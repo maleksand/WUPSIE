@@ -4,7 +4,7 @@ from dateutil import parser as mongo_date_parser
 import time
 
 def get_measurements_df():
-    df = pd.read_csv(r"csv-data/measurement.csv")
+    df = pd.read_csv(r"data-processing\csv-data\measurement.csv")
     return df
 
 def format_csv_df(df):
@@ -37,7 +37,7 @@ def csv_df_to_collection(db, df):
             "measurement" : value
         }
         device["measurements"].append(measurement)
-        print("row:" + i)
+        print("row:" + str(i))
     
     # insert in database
     db_measurements.insert_many(devices)

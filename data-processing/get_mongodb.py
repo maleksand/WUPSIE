@@ -6,8 +6,10 @@ def get_database():
 
     # Create a connection using MongoClient. You can import MongoClient or use pymongo.MongoClient
     from pymongo import MongoClient
-    client = MongoClient(port=27017, username="mongoadmin", password="secret") #if localhost, then just define port
-
+    #For Local
+    #client = MongoClient(port=27017, username="mongoadmin", password="secret") #if localhost, then just define port
+    # For remote
+    client = MongoClient("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/test") 
     # Create the database for our example (we will use the same database throughout the tutorial
     return client['WUPS']
 
