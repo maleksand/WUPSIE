@@ -22,6 +22,12 @@ namespace wups_service.Controllers
 
             return Ok(json);
         }
+
+        [HttpGet("{parameters}")]
+        public ActionResult<string> Get(string id, string parameters)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
