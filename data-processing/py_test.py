@@ -1,16 +1,13 @@
 import time
-from pymongo import MongoClient
-import pymongo
+from unicodedata import decimal
+import pandas as pd
 
 def run():
-     myclient = pymongo.MongoClient("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-     mydb = myclient["WUPS"]
-     mycol = mydb["measurements"]
-     mydict = { "name": "John", "address": "Highway 37" }
-     x = mycol.insert_one(mydict)
+     df = pd.read_csv(r"csv-data/measurement.csv")
+     devices = df["deviceID"].unique()
+     print(df[df["deviceID"] == devices[1]].head(1)["meterType"].item())
 
 if __name__ == "__main__":
     seconds = time.time()
     run()
     print(time.time() - seconds)
-    input()
