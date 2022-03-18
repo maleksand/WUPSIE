@@ -7,7 +7,9 @@ def get_database(type="local"):
     if(type == "local"):
         client = MongoClient(port=27017, username="mongoadmin", password="secret") 
     elif(type == "remote"):
-        client = MongoClient("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/test") 
+        client = MongoClient("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/test")
+    else:
+        client = MongoClient(port=27017, username="mongoadmin", password="secret") 
     # Create the database for our example (we will use the same database throughout the tutorial
     return client['WUPS']
 
