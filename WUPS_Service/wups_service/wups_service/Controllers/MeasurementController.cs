@@ -20,13 +20,33 @@ namespace wups_service.Controllers
         {
             string json = _measurementRepository.Get(id);
 
-            return Ok(json);
+            //If the mongo driver does not find any it returns an empty JSON doc
+            if (json == "[]")
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(json);
+            }
         }
 
-        [HttpGet("{parameters}")]
-        public ActionResult<string> Get(string id, string parameters)
+
+        [HttpGet("bydate")]
+
+        public ActionResult<string> Get(string id, string date)
         {
-            throw new NotImplementedException();
+            string json = _measurementRepository.Get(id,date);
+
+            //If the mongo driver does not find any it returns an empty JSON doc
+            if (json == "[]")
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(json);
+            }
         }
     }
 
