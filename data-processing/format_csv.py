@@ -57,26 +57,37 @@ def add_record_to_measurements_documents(devices, record):
 
 
 def insert_measurements_collection(db, docs):
-    print("dropping measurements collection")
+    print("dropping measurements collection...", end="")
     db["measurements"].drop()
-    db_collection = db["measurements"] #creates collection
+    print("done")
 
-    print("uploading measurements collection")
+    print("dropping measurements collection...", end="")
+    db_collection = db["measurements"] #creates collection
+    print("done")
+
+    print("uploading measurements collection...", end="")
     insert_into_collection(docs, db_collection)
+    print("done")
+
 
 
 def insert_water_measuremnts_collection(db, docs):
-    print("dropping water measurements collection")
+    print("dropping water measurements collection...", end="")
     db.drop_collection("Water-measurements")
+    print("done")
+
+    print("creating water measurements collection...", end="")
     db_collection = db.create_collection("Water-measurements", 
         timeseries={
             "timeField" : "timestamp",
             "metaField" : "metadata" 
         }
     ) #creates collection
+    print("done")
 
-    print("uploading water measurements collection")
+    print("uploading water measurements collection...", end="")
     insert_into_collection(docs, db_collection)
+    print("done")
 
 
 def df_to_documents(df):
@@ -93,19 +104,15 @@ def df_to_documents(df):
     water_measuremnts_docs = []
 
     df_measurements = df.to_dict("records") # converts each row to a dict(pythons json like thing)
-    for i, record in enumerate(df_measurements):
-        add_record_to_measurements_documents(measurements_docs, record)
-        record_to_water_measuremenst_document(water_measuremnts_docs, record)
-
-        if(i % 10000 == 0):
-            print("row:" + str(i))
+    df.apply(lambda record: add_record_to_measurements_documents(measurements_docs, record))
+    df.apply(lambda record: record_to_water_measuremenst_document(water_measuremnts_docs, record))
 
     return measurements_docs, water_measuremnts_docs
 
 if __name__ == "__main__":
     start_time = time.time()
     
-    db = get_mongodb.get_database("remote")
+    db = get_mongodb.get_database("local")
     df = get_measurements_df()
 
     measurements_docs, water_measuremnts_docs = df_to_documents(df)
