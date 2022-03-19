@@ -57,26 +57,26 @@ def add_record_to_measurements_documents(devices, record):
 
 
 def insert_measurements_collection(db, docs):
-    print("dropping measurements collection...", end="")
+    print("dropping measurements collection...", end="", flush=True)
     db["measurements"].drop()
     print("done")
 
-    print("dropping measurements collection...", end="")
+    print("dropping measurements collection...", end="", flush=True)
     db_collection = db["measurements"] #creates collection
     print("done")
 
-    print("uploading measurements collection...", end="")
+    print("uploading measurements collection...", end="", flush=True)
     insert_into_collection(docs, db_collection)
     print("done")
 
 
 
 def insert_water_measuremnts_collection(db, docs):
-    print("dropping water measurements collection...", end="")
+    print("dropping water measurements collection...", end="", flush=True)
     db.drop_collection("Water-measurements")
     print("done")
 
-    print("creating water measurements collection...", end="")
+    print("creating water measurements collection...", end="", flush=True)
     db_collection = db.create_collection("Water-measurements", 
         timeseries={
             "timeField" : "timestamp",
@@ -85,7 +85,7 @@ def insert_water_measuremnts_collection(db, docs):
     ) #creates collection
     print("done")
 
-    print("uploading water measurements collection...", end="")
+    print("uploading water measurements collection...", end="", flush=True)
     insert_into_collection(docs, db_collection)
     print("done")
 
@@ -103,9 +103,13 @@ def df_to_documents(df):
 
     water_measuremnts_docs = []
 
-    df_measurements = df.to_dict("records") # converts each row to a dict(pythons json like thing)
-    df.apply(lambda record: add_record_to_measurements_documents(measurements_docs, record))
-    df.apply(lambda record: record_to_water_measuremenst_document(water_measuremnts_docs, record))
+    print("processing measurements docs...", end="", flush=True)
+    df.apply(lambda record: add_record_to_measurements_documents(measurements_docs, record), axis=1)
+    print("done")
+
+    print("processing water measurements docs...", end="", flush=True)
+    df.apply(lambda record: record_to_water_measuremenst_document(water_measuremnts_docs, record), axis=1)
+    print("done")
 
     return measurements_docs, water_measuremnts_docs
 
@@ -123,6 +127,3 @@ if __name__ == "__main__":
     time_used = time.time() - start_time
     print(f"This took {time_used:.2f} seconds!")
     
-    
-    
-
