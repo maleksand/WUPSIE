@@ -19,7 +19,7 @@ def insert_into_collection(documents, db_collection):
     db_collection.insert_many(documents)
 
 
-def record_to_water_measuremenst_document(measurements, record):
+def record_to_water_measuremenst_document(docs, record):
     device_id = record["deviceID"]
     
     # convert datetime to string by iso format
@@ -33,12 +33,12 @@ def record_to_water_measuremenst_document(measurements, record):
         "timestamp" : iso_date,
         "measurement" : value
     }
-    measurements.append(measurement)
+    docs.append(measurement)
 
-    return measurements
+    return docs
 
 
-def add_record_to_measurements_documents(devices, record):
+def add_record_to_measurements_documents(docs, record):
     device_id = record["deviceID"]
     
     # convert datetime to string by iso format
@@ -46,14 +46,14 @@ def add_record_to_measurements_documents(devices, record):
     value = record["value"]
     
     # find the dict in devices which have matching id
-    device = next(x for x in devices if x["_id"] == device_id) 
+    device = next(x for x in docs if x["_id"] == device_id) 
     measurement = {
         "datetime": iso_date,
         "measurement" : value
     }
     device["measurements"].append(measurement)
     
-    return devices
+    return docs
 
 
 def insert_measurements_collection(db, docs):
