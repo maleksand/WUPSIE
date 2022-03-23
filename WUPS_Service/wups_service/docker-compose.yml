@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  api-service:
+    build: 
+      dockerfile: /wups_service/Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/service_volumes
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    volumes:
+      - .:/mongodb_volumes

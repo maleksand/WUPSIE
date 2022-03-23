@@ -26,7 +26,7 @@ namespace wups_service.Controllers
         /// <returns>A json file with the timeseries data</returns>
         [HttpGet]
         [Route("{id}")]
-        public ActionResult<string> Get(string id, string? startDate, string? endDate)
+        public async Task<ActionResult<string>> Get(string id, string? startDate, string? endDate)
         {
             string json = "";
             if (startDate != null && startDate.Length > 0)
@@ -51,13 +51,15 @@ namespace wups_service.Controllers
             //If the mongo driver does not find any it returns an empty JSON doc
             if (json == "[]" || json == "")
             {
+                // TODO: what if the database conncetion is down? in that case it should be statuscode 500
                 return NotFound();
             }
             else
             {
                 Response.Headers.Add("Content-Type", "application/json");
-                Response.WriteAsync(json);
-                return Ok();
+                await Response.WriteAsync(json);
+                await Response.CompleteAsync();
+                return Ok(json);
 
             }
         }

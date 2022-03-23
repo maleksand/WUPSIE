@@ -103,7 +103,17 @@ namespace wups_service.DataAccess
         private IMongoCollection<BsonDocument> GetMongoCollection(string databaseName, string collectionName)
         {
             //TODO Get the connectionstring into appsettings.json
-            MongoClient dbClient = new("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+
+            // remote
+            MongoUrl mongoUrl = new("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+
+            // local
+            //MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@localhost:27017/?authSource=admin");
+
+            // docker compose
+            //MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@mongodb:27017/?authSource=admin");
+
+            MongoClient dbClient = new(mongoUrl);
 
             var database = dbClient.GetDatabase(databaseName);
             var collection = database.GetCollection<BsonDocument>(collectionName);
