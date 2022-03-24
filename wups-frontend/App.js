@@ -8,18 +8,20 @@ import Indexed from './index.js';
 export default class App extends React.Component{
   render(){
     <link rel='stylesheet' href='./node_modules/react-grid-layout/css/styles.css'></link>
-    //var dashboard = new DashBoard();
+ 
 
   return (
-    <View style={styles.menubar}>
-    {/* <View style={styles.container}> */}
-      {/* <View style={styles.menubar}> */}
-        {/* <DashBoard /> */}
+    <View>
+      <View style={styles.menubar}>
+ 
         <Text style={{color: "white"}}>Menu bar</Text>
-        {/* <Text>Open up App.js to start working on your app!</Text> */}
-        {/* <StatusBar style="auto" /> */}
+
       </View>
-    // </View>
+      <View style={styles.buttonbar}>
+        <Text style={{color:'yellow'}}>This where our buttons go</Text>
+
+      </View>
+    </View>
     // </View>
   );
   }
@@ -35,10 +37,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   menubar:{
-    height: 70,
+    height: 60,
     minWidth: 150,
     maxWidth: Dimensions.get('window').width,
     backgroundColor: '#000000',
+    justifyContent: 'center',
+    alignItems: 'center',
+    //textColor:{color: '#ffffff'},
+  },
+  buttonbar:{
+    height: 60,
+    //minWidth: 150,
+    maxWidth: Dimensions.get('window').width,
+    backgroundColor: '#000055',
     justifyContent: 'center',
     alignItems: 'center',
     //textColor:{color: '#ffffff'},
