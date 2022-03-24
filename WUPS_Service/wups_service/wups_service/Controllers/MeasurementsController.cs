@@ -27,32 +27,43 @@ namespace wups_service.Controllers
         /// <returns>A json file with the timeseries data</returns>
         [HttpGet]
         [Route("{id}")]
-        public async Task<ActionResult<string>> Get(string id, string? startDate, string? endDate)
+        public ActionResult<List<Measurement>> Get(string id, string? startDate, string? endDate)
         {
             List<Measurement> measurements = new List<Measurement>();
-            if (startDate != null && startDate.Length > 0)
+            try
             {
-                if (endDate != null && endDate.Length > 0)
+                if (startDate != null && startDate.Length > 0)
                 {
-                    // if both startDate and endDate is defined
-                    measurements = _measurementRepository.GetByDateRange(id, startDate, endDate);
+                    if (endDate != null && endDate.Length > 0)
+                    {
+                        // if both startDate and endDate is defined
+                        measurements = _measurementRepository.GetByDateRange(id, startDate, endDate);
+                    }
+                    else
+                    {
+                        // if only startdate is defined
+                        measurements = _measurementRepository.GetByDate(id, startDate);
+                    }
                 }
                 else
                 {
-                    // if only startdate is defined
-                    measurements = _measurementRepository.GetByDate(id, startDate);
+                    // if startDate and endDate is nor defined
+                    measurements = _measurementRepository.Get(id);
                 }
+
+                return decideResponse(measurements);
             }
-            else
+            catch (Exception ex)
             {
-                // if startDate and endDate is nor defined
-                measurements = _measurementRepository.Get(id);
+                return Problem(ex.Message);
             }
 
+        }
+        private ActionResult<List<Measurement>> decideResponse(List<Measurement> measurements)
+        {
             //If the mongo driver does not find any it returns an empty JSON doc
             if (measurements.Count < 1)
             {
-                // TODO: what if the database conncetion is down? in that case it should be statuscode 500
                 return NotFound();
             }
             else
