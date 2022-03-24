@@ -2,9 +2,10 @@ import pandas as pd
 import get_mongodb
 from dateutil import parser as mongo_date_parser
 import time
+import sys
 
 def get_measurements_df():
-    df = pd.read_csv(r"csv-data\measurement.csv")
+    df = pd.read_csv("csv-data/measurement.csv")
     format_csv_df(df)
     return df
 
@@ -103,6 +104,7 @@ def df_to_documents(df):
 
     water_measuremnts_docs = []
 
+    print("Processing begun")
     print("processing measurements docs...", end="", flush=True)
     df.apply(lambda record: add_record_to_measurements_documents(measurements_docs, record), axis=1)
     print("done")
@@ -116,7 +118,7 @@ def df_to_documents(df):
 if __name__ == "__main__":
     start_time = time.time()
     
-    db = get_mongodb.get_database("local")
+    db = get_mongodb.get_database()
     df = get_measurements_df()
 
     measurements_docs, water_measuremnts_docs = df_to_documents(df)

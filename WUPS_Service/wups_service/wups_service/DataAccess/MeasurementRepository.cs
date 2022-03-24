@@ -94,13 +94,13 @@ namespace wups_service.DataAccess
             //TODO Get the connectionstring into appsettings.json
 
             // remote
-            MongoUrl mongoUrl = new("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+            //MongoUrl mongoUrl = new("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
             // local
             //MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@localhost:27017/?authSource=admin");
 
             // docker compose
-            //MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@mongodb:27017/?authSource=admin");
+            MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@mongodb:27017/?authSource=admin");
 
             MongoClient dbClient = new(mongoUrl);
 
