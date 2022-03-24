@@ -44,13 +44,7 @@ router.get("/devices/:deviceId/measurements", async (req, res) => {
     }
 
     const response = await fetch(url, options)
-
-    if (!response.ok) throw new Error(`unexpected response ${response.statusText}`);
-    
-    console.log(response.url)
-    console.log("If console stop here... WHY AWAIT FOREVER!?!!?!!")
     jsondata = await response.json()
-    console.log("You somehow got through...")
 
     res.json(jsondata)
 })

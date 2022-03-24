@@ -2,7 +2,7 @@ version: "3.9"
 services:
   api-service:
     build: 
-      dockerfile: /wups_service/Dockerfile
+      dockerfile: WUPS_Service/wups_service/wups_service/Dockerfile
     ports:
       - "8080:80"
     volumes:

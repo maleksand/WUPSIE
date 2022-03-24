@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using wups_service.DataAccess;
+using wups_service.Model;
 
 namespace wups_service.Controllers
 {
@@ -28,39 +29,35 @@ namespace wups_service.Controllers
         [Route("{id}")]
         public async Task<ActionResult<string>> Get(string id, string? startDate, string? endDate)
         {
-            string json = "";
+            List<Measurement> measurements = new List<Measurement>();
             if (startDate != null && startDate.Length > 0)
             {
                 if (endDate != null && endDate.Length > 0)
                 {
                     // if both startDate and endDate is defined
-                    json = _measurementRepository.GetByDateRange(id, startDate, endDate);
+                    measurements = _measurementRepository.GetByDateRange(id, startDate, endDate);
                 }
                 else
                 {
                     // if only startdate is defined
-                    json = _measurementRepository.GetByDate(id, startDate);
+                    measurements = _measurementRepository.GetByDate(id, startDate);
                 }
             }
             else
             {
                 // if startDate and endDate is nor defined
-                json = _measurementRepository.Get(id);
+                measurements = _measurementRepository.Get(id);
             }
 
             //If the mongo driver does not find any it returns an empty JSON doc
-            if (json == "[]" || json == "")
+            if (measurements.Count < 1)
             {
                 // TODO: what if the database conncetion is down? in that case it should be statuscode 500
                 return NotFound();
             }
             else
             {
-                Response.Headers.Add("Content-Type", "application/json");
-                await Response.WriteAsync(json);
-                await Response.CompleteAsync();
-                return Ok(json);
-
+                return Json(measurements);
             }
         }
     }
