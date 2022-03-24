@@ -19,7 +19,7 @@ namespace wups_service.DataAccess
             List<Measurement> measurements = new List<Measurement>();
             try
             {
-                var collection = GetMongoCollection("WUPS", "Water-Measurements");
+                var collection = GetMongoCollection("WUPS", "Water-measurements");
 
                 measurements = collection.Find(m => m.Metadata.DeviceId == id).ToList();
             }
@@ -36,19 +36,19 @@ namespace wups_service.DataAccess
         /// </summary>
         /// <param name="id">DevicdeId</param>
         /// <param name="date">starting date point YYYY-MM-DDT00:00:00</param>
-        /// <returns> history of the date + 24 hours </returns>
+        /// <returns> history of the date + 1 day </returns>
         public List<Measurement> GetByDate(string id, string date)
         {
             List<Measurement> measurements = new List<Measurement>();
 
             try
             {
-                var collection = GetMongoCollection("WUPS", "Water-Measurements");
+                var collection = GetMongoCollection("WUPS", "Water-measurements");
 
                 var stringDate = date;
                 DateTime dateFilter = DateTime.Parse(stringDate, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
-                // creating a filter to  find all documents with the specific ID in the collection
-                measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp > dateFilter && m.Timestamp < dateFilter.AddDays(1)).ToList();
+
+                measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp >= dateFilter && m.Timestamp < dateFilter.AddDays(1)).ToList();
 
             }
             catch (Exception ex)
@@ -74,7 +74,7 @@ namespace wups_service.DataAccess
                 DateTime startFilter = DateTime.Parse(startString, CultureInfo.InvariantCulture,DateTimeStyles.AssumeUniversal);
                 DateTime endFilter = DateTime.Parse(endString, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
                 
-                measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp > startFilter && m.Timestamp < endFilter).ToList();
+                measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp >= startFilter && m.Timestamp < endFilter).ToList();
             }
             catch (Exception ex)
             {
@@ -94,13 +94,13 @@ namespace wups_service.DataAccess
             //TODO Get the connectionstring into appsettings.json
 
             // remote
-            //MongoUrl mongoUrl = new("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+            MongoUrl mongoUrl = new("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
             // local
             //MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@localhost:27017/?authSource=admin");
 
             // docker compose
-            MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@mongodb:27017/?authSource=admin");
+            //MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@mongodb:27017/?authSource=admin");
 
             MongoClient dbClient = new(mongoUrl);
 

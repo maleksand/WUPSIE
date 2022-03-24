@@ -43,8 +43,15 @@ router.get("/devices/:deviceId/measurements", async (req, res) => {
         }
     }
 
-    const response = await fetch(url, options)
-    jsondata = await response.json()
+    let jsondata = null
+
+    try {
+        const response = await fetch(url, options)
+        jsondata = await response.json()
+    } catch (e) {
+        console.log(e)
+        jsondata = e
+    }
 
     res.json(jsondata)
 })

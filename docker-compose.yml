@@ -1,12 +1,5 @@
 version: "3.9"
 services:
-  api-service:
-    build: 
-      dockerfile: WUPS_Service/wups_service/wups_service/Dockerfile
-    ports:
-      - "8080:80"
-    volumes:
-      - .:/service_volumes
   mongodb:
     image: mongo
     ports:
@@ -16,3 +9,15 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: secret
     volumes:
       - .:/mongodb_volumes
+
+  api-service:
+    build: 
+      dockerfile: WUPS_Service/wups_service/wups_service/Dockerfile
+    ports:
+      - "8080:80"
+
+  api-node:
+    build: 
+      dockerfile: Node-server/Dockerfile
+    ports:
+      - "3000:3000"

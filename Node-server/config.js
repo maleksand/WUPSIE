@@ -10,6 +10,11 @@ environments.development = {
     baseAPIUrl: "http://localhost:8080"
 }
 
+environments.docker = {
+    httpPort: 3000,
+    baseAPIUrl: "http://api-service:80"
+}
+
 // Determine which enviroment was passed as a command-line argument
 let currentEnviroment = typeof(process.env.NODE_ENV) === 'string' ? process.env.NODE_ENV.toLowerCase() : ""
 
