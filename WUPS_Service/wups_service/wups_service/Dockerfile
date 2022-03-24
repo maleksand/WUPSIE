@@ -3,14 +3,17 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80
+<<<<<<< HEAD
 #HTTPS does not work for now due to TLS 1.2 requirement in the docker image
+=======
+>>>>>>> node.js-express-api
 #EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["wups_service/wups_service.csproj", "wups_service/"]
+COPY ["./WUPS_Service/wups_service/wups_service/wups_service.csproj", "wups_service/"]
 RUN dotnet restore "wups_service/wups_service.csproj"
-COPY . .
+COPY ./WUPS_Service/wups_service/ .
 WORKDIR "/src/wups_service"
 RUN dotnet build "wups_service.csproj" -c Release -o /app/build
 
