@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { render } from 'react-dom';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Modal } from 'react-native';
+import { Button } from 'react-native'
+
 //import Dash from './dashboard.js';
 import Indexed from './index.js';
 import Menubar from './Menubar.js';
@@ -26,7 +28,16 @@ export default class App extends React.Component{
          <Text style={{color: "white"}}>Menu bar</Text>
       </View>
       <View style={styles.buttonBar}>
-        <Text style={{color:'yellow'}}>This where our buttons go</Text>
+
+        <View style={styles.buttoncontainer} >
+          <Button title="help " color="orange" style={styles.button}> </Button>   
+          <Button title="me " color="pink" style={styles.button} > </Button>
+          <Button title="I'm" color="blue" style={styles.button}> </Button>
+          <Button title=" in" color="green" style={styles.button}> </Button>
+          <Button title=" react" color="yellow" style={styles.button}> </Button>
+          <Button title="prison" color="purple"> </Button>
+        </View>
+
       </View>
       <View styles={styles.container}>
         <View styles={styles.graphBox}>
@@ -74,7 +85,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    padding:2,
+    //padding:2,
   },
   menuBar:{
     height: 60,
@@ -90,8 +101,10 @@ const styles = StyleSheet.create({
     //minWidth: 150,
     maxWidth: Dimensions.get('window').width,
     backgroundColor: '#000055',
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent:"space-evenly",
+    alignItems: 'stretch',
+    
+    padding:10,
     //textColor:{color: '#ffffff'},
   },
   graphBox:{
@@ -99,14 +112,40 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width/2 -12,
     height: 300,
     //backgroundColor: '#eeeeee',
-    justifyContent: 'center',
-    alignItems: 'stretch',
-    backgroundColor: '#00ff00',
-
-    
-    
-    padding: 30,
+    backgroundColor: '#ff0000',
+    justifyContent:"space-evenly",
+    // alignItems: 'stretch',
+    //padding: 30,
 
   },
 
+ 
+
+ buttoncontainer: {
+  height: 50,
+  //minWidth: 150,
+  maxWidth: Dimensions.get('window').width,
+  backgroundColor: '#000055',
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    justifyContent:"space-evenly",
+    padding:10,
+    
+  },
+  space: {
+    justifyContent:"space-evenly",
+
+    flex: 1,
+    width: 20,
+    height: 20,
+  },
+  button: {
+    justifyContent:"space-evenly",
+    width: '40%',
+
+    flex: 1,
+    padding: 10
+  },
+  
 });
