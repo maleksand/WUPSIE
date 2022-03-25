@@ -1,10 +1,6 @@
 const config = require("../config")
 
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-const {createWriteStream} = require("node:fs")
-const {pipeline} = require("node:stream")
-const {promisify} = require("node:util")
-
 
 const express = require("express")
 const router = express.Router()
