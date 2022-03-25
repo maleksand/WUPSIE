@@ -1,12 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
+//import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { render } from 'react-dom';
-import { StyleSheet, Text, View, Dimensions, Modal } from 'react-native';
-import { Button } from 'react-native'
-
+//import { render } from 'react-dom';
+import { StyleSheet, Text, View, Dimensions, Button, ScrollView } from 'react-native';
+//import { Responsive } from 'react-grid-layout';
 //import Dash from './dashboard.js';
-import Indexed from './index.js';
-import Menubar from './Menubar.js';
+//import Indexed from './index.js';
+//import Menubar from './Menubar.js';
 import './App.css';
 
 export default class App extends React.Component{
@@ -20,12 +19,12 @@ export default class App extends React.Component{
     //   <Menubar></Menubar>
     // </div>
     
-    <View >
+    <ScrollView style={styles.scrollcontainer}>
       {/* <div >
         <Menubar />
       </div> */}
       <View style={styles.menuBar}>
-         <Text style={{color: "white"}}>Menu bar</Text>
+         <Text style={{color: "white"}}>Static Menu bar</Text>
       </View>
       <View style={styles.buttonBar}>
 
@@ -35,43 +34,45 @@ export default class App extends React.Component{
           <Button title="I'm" color="blue" style={styles.button}> </Button>
           <Button title=" in" color="green" style={styles.button}> </Button>
           <Button title=" react" color="yellow" style={styles.button}> </Button>
-          <Button title="prison" color="purple"> </Button>
+          <Button title="prison" color="purple" style={styles.button}> </Button>
         </View>
 
       </View>
       <View styles={styles.container}>
-        <View styles={styles.graphBox}>
+        <View>
+        <View styles={styles.graphbox}>
           
           <Text>This is where the graph go</Text>
           
         </View>
-        <View styles={styles.graphBox}> 
-          <div>
+        <View styles={styles.graphbox}> 
+          
           <Text>This is where the 2. graph go</Text>
-          </div>
+          
         </View>
-        <View styles={styles.graphBox}>
+        <View styles={styles.graphbox}>
           
           <Text>This is not yet implemented</Text>
           
         </View>
-        <View styles={styles.graphBox}>
+        <View styles={styles.graphbox}>
           
           <Text>To be continued</Text>
           
         </View>
-        <View styles={styles.graphBox}>
+        <View styles={styles.graphbox}>
           
           <Text>Awaiting orders</Text>
           
         </View>
-        <View styles={styles.graphBox}>
+        <View styles={styles.graphbox}>
           
           <Text>Unable to comply. Building in progress</Text>
           
         </View>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
   }
 }
@@ -101,41 +102,34 @@ const styles = StyleSheet.create({
     //minWidth: 150,
     maxWidth: Dimensions.get('window').width,
     backgroundColor: '#000055',
-    justifyContent:"space-evenly",
+    justifyContent: 'space-evenly',
     alignItems: 'stretch',
-    
     padding:10,
     //textColor:{color: '#ffffff'},
   },
-  graphBox:{
+  graphbox:{
     margin: 2,
     width: Dimensions.get('window').width/2 -12,
     height: 300,
     //backgroundColor: '#eeeeee',
-    backgroundColor: '#ff0000',
-    justifyContent:"space-evenly",
-    // alignItems: 'stretch',
+    backgroundColor: '#33c1ff',
+    justifyContent: 'center',
+    alignItems: 'stretch',
     //padding: 30,
-
   },
-
- 
-
- buttoncontainer: {
-  height: 50,
-  //minWidth: 150,
-  maxWidth: Dimensions.get('window').width,
-  backgroundColor: '#000055',
+  buttoncontainer: {
+    height: 50,
+    //minWidth: 150,
+    maxWidth: Dimensions.get('window').width,
+    backgroundColor: '#000055',
     flex: 1,
     flexDirection: 'row',
     alignItems: 'stretch',
     justifyContent:"space-evenly",
     padding:10,
-    
   },
   space: {
     justifyContent:"space-evenly",
-
     flex: 1,
     width: 20,
     height: 20,
@@ -143,9 +137,11 @@ const styles = StyleSheet.create({
   button: {
     justifyContent:"space-evenly",
     width: '40%',
-
     flex: 1,
     padding: 10
+  },
+  scrollcontainer:{
+    flex: 1,
   },
   
 });
