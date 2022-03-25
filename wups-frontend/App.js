@@ -9,8 +9,8 @@ import './App.css';
 
 export default class App extends React.Component{
   render(){
-     //<link rel='stylesheet' href='./node_modules/react-grid-layout/css/styles.css'></link>
-      <link rel='stylesheet' href='.App.css'></link>
+     <link rel='stylesheet' href='./node_modules/react-grid-layout/css/styles.css'></link>
+      //<link rel='stylesheet' href='.App.css'></link>
  
 // export default function App() {
   return (
@@ -23,13 +23,10 @@ export default class App extends React.Component{
         <Menubar />
       </div> */}
       <View style={styles.menuBar}>
- 
-        <Text style={{color: "white"}}>Menu bar</Text>
-
+         <Text style={{color: "white"}}>Menu bar</Text>
       </View>
       <View style={styles.buttonBar}>
         <Text style={{color:'yellow'}}>This where our buttons go</Text>
-
       </View>
       <View styles={styles.container}>
         <View styles={styles.graphBox}>
@@ -37,9 +34,29 @@ export default class App extends React.Component{
           <Text>This is where the graph go</Text>
           
         </View>
+        <View styles={styles.graphBox}> 
+          <div>
+          <Text>This is where the 2. graph go</Text>
+          </div>
+        </View>
         <View styles={styles.graphBox}>
           
-          <Text>This is where the 2. graph go</Text>
+          <Text>This is not yet implemented</Text>
+          
+        </View>
+        <View styles={styles.graphBox}>
+          
+          <Text>To be continued</Text>
+          
+        </View>
+        <View styles={styles.graphBox}>
+          
+          <Text>Awaiting orders</Text>
+          
+        </View>
+        <View styles={styles.graphBox}>
+          
+          <Text>Unable to comply. Building in progress</Text>
           
         </View>
       </View>
@@ -55,13 +72,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#fff',
-    //alignItems: 'center',
-    //justifyContent: 'center',
-    //padding:2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding:2,
   },
   menuBar:{
     height: 60,
-    minWidth: 150,
+    //minWidth: 150,
     maxWidth: Dimensions.get('window').width,
     backgroundColor: '#000000',
     justifyContent: 'center',
@@ -78,15 +95,17 @@ const styles = StyleSheet.create({
     //textColor:{color: '#ffffff'},
   },
   graphBox:{
-    //margin: 2,
-    
-    width: Dimensions.get('window').width/2 -6,
-    height: 200,
+    margin: 2,
+    width: Dimensions.get('window').width/2 -12,
+    height: 300,
     //backgroundColor: '#eeeeee',
-    backgroundColor: '#ff0000',
     justifyContent: 'center',
     alignItems: 'stretch',
-    //padding: 30,
+    backgroundColor: '#00ff00',
+
+    
+    
+    padding: 30,
 
   },
 
