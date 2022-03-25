@@ -17,17 +17,11 @@ namespace wups_service.DataAccess
         public List<Measurement> Get(string id)
         {
             List<Measurement> measurements = new List<Measurement>();
-            try
-            {
-                var collection = GetMongoCollection("WUPS", "Water-measurements");
+        
+            var collection = GetMongoCollection("WUPS", "Water-measurements");
 
-                measurements = collection.Find(m => m.Metadata.DeviceId == id).ToList();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
+            measurements = collection.Find(m => m.Metadata.DeviceId == id).ToList();
+            
             return measurements;
 
         }
@@ -41,20 +35,12 @@ namespace wups_service.DataAccess
         {
             List<Measurement> measurements = new List<Measurement>();
 
-            try
-            {
-                var collection = GetMongoCollection("WUPS", "Water-measurements");
+            var collection = GetMongoCollection("WUPS", "Water-measurements");
 
-                var stringDate = date;
-                DateTime dateFilter = DateTime.Parse(stringDate, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
+            var stringDate = date;
+            DateTime dateFilter = DateTime.Parse(stringDate, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
 
-                measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp >= dateFilter && m.Timestamp < dateFilter.AddDays(1)).ToList();
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp >= dateFilter && m.Timestamp < dateFilter.AddDays(1)).ToList();
 
             return measurements;
 
@@ -64,22 +50,16 @@ namespace wups_service.DataAccess
         {
             List<Measurement> measurements = new List<Measurement>();
 
-            try
-            {
-                var collection = GetMongoCollection("WUPS", "Water-measurements");
+            var collection = GetMongoCollection("WUPS", "Water-measurements");
 
-                var startString = startDate;
-                var endString = endDate;
+            var startString = startDate;
+            var endString = endDate;
 
-                DateTime startFilter = DateTime.Parse(startString, CultureInfo.InvariantCulture,DateTimeStyles.AssumeUniversal);
-                DateTime endFilter = DateTime.Parse(endString, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
+            // Makes sure that different dateformats are passed to ISO date (ie. 2000-10-01 becomes 2000-10-01T00:00:00:000 )
+            DateTime startFilter = DateTime.Parse(startString, CultureInfo.InvariantCulture,DateTimeStyles.AssumeUniversal);
+            DateTime endFilter = DateTime.Parse(endString, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
                 
-                measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp >= startFilter && m.Timestamp < endFilter).ToList();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp >= startFilter && m.Timestamp < endFilter).ToList();
 
             return measurements;
         }
@@ -94,13 +74,13 @@ namespace wups_service.DataAccess
             //TODO Get the connectionstring into appsettings.json
 
             // remote
-            //MongoUrl mongoUrl = new("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+            MongoUrl mongoUrl = new("mongodb+srv://mongoadmin:secret1234@cluster0.9w8cr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
             // local
             //MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@localhost:27017/?authSource=admin");
 
             // docker compose
-            MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@mongodb:27017/?authSource=admin");
+            //MongoUrl mongoUrl = new("mongodb://mongoadmin:secret@mongodb:27017/?authSource=admin");
 
             MongoClient dbClient = new(mongoUrl);
 
