@@ -40,7 +40,7 @@ export default class App extends React.Component {
 
         </View>
 
-
+      <View style={styles.container}>
         <View style={styles.graphbox}>
 
           <GraphPlaceholder />
@@ -61,7 +61,28 @@ export default class App extends React.Component {
 
 
         </View>
-        
+        <View style={styles.graphbox}>
+
+          <GraphPlaceholder />
+
+
+
+        </View>
+        <View style={styles.graphbox}>
+
+          <GraphPlaceholder />
+
+
+
+        </View>
+        <View style={styles.graphbox}>
+
+          <GraphPlaceholder />
+
+
+
+        </View>
+        </View>
       </ScrollView>
       
 
@@ -105,8 +126,8 @@ const styles = StyleSheet.create({
     margin: 10,
     width: Dimensions.get('window').width / 3 - 50,
     height: 300,
-    //backgroundColor: '#eeeeee',
-    backgroundColor: '#000000',
+    backgroundColor: '#eeeeee',
+    //backgroundColor: '#000000',
     justifyContent: 'center',
     alignItems: 'center',
     
