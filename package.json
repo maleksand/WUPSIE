@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-native-grid-layout": "^0.1.9",
+    "react-native-wagmi-charts": "^2.1.0"
+  }
+}
