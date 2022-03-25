@@ -31,21 +31,16 @@ export default class App extends React.Component{
       </View>
       <View style={styles.buttonBar}>
 
+        <View style={styles.buttoncontainer} >
+          <Button title="help " color="orange" style={styles.button}> </Button>   
+          <Button title="me " color="pink" style={styles.button} > </Button>
+          <Button title="I'm" color="blue" style={styles.button}> </Button>
+          <Button title=" in" color="green" style={styles.button}> </Button>
+          <Button title=" react" color="yellow" style={styles.button}> </Button>
+          <Button title="prison" color="purple"> </Button>
+        </View>
 
-      
-
-      <View style={styles.buttoncontainer} >
-      <Button title="help " color="orange" style={styles.button}> </Button>   
-      <Button title="me " color="pink" style={styles.button} > </Button>
-      <Button title="I'm" color="blue" style={styles.button}> </Button>
-      <Button title=" in" color="green" style={styles.button}> </Button>
-      <Button title=" react" color="yellow" style={styles.button}> </Button>
-      
-
-      <Button title="prison" color="purple"> </Button>
       </View>
-
-    </View>
       <View styles={styles.container}>
         <View styles={styles.graphBox}>
           
@@ -71,7 +66,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     backgroundColor: '#fff',
     alignItems: 'center',
-    //justifyContent: 'center',
+    justifyContent: 'center',
     //padding:2,
   },
   menuBar:{
@@ -79,7 +74,8 @@ const styles = StyleSheet.create({
     minWidth: 150,
     maxWidth: Dimensions.get('window').width,
     backgroundColor: '#000000',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
+    alignItems: 'center',
     //textColor:{color: '#ffffff'},
   },
   buttonBar:{
@@ -115,9 +111,9 @@ const styles = StyleSheet.create({
   backgroundColor: '#000055',
     flex: 1,
     flexDirection: 'row',
-    // alignItems: 'center',
+    alignItems: 'stretch',
     justifyContent:"space-evenly",
-        padding:10,
+    padding:10,
     
   },
   space: {
