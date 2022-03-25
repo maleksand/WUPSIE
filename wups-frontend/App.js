@@ -4,28 +4,50 @@ import { render } from 'react-dom';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 //import Dash from './dashboard.js';
 import Indexed from './index.js';
+import Menubar from './Menubar.js';
+import './App.css';
 
 export default class App extends React.Component{
   render(){
-    <link rel='stylesheet' href='./node_modules/react-grid-layout/css/styles.css'></link>
+     //<link rel='stylesheet' href='./node_modules/react-grid-layout/css/styles.css'></link>
+      <link rel='stylesheet' href='.App.css'></link>
  
-
+// export default function App() {
   return (
-    <View>
-      <View style={styles.menubar}>
+    // <div className='App'>
+    //   <Menubar></Menubar>
+    // </div>
+    
+    <View >
+      {/* <div >
+        <Menubar />
+      </div> */}
+      <View style={styles.menuBar}>
  
         <Text style={{color: "white"}}>Menu bar</Text>
 
       </View>
-      <View style={styles.buttonbar}>
+      <View style={styles.buttonBar}>
         <Text style={{color:'yellow'}}>This where our buttons go</Text>
 
       </View>
+      <View styles={styles.container}>
+        <View styles={styles.graphBox}>
+          
+          <Text>This is where the graph go</Text>
+          
+        </View>
+        <View styles={styles.graphBox}>
+          
+          <Text>This is where the 2. graph go</Text>
+          
+        </View>
+      </View>
     </View>
-    // </View>
   );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -33,10 +55,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    //alignItems: 'center',
+    //justifyContent: 'center',
+    //padding:2,
   },
-  menubar:{
+  menuBar:{
     height: 60,
     minWidth: 150,
     maxWidth: Dimensions.get('window').width,
@@ -45,14 +68,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     //textColor:{color: '#ffffff'},
   },
-  buttonbar:{
-    height: 60,
+  buttonBar:{
+    height: 50,
     //minWidth: 150,
     maxWidth: Dimensions.get('window').width,
     backgroundColor: '#000055',
     justifyContent: 'center',
     alignItems: 'center',
     //textColor:{color: '#ffffff'},
+  },
+  graphBox:{
+    //margin: 2,
+    
+    width: Dimensions.get('window').width/2 -6,
+    height: 200,
+    //backgroundColor: '#eeeeee',
+    backgroundColor: '#ff0000',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    //padding: 30,
+
   },
 
 });
