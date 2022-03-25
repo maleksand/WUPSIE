@@ -7,73 +7,67 @@ import { StyleSheet, Text, View, Dimensions, Button, ScrollView } from 'react-na
 //import Indexed from './index.js';
 //import Menubar from './Menubar.js';
 import './App.css';
+import GraphPlaceholder from './graph_placeholder';
 
-export default class App extends React.Component{
-  render(){
-     <link rel='stylesheet' href='./node_modules/react-grid-layout/css/styles.css'></link>
-      //<link rel='stylesheet' href='.App.css'></link>
- 
-// export default function App() {
-  return (
-    // <div className='App'>
-    //   <Menubar></Menubar>
-    // </div>
-    
-    <ScrollView style={styles.scrollcontainer}>
-      {/* <div >
+export default class App extends React.Component {
+  render() {
+    <link rel='stylesheet' href='./node_modules/react-grid-layout/css/styles.css'></link>
+    //<link rel='stylesheet' href='.App.css'></link>
+
+    // export default function App() {
+    return (
+      // <div className='App'>
+      //   <Menubar></Menubar>
+      // </div>
+
+      <ScrollView style={styles.scrollcontainer}>
+        {/* <div >
         <Menubar />
       </div> */}
-      <View style={styles.menuBar}>
-         <Text style={{color: "white"}}>Static Menu bar</Text>
-      </View>
-      <View style={styles.buttonBar}>
+        <View style={styles.menuBar}>
+          <Text style={{ color: "white" }}>Static Menu bar</Text>
+        </View>
+        <View style={styles.buttonBar}>
 
-        <View style={styles.buttoncontainer} >
-          <Button title="help " color="orange" style={styles.button}> </Button>   
-          <Button title="me " color="pink" style={styles.button} > </Button>
-          <Button title="I'm" color="blue" style={styles.button}> </Button>
-          <Button title=" in" color="green" style={styles.button}> </Button>
-          <Button title=" react" color="yellow" style={styles.button}> </Button>
-          <Button title="prison" color="purple" style={styles.button}> </Button>
+          <View style={styles.buttoncontainer} >
+            <Button title="help " color="orange" style={styles.button}> </Button>
+            <Button title="me " color="pink" style={styles.button} > </Button>
+            <Button title="I'm" color="blue" style={styles.button}> </Button>
+            <Button title=" in" color="green" style={styles.button}> </Button>
+            <Button title=" react" color="yellow" style={styles.button}> </Button>
+            <Button title="prison" color="purple" style={styles.button}> </Button>
+          </View>
+
         </View>
 
-      </View>
-      <View styles={styles.container}>
-        <View>
-        <View styles={styles.graphbox}>
-          
-          <Text>This is where the graph go</Text>
-          
+
+        <View style={styles.graphbox}>
+
+          <GraphPlaceholder />
+
+
+
         </View>
-        <View styles={styles.graphbox}> 
-          
-          <Text>This is where the 2. graph go</Text>
-          
+        <View style={styles.graphbox}>
+
+          <GraphPlaceholder />
+
+
+
+        </View><View style={styles.graphbox}>
+
+          <GraphPlaceholder />
+
+
+
         </View>
-        <View styles={styles.graphbox}>
-          
-          <Text>This is not yet implemented</Text>
-          
-        </View>
-        <View styles={styles.graphbox}>
-          
-          <Text>To be continued</Text>
-          
-        </View>
-        <View styles={styles.graphbox}>
-          
-          <Text>Awaiting orders</Text>
-          
-        </View>
-        <View styles={styles.graphbox}>
-          
-          <Text>Unable to comply. Building in progress</Text>
-          
-        </View>
-        </View>
-      </View>
-    </ScrollView>
-  );
+        
+      </ScrollView>
+      
+
+
+
+    );
   }
 }
 
@@ -88,7 +82,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     //padding:2,
   },
-  menuBar:{
+  menuBar: {
     height: 60,
     //minWidth: 150,
     maxWidth: Dimensions.get('window').width,
@@ -97,24 +91,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     //textColor:{color: '#ffffff'},
   },
-  buttonBar:{
+  buttonBar: {
     height: 50,
     //minWidth: 150,
     maxWidth: Dimensions.get('window').width,
     backgroundColor: '#000055',
     justifyContent: 'space-evenly',
     alignItems: 'stretch',
-    padding:10,
+    padding: 10,
     //textColor:{color: '#ffffff'},
   },
-  graphbox:{
-    margin: 2,
-    width: Dimensions.get('window').width/2 -12,
+  graphbox: {
+    margin: 10,
+    width: Dimensions.get('window').width / 3 - 50,
     height: 300,
     //backgroundColor: '#eeeeee',
-    backgroundColor: '#33c1ff',
+    backgroundColor: '#000000',
     justifyContent: 'center',
-    alignItems: 'stretch',
+    alignItems: 'center',
+    
+    
     //padding: 30,
   },
   buttoncontainer: {
@@ -125,23 +121,23 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'stretch',
-    justifyContent:"space-evenly",
-    padding:10,
+    justifyContent: "space-evenly",
+    padding: 10,
   },
   space: {
-    justifyContent:"space-evenly",
+    justifyContent: "space-evenly",
     flex: 1,
     width: 20,
     height: 20,
   },
   button: {
-    justifyContent:"space-evenly",
+    justifyContent: "space-evenly",
     width: '40%',
     flex: 1,
     padding: 10
   },
-  scrollcontainer:{
+  scrollcontainer: {
     flex: 1,
   },
-  
+
 });
