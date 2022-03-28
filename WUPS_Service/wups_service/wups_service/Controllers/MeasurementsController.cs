@@ -12,9 +12,11 @@ namespace wups_service.Controllers
     {
         private readonly MeasurementRepository _measurementRepository;
 
-        public MeasurementsController()
+        private IConfiguration Config;
+        public MeasurementsController(IConfiguration config)
         {
-            _measurementRepository = new MeasurementRepository();
+            Config = config;
+            _measurementRepository = new MeasurementRepository(config);
         }
 
 

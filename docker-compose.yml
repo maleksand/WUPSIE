@@ -25,6 +25,8 @@ services:
       - "8080:80"
     volumes:
      - .:/volumes
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
 
   api-node:
     build: 
