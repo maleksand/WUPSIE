@@ -11,7 +11,7 @@ environments.development = {
 }
 
 environments.docker = {
-    httpPort: 3000,
+    httpPort: 80,
     baseAPIUrl: "http://api-service:80"
 }
 
