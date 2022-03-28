@@ -1,6 +1,7 @@
 import React from "react";
 // import Styles from '../App.css'
 import { StyleSheet, Text, View } from "react-native";
+import Beers from './Beers';
 
 
 
@@ -16,7 +17,7 @@ const Flex = () => {
 
             </View>
             <View style={{ flex: 2, backgroundColor: "green" }} >
-                <Text>This is where graph 2 will go</Text>
+                <Beers/>
             </View>
 
         </View>
