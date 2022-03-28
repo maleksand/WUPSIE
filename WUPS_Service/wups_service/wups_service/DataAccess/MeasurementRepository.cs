@@ -28,7 +28,7 @@ namespace wups_service.DataAccess
         {
             List<Measurement> measurements = new List<Measurement>();
         
-            var collection = GetMongoCollection("WUPS", "Water-measurements");
+            var collection = GetMongoCollection(_databaseName, "Water-measurements");
 
             measurements = collection.Find(m => m.Metadata.DeviceId == id).ToList();
             
@@ -45,7 +45,7 @@ namespace wups_service.DataAccess
         {
             List<Measurement> measurements = new List<Measurement>();
 
-            var collection = GetMongoCollection("WUPS", "Water-measurements");
+            var collection = GetMongoCollection(_databaseName, "Water-measurements");
 
             var stringDate = date;
             DateTime dateFilter = DateTime.Parse(stringDate, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
@@ -60,7 +60,7 @@ namespace wups_service.DataAccess
         {
             List<Measurement> measurements = new List<Measurement>();
 
-            var collection = GetMongoCollection("WUPS", "Water-measurements");
+            var collection = GetMongoCollection(_databaseName, "Water-measurements");
 
             var startString = startDate;
             var endString = endDate;
