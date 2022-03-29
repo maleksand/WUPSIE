@@ -1,4 +1,4 @@
-package com.wupsfrontend;
+package com.wupsprototype;
 
 import android.os.Build;
 import android.os.Bundle;

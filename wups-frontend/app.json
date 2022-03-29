@@ -1,11 +1,10 @@
 {
   "expo": {
-    "name": "wups-frontend",
-    "slug": "wups-frontend",
+    "name": "WupsPrototype",
+    "slug": "WupsPrototype",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
-  },
-  "name": "wups-frontend"
+  }
 }
