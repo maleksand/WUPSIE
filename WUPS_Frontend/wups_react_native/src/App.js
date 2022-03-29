@@ -4,7 +4,7 @@ import About from './Components/About';
 import Profile from './Components/Profile';
 import Beers from './Components/Beers';
 import BeerDetails from './Components/BeerDetails';
-import Flex from './Components/Flex'
+import FlexBackground from './Components/FlexBackground'
 import NotFound from './Components/NotFound';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {View, Text} from 'react-native';
@@ -30,7 +30,9 @@ function App() {
 
 const Home = () => (
   <View>
-    <Text><Flex/></Text>
+    <View>
+      <FlexBackground />
+    </View>
   </View>
   
 )
