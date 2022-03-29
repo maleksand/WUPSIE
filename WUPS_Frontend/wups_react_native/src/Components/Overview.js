@@ -6,7 +6,7 @@ import FlexBackGround from './FlexBackground';
 const Overview = () => {
     return(
         <View>
-            <FlexBackGround>
+            {/* <FlexBackGround> */}
                 <View>
                     <GraphBox />
                     <GraphBox />
@@ -15,7 +15,7 @@ const Overview = () => {
                     <GraphBox />
 
                 </View>
-            </FlexBackGround>
+            {/* </FlexBackGround> */}
         </View>
     );
 }
