@@ -48,7 +48,10 @@ router.get("/devices/:deviceId/measurements", async (req, res) => {
         console.log(e)
         jsondata = e
     }
-
+     /*
+      * TODO: If fetch returns error code, send that error code to end user also.
+      * It's not OK, just becuase this api can send json descriping 500 statuscode.
+      */
     res.json(jsondata)
 })
 
