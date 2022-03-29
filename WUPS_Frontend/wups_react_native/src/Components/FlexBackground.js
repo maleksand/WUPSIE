@@ -2,13 +2,14 @@ import React from "react";
 // import Styles from '../App.css'
 import { StyleSheet, Text, View } from "react-native";
 import Beers from './Beers';
+import Overview from "./Overview";
 
 
 
-const Flex = () => {
+const FlexBackGround = () => {
     return (
-        <View style={[styles.container, { flexDirection: "row" }]}>
-
+        <View style={[styles.container]}>
+{/* 
             <View style={{ flex: 2, backgroundColor: "red" }}>
                 <Text>This is where a graph will go</Text>
             </View>
@@ -18,7 +19,8 @@ const Flex = () => {
             </View>
             <View style={{ flex: 2, backgroundColor: "green" }} >
                 <Beers/>
-            </View>
+            </View> */}
+            {/* <Overview /> */}
 
         </View>
     )
@@ -26,7 +28,12 @@ const Flex = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
         padding: 20,
     },
 });
-export default Flex;
+export default FlexBackGround;

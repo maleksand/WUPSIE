@@ -4,10 +4,11 @@ import About from './Components/About';
 import Profile from './Components/Profile';
 import Beers from './Components/Beers';
 import BeerDetails from './Components/BeerDetails';
-import FlexBackground from './Components/FlexBackground'
+//import FlexBackground from './Components/FlexBackground';
 import NotFound from './Components/NotFound';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
+import Overview from './Components/Overview';
 
 
 function App() {
@@ -30,9 +31,13 @@ function App() {
 
 const Home = () => (
   <View>
-    <View>
-      <FlexBackground />
-    </View>
+    {/* <View>
+      <FlexBackground> */}
+        <View>
+          <Overview />
+        </View>
+      {/* </FlexBackground>
+    </View> */}
   </View>
   
 )
