@@ -7,12 +7,13 @@ import BeerDetails from './Components/BeerDetails';
 import Flex from './Components/Flex'
 import NotFound from './Components/NotFound';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {View, Text} from 'react-native';
 
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <View className="App">
         <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -22,15 +23,15 @@ function App() {
           <Route path="/beer/:id"element={<BeerDetails/>} />
           <Route path="*" element={<NotFound/>}/>
         </Routes>
-      </div>
+      </View>
     </Router>
   );
 }
 
 const Home = () => (
-  <div>
-    <h1><Flex/></h1>
-  </div>
+  <View>
+    <Text><Flex/></Text>
+  </View>
   
 )
 
