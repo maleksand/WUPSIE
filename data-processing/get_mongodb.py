@@ -7,7 +7,7 @@ def get_database(type=""):
     from pymongo import MongoClient
 
     try:
-        type = type if not type == "" else os.environ["PYTHON_ENV"]
+        type = type if type != "" else os.environ["PYTHON_ENV"]
     except KeyError as err:
         print(err)
 
