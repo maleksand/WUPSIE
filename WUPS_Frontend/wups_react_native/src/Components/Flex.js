@@ -1,6 +1,6 @@
 import React from "react";
 // import Styles from '../App.css'
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 // import Beers from './Beers';
 import styles from "../styles"
 
