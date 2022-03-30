@@ -1,7 +1,7 @@
 import React from "react";
-import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis,tickLabelComponent, VictoryLabel } from "victory";
+import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel } from "victory";
 import { reMap } from "./Mapping";
-
+import VictoryChartsStyle from "./VictoryChartsStyle";
 
 //Meter equals the value of meterType in jSon
 const Meter = "hot water"
@@ -23,12 +23,15 @@ const data = reMap(meterType);
 
 export default class GraphHotWater extends React.Component {
   render() {
+
+    
     return (
-      <VictoryChart>
+      <VictoryChart
+      theme={VictoryChartsStyle}
+            >
 
         <VictoryAxis
-        
-    tickLabelComponent={(
+            tickLabelComponent={(
       <VictoryLabel
       textAnchor={'start'}
           angle={45}
@@ -39,6 +42,15 @@ export default class GraphHotWater extends React.Component {
       fontSize: 5,
     }
   }}
+/>
+<VictoryAxis
+          dependentAxis
+          tickFormat={(x) => ((x * 1000) + ' liter')}
+          style={{
+            tickLabels: {
+              fontSize: 5,
+            }
+          }}
 />
         <VictoryBar
           data={data}
