@@ -6,7 +6,7 @@ import { reMap } from "./Mappings";
 
 //Meter equals the value of meterType in jSon
 const Meter = "cold water"
-//Meter equals the value of meterType in jSonnpm
+//Meter equals the value of meterType in jSon
 
 
 //replace jsonDate with the Fetch constant

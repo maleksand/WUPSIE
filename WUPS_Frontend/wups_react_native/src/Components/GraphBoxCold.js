@@ -19,8 +19,8 @@ const GraphBoxCold = () => {
 
 
                 {/* <GraphPlaceholder /> */}
-                {/* <GraphColdWater /> */}
-                <GraphHotWater />
+                <GraphColdWater />
+                {/* <GraphHotWater /> */}
             </Pressable>
         </View>
     );
