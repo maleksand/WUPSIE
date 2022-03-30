@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Dimensions, StyleSheet, Pressable, Alert } from 'react-native';
 import GraphPlaceholder from './GraphPlaceholder';
+import GraphColdWater from './ColdWater';
+import GraphHotWater from './HotWater';
 
 const GraphBox = () => {
     const onPressHandler = () => {
@@ -25,6 +27,8 @@ const GraphBox = () => {
                 > */}
 
                 <GraphPlaceholder />
+                {/* <GraphColdWater /> */}
+                {/* <GraphHotWater /> */}
             </Pressable>
         </View>
     );
