@@ -1,15 +1,17 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import GraphBox from './Graphbox';
+import GraphBoxCold from './GraphBoxCold';
+import GraphBoxHot from './GraphBoxHot';
 
 const Overview = () => {
     return(
     
         <View style={styles.container}>
             <GraphBox />
+            <GraphBoxCold />
             <GraphBox />
-            <GraphBox />
-            <GraphBox />
+            <GraphBoxHot />
             <GraphBox />
 
         </View>
