@@ -1,28 +1,9 @@
-from dateutil import parser as mongo_date_parser
-from . import get_mongodb
+from . import processor
 import pandas as pd
-from pymongo import collection
-
-
-db = get_mongodb.get_database("remote")
-
+from dateutil import parser as mongo_date_parser
 
 def insert_df(df: pd.DataFrame):
-    collection = recreate_collection()
-    
-    measurements = []
-    df.apply(lambda record: format_record_to_dict(record, measurements), axis=1)
-    
-    collection.insert_many(measurements)
-    
-
-def recreate_collection() -> collection.Collection:
-    if "Water-measurements" in db.list_collection_names():
-        db.drop_collection("Water-measurements")
-    
-    db.create_collection("Water-measurements")
-    return db.get_collection("Water-measurements")
-
+    processor.insert_df(df, "Water-measurements", format_record_to_dict)
 
 def format_record_to_dict(record: pd.Series, list: list):
     device_id = record["deviceID"]

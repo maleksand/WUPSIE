@@ -10,3 +10,11 @@ def format_measurements_df(df):
     df['value'] = pd.to_numeric(df['value']) # converts values from string to float64
     df['measurement'] = pd.to_datetime(df['measurement']) # parse string to datetime
     df = df.sort_values(by="measurement") # sort by date
+    
+def get_households_df():
+    df = pd.read_csv(f"csv-data/household.csv")
+    return df
+
+def get_devices_df():
+    df = pd.read_csv(f"csv-data/device.csv")
+    return df
