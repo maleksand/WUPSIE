@@ -10,21 +10,12 @@ const GraphBoxHot = () => {
     }
     return (
         <View style={styles.graphboxHot}>
-            <Pressable 
-            style={({pressed}) => [
-                {opacity: pressed? '30%':'100%'}
-            ]}
-            onPress={onPressHandler}
+            <Pressable
+                style={({ pressed }) => [
+                    { opacity: pressed ? '30%' : '100%' }
+                ]}
+                onPress={onPressHandler}
             >
-            {/* <Pressable style={({pressed}) => {styles.press}} onPress={onPressHandler}> */}
-            {/* <Pressable
-                style={({ press }) => [
-                    { opacity: press ? '30%' : '100%' },
-                    styles.test
-            ]}
-                
-                onPress ={onPressHandler}
-                > */}
 
                 {/* <GraphPlaceholder /> */}
                 {/* <GraphColdWater /> */}
@@ -38,15 +29,15 @@ export default GraphBoxHot;
 
 const styles = StyleSheet.create({
     graphboxHot: {
+        display: 'flex',
         margin: 10,
         width: Dimensions.get('window').width / 3 - 50,
-        height: 300,
-        backgroundColor: '#eeeeee',
+        maxHeight: Dimensions.get('window').height,
+        //height: 300,
+        backgroundColor: '#aaaaaa',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 30,
+        padding: 10,
     },
-    // test: {
-    //     opacity: '100%'
-    // },
+
 })

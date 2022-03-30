@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Dimensions, StyleSheet, Pressable, Alert } from 'react-native';
 //import GraphPlaceholder from './GraphPlaceholder';
 import GraphColdWater from './ColdWater';
-import GraphHotWater from './HotWater';
+//import GraphHotWater from './HotWater';
 
 const GraphBoxCold = () => {
     const onPressHandler = () => {
@@ -10,13 +10,12 @@ const GraphBoxCold = () => {
     }
     return (
         <View style={styles.graphboxCold}>
-            <Pressable 
+            <Pressable
                 style={({ pressed }) => [
                     { opacity: pressed ? '30%' : '100%' }
                 ]}
                 onPress={onPressHandler}
             >
-
 
                 {/* <GraphPlaceholder /> */}
                 <GraphColdWater />
@@ -31,14 +30,13 @@ export default GraphBoxCold;
 const styles = StyleSheet.create({
     graphboxCold: {
         margin: 10,
+        display: 'flex',
         width: Dimensions.get('window').width / 3 - 50,
-        height: 300,
+        maxHeight: Dimensions.get('window').height,
+        //height: 300,
         backgroundColor: '#c8d7ff',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 30,
+        padding: 10,
     },
-    // test: {
-    //     opacity: '100%'
-    // },
 })
