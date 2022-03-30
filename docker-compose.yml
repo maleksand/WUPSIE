@@ -5,8 +5,6 @@ services:
       dockerfile: WUPS_Service/wups_service/wups_service/Dockerfile
     ports:
       - "8080:80"
-    environment:
-      ASPNETCORE_ENVIRONMENT: DockerRemoteDatabase
 
   api-node:
     build: 

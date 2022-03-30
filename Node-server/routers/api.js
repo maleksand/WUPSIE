@@ -43,10 +43,12 @@ router.get("/devices/:deviceId/measurements", async (req, res) => {
 
     try {
         const response = await fetch(url, options)
+        res.statusCode = response.status
         jsondata = await response.json()
     } catch (e) {
         console.log(e)
         jsondata = e
+        res.statusCode = 500
     }
      /*
       * TODO: If fetch returns error code, send that error code to end user also.
