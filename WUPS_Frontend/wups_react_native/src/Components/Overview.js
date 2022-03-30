@@ -21,10 +21,11 @@ export default Overview;
 
 const styles = StyleSheet.create({
     container: {
+        display: 'flex',
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'center',
+        //justifyContent: 'center',
         //backgroundColor: '#eeeeee',
         padding: 20,
 

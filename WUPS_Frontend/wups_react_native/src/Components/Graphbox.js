@@ -1,12 +1,31 @@
 import React from 'react';
-import {View, Dimensions, StyleSheet} from 'react-native';
+import { View, Dimensions, StyleSheet, Pressable, Alert } from 'react-native';
 import GraphPlaceholder from './GraphPlaceholder';
 
 const GraphBox = () => {
-    return(
+    const onPressHandler = () => {
+        window.alert('You should have been routed, but it isn\'t implemented yet')
+    }
+    return (
         <View style={styles.graphbox}>
-            <GraphPlaceholder />
-            
+            <Pressable 
+            style={({pressed}) => [
+                {opacity: pressed? '30%':'100%'}
+            ]}
+            onPress={onPressHandler}
+            >
+            {/* <Pressable style={({pressed}) => {styles.press}} onPress={onPressHandler}> */}
+            {/* <Pressable
+                style={({ press }) => [
+                    { opacity: press ? '30%' : '100%' },
+                    styles.test
+            ]}
+                
+                onPress ={onPressHandler}
+                > */}
+
+                <GraphPlaceholder />
+            </Pressable>
         </View>
     );
 }
@@ -22,5 +41,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 30,
-      },
+    },
+    // test: {
+    //     opacity: '100%'
+    // },
 })
