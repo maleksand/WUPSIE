@@ -8,7 +8,7 @@ import Overview from "./Overview";
 
 const FlexBackGround = () => {
     return (
-        <View style={[styles.container]}>
+        <View style={styles.container}>
 {/* 
             <View style={{ flex: 2, backgroundColor: "red" }}>
                 <Text>This is where a graph will go</Text>

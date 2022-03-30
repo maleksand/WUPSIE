@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Dimensions, StyleSheet, Text} from 'react-native';
+import {View, Dimensions, StyleSheet} from 'react-native';
 import GraphPlaceholder from './GraphPlaceholder';
 
 const GraphBox = () => {
@@ -7,7 +7,6 @@ const GraphBox = () => {
         <View style={styles.graphbox}>
             <GraphPlaceholder />
             
-            {/* <Text>Yo, this is wacked</Text> */}
         </View>
     );
 }
