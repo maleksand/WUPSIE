@@ -1,5 +1,4 @@
 FROM python:3.10.2
-ENV PYTHON_ENV=docker
 
 WORKDIR /app
 
