@@ -26,9 +26,9 @@ const GraphBox = () => {
                 onPress ={onPressHandler}
                 > */}
 
-                <GraphPlaceholder />
+                {/* <GraphPlaceholder /> */}
                 {/* <GraphColdWater /> */}
-                {/* <GraphHotWater /> */}
+                <GraphHotWater />
             </Pressable>
         </View>
     );
