@@ -1,5 +1,5 @@
 import './App.css';
-import Nav from './Components/Nav';
+import Header from './Components/Header/Header';
 import About from './Components/About';
 import Profile from './Components/Profile';
 import Beers from './Components/Beers';
@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <View className="App">
-        <Nav />
+        <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
