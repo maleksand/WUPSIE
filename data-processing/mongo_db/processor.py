@@ -8,11 +8,10 @@ db = get_mongodb.get_database()
 
 
 def insert_df(df: pd.DataFrame, collectionName: str, formatter: Callable[[pd.Series, list], None]):
-    collection = recreate_collection(collectionName)
-    
     items = []
     df.apply(lambda record: formatter(record, items), axis=1)
     
+    collection = recreate_collection(collectionName)
     collection.insert_many(items)
     
 

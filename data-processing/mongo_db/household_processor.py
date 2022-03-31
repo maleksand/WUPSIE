@@ -9,10 +9,12 @@ def insert_df(df: pd.DataFrame):
 def format_record_to_dict(record: pd.Series, list: list):
     household_id = record["householdID"]
     user_id = record["userID"]
+    devices = record["devices"]
     
     
     household = {
         "_id": household_id,
-        "user_id": user_id
+        "user_id": user_id,
+        "devices": devices
     }
     list.append(household)
