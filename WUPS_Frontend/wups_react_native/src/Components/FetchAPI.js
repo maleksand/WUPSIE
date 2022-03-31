@@ -13,6 +13,4 @@ return data
 
 }
 
-
-
 ManBeast().then(data => {console.log(data)})
