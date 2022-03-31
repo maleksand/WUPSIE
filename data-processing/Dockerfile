@@ -8,4 +8,4 @@ RUN pip3 install -r requirements.txt
 
 COPY ./data-processing/ .
 
-CMD [ "python3", "-u", "format_csv.py"]
+CMD [ "python3", "-u", "-m", "main"]
