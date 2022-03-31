@@ -26,24 +26,24 @@ export default class GraphHotWater extends React.Component {
   render() {
     return (
       <VictoryChart
-      theme={VictoryTheme.material}
+        theme={VictoryTheme.material}
       >
 
-<VictoryAxis
-            tickLabelComponent={(
-      <VictoryLabel
-      textAnchor={'start'}
-          angle={45}
-      />
-  )}
-  style={{
-    tickLabels: {
-      fontSize: 5,
-    }
-  }}
-/>
+        <VictoryAxis
+          tickLabelComponent={(
+            <VictoryLabel
+              textAnchor={'start'}
+              angle={45}
+            />
+          )}
+          style={{
+            tickLabels: {
+              fontSize: 5,
+            }
+          }}
+        />
 
-<VictoryAxis
+        <VictoryAxis
           dependentAxis
           tickFormat={(x) => (x)}
           style={{
@@ -51,14 +51,14 @@ export default class GraphHotWater extends React.Component {
               fontSize: 5,
             }
           }}
-/>
+        />
         <VictoryBar
           data={data}
           x="date"
           y="measurement"
         />
       </VictoryChart>
-      
+
     )
   }
 }

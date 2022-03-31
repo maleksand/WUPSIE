@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Dimensions, StyleSheet, Pressable, Alert } from 'react-native';
-import GraphPlaceholder from './GraphPlaceholder';
+//import GraphPlaceholder from './GraphPlaceholder';
 import GraphColdWater from './ColdWater';
-import GraphHotWater from './HotWater';
+//import GraphHotWater from './HotWater';
 
-const GraphBox = () => {
+const GraphBoxCold = () => {
     const onPressHandler = () => {
         window.alert('You should have been routed, but it isn\'t implemented yet')
     }
     return (
-        <View style={styles.graphbox}>
+        <View style={styles.graphboxCold}>
             <Pressable
                 style={({ pressed }) => [
                     { opacity: pressed ? '30%' : '100%' }
@@ -17,26 +17,26 @@ const GraphBox = () => {
                 onPress={onPressHandler}
             >
 
-                <GraphPlaceholder />
-                {/* <GraphColdWater /> */}
+                {/* <GraphPlaceholder /> */}
+                <GraphColdWater />
                 {/* <GraphHotWater /> */}
             </Pressable>
         </View>
     );
 }
 
-export default GraphBox;
+export default GraphBoxCold;
 
 const styles = StyleSheet.create({
-    graphbox: {
+    graphboxCold: {
         margin: 10,
+        display: 'flex',
         width: Dimensions.get('window').width / 3 - 50,
         maxHeight: Dimensions.get('window').height,
         //height: 300,
-        backgroundColor: '#eeeeee',
+        backgroundColor: '#c8d7ff',
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
     },
-
 })

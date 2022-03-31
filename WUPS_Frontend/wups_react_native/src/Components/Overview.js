@@ -1,15 +1,17 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import GraphBox from './Graphbox';
+import GraphBoxCold from './GraphBoxCold';
+import GraphBoxHot from './GraphBoxHot';
 
 const Overview = () => {
-    return(
-    
+    return (
+
         <View style={styles.container}>
             <GraphBox />
+            <GraphBoxCold />
             <GraphBox />
-            <GraphBox />
-            <GraphBox />
+            <GraphBoxHot />
             <GraphBox />
 
         </View>
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         //justifyContent: 'center',
         //backgroundColor: '#eeeeee',
-        padding: 20,
+        padding: 10,
 
     },
 });
