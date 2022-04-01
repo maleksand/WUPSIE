@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Dimensions, StyleSheet, Pressable, Alert } from 'react-native';
-//import GraphPlaceholder from './GraphPlaceholder';
-//import GraphColdWater from './ColdWater';
+import { View, Dimensions, StyleSheet, Pressable } from 'react-native';
 import GraphHotWater from './HotWater';
+import PickDate from './PickDate';
 
 const GraphBoxHot = () => {
     const onPressHandler = () => {
@@ -10,15 +9,13 @@ const GraphBoxHot = () => {
     }
     return (
         <View style={styles.graphboxHot}>
+            <PickDate />
             <Pressable
                 style={({ pressed }) => [
                     { opacity: pressed ? '30%' : '100%' }
                 ]}
                 onPress={onPressHandler}
             >
-
-                {/* <GraphPlaceholder /> */}
-                {/* <GraphColdWater /> */}
                 <GraphHotWater />
             </Pressable>
         </View>
@@ -31,13 +28,13 @@ const styles = StyleSheet.create({
     graphboxHot: {
         display: 'flex',
         margin: 10,
-        width: Dimensions.get('window').width / 3 - 50,
+        width: Dimensions.get('window').width / 2 - 50,
         maxHeight: Dimensions.get('window').height,
-        //height: 300,
-        backgroundColor: '#aaaaaa',
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
+        borderColor: '#e5d9c5',
+        borderWidth: 1,
     },
 
 })

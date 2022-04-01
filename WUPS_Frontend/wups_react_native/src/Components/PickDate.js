@@ -1,27 +1,37 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, StyleSheet, TextInput, Pressable, Button, Text, Dimensions } from 'react-native';
 import DateSubmitButton from './DateSubmitButton';
 
-const PickDate = () => {
-  const onPressHandler = () => {
-    window.alert('Buttons must do something')
-  }
 
+const PickDate = () => {
+  
+  const [startDate, setStartDate] = useState('')
+  const [endDate, setEndDate] = useState('')
+
+  const onPressHandler = () => {
+    window.alert('Date span selected: ' + startDate + ' ' + endDate)
+    //console.log(startDate)
+    //console.log(endDate)
+  }
+  
   return (
 
     <View style={styles.dateContainer}>
+      <Text style={styles.text}> Please select a date range from</Text>
 
       <TextInput
         style={styles.input}
-        // onChangeText={onChangeNumber}
-        // value={getDate()}
-        placeholder="Pick a Start date..."
+        onChangeText={newDate => setStartDate(newDate)}
+        name="startDate"
+        placeholder="Set a Start date..."
       />
+      <Text style={styles.text}>to</Text>
       <TextInput
+        onChangeText={newDate => setEndDate(newDate)}
         style={styles.input}
-        // onChangeText={onChangeNumber}
-        // value={getDate()}
-        placeholder="Pick an End date..."
+        name="endDate"
+
+        placeholder="Set an End date..."
       />
       <View>
         <Pressable
@@ -39,7 +49,7 @@ const PickDate = () => {
 
 const styles = StyleSheet.create({
   input: {
-    height: 30,
+    height: 20,
     margin: 10,
     borderWidth: 1,
     padding: 10,
@@ -49,6 +59,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     maxWidth: Dimensions.get('window').width,
+    alignItems: 'stretch',
+  },
+  text:{
+    color: 'black',
+    margin: 10,
+    
   },
 
 });

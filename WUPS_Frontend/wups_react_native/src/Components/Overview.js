@@ -8,14 +8,14 @@ const Overview = () => {
     return (
 
         <View style={styles.container}>
-            <GraphBox />
+            {/* <GraphBox /> */}
             <GraphBoxCold />
-            <GraphBox />
+            {/* <GraphBox /> */}
             <GraphBoxHot />
-            <GraphBox />
-
+            {/* <GraphBox /> */}
+            <GraphBoxHot />
+            <GraphBoxCold />
         </View>
-
     );
 }
 
@@ -27,8 +27,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        //justifyContent: 'center',
-        //backgroundColor: '#eeeeee',
+        justifyContent: 'space-evenly',
         padding: 10,
 
     },

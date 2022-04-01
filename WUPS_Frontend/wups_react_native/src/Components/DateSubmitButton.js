@@ -1,14 +1,12 @@
 import React from "react";
-import { View, StyleSheet, TextInput, Pressable, Button, Text, Dimensions } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 const DateSubmitButton = () => {
 
     return (
 
         <View style={styles.button}>
-
             <Text>Submit dates</Text>
-
         </View>
 
     );
@@ -17,8 +15,7 @@ const DateSubmitButton = () => {
 const styles = StyleSheet.create({
 
     button: {
-        height: 30,
-        //padding: 5,
+        height: 21,
         margin: 10,
         width: 100,
         alignItems: "center",
@@ -26,7 +23,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#aaaaaa',
         borderColor: '#000000',
         borderWidth: 1,
-
     },
 
 });
