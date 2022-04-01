@@ -22,15 +22,12 @@ const PickDate = () => {
       <TextInput
         style={styles.input}
         onChangeText={newDate => setStartDate(newDate)}
-        name="startDate"
         placeholder="Set a Start date..."
       />
       <Text style={styles.text}>to</Text>
       <TextInput
         onChangeText={newDate => setEndDate(newDate)}
         style={styles.input}
-        name="endDate"
-
         placeholder="Set an End date..."
       />
       <View>
