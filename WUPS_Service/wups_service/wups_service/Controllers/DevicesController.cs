@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using wups_service.BusinessLogic;
 using wups_service.DataAccess;
 using wups_service.Model;
 
@@ -10,28 +11,29 @@ namespace wups_service.Controllers
     [EnableCors("_myAllowSpecificOrigins")]
     public class DevicesController : Controller
     {
-        private readonly WaterMeasurementRepository _measurementRepository;
+        private readonly Broker _broker;
 
         private IConfiguration Config;
         public DevicesController(IConfiguration config)
         {
             Config = config;
-            _measurementRepository = new WaterMeasurementRepository(config);
+            _broker = new Broker(config);
         }
 
 
         /// <summary>
         /// Returns measurements
         /// </summary>
-        /// <param name="id">DeviceId</param>
+        /// <param name="id">Device ID</param>
+        /// <param name="type">Device type</param>
         /// <param name="startDate">(optional) Start date - YYYY-MM-DDT00:00:00</param>
         /// <param name="endDate">(optional) End date - YYYY-MM-DDT00:00:00</param>
         /// <returns>A json file with the timeseries data</returns>
         [HttpGet]
         [Route("{id}/measurements")]
-        public ActionResult<List<Measurement>> Get(string id, string? startDate, string? endDate)
+        public ActionResult<string> Get(string id, string type, string? startDate, string? endDate)
         {
-            List<Measurement> measurements = new List<Measurement>();
+            string measurements;
             try
             {
                 if (startDate != null && startDate.Length > 0)
@@ -39,18 +41,18 @@ namespace wups_service.Controllers
                     if (endDate != null && endDate.Length > 0)
                     {
                         // if both startDate and endDate is defined
-                        measurements = _measurementRepository.GetByDateRange(id, startDate, endDate);
+                        measurements = _broker.GetByDateRange(id, startDate, endDate, type);
                     }
                     else
                     {
                         // if only startdate is defined
-                        measurements = _measurementRepository.GetByDate(id, startDate);
+                        measurements = _broker.GetByDate(id, startDate, type);
                     }
                 }
                 else
                 {
                     // if startDate and endDate is nor defined
-                    measurements = _measurementRepository.Get(id);
+                    measurements = _broker.Get(id, type);
                 }
 
                 return decideResponse(measurements);
@@ -61,16 +63,16 @@ namespace wups_service.Controllers
             }
 
         }
-        private ActionResult<List<Measurement>> decideResponse(List<Measurement> measurements)
+        private ActionResult<string> decideResponse(string measurements)
         {
             //If the mongo driver does not find any it returns an empty JSON doc
-            if (measurements.Count < 1)
+            if (string.IsNullOrEmpty(measurements))
             {
                 return NotFound();
             }
             else
             {
-                return Json(measurements);
+                return Content(measurements, "application/json");
             }
         }
     }

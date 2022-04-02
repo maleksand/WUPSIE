@@ -1,10 +1,11 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Text.Json;
 
 namespace wups_service.Model
 {
     [BsonIgnoreExtraElements]
-    public class Measurement
+    public class WaterMeasurement
     {
         [BsonElement("metadata")]
         public MeasuremnetMetadata Metadata { get; set; }
@@ -14,7 +15,6 @@ namespace wups_service.Model
 
         [BsonElement("measurement")]
         public double Value { get; set; }
-
     }
 
     public class MeasuremnetMetadata

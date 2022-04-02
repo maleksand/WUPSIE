@@ -7,7 +7,7 @@ using wups_service.Model;
 
 namespace wups_service.DataAccess
 {
-    public class WaterMeasurementRepository : IRepository<List<Measurement>>
+    public class WaterMeasurementRepository : IMeasurementRepository<List<WaterMeasurement>>
     {
         private string _connectionString;
         private string _databaseName;
@@ -24,9 +24,9 @@ namespace wups_service.DataAccess
         /// </summary>
         /// <param name="id"> the device id</param>
         /// <returns>historical data related to the id as a json document. Null if nothing was found</returns>
-        public List<Measurement> Get(string id)
+        public List<WaterMeasurement> Get(string id)
         {
-            List<Measurement> measurements = new List<Measurement>();
+            List<WaterMeasurement> measurements = new List<WaterMeasurement>();
         
             var collection = GetMongoCollection(_databaseName, "Water-measurements");
 
@@ -41,9 +41,9 @@ namespace wups_service.DataAccess
         /// <param name="id">DevicdeId</param>
         /// <param name="date">starting date point YYYY-MM-DDT00:00:00</param>
         /// <returns> history of the date + 1 day </returns>
-        public List<Measurement> GetByDate(string id, string date)
+        public List<WaterMeasurement> GetByDate(string id, string date)
         {
-            List<Measurement> measurements = new List<Measurement>();
+            List<WaterMeasurement> measurements = new List<WaterMeasurement>();
 
             var collection = GetMongoCollection(_databaseName, "Water-measurements");
 
@@ -56,9 +56,9 @@ namespace wups_service.DataAccess
 
         }
 
-        public List<Measurement> GetByDateRange(string id, string startDate, string endDate)
+        public List<WaterMeasurement> GetByDateRange(string id, string startDate, string endDate)
         {
-            List<Measurement> measurements = new List<Measurement>();
+            List<WaterMeasurement> measurements = new List<WaterMeasurement>();
 
             var collection = GetMongoCollection(_databaseName, "Water-measurements");
 
@@ -79,7 +79,7 @@ namespace wups_service.DataAccess
         /// <param name="databaseName"></param>
         /// <param name="collectionName"></param>
         /// <returns></returns>
-        private IMongoCollection<Measurement> GetMongoCollection(string databaseName, string collectionName)
+        private IMongoCollection<WaterMeasurement> GetMongoCollection(string databaseName, string collectionName)
         {
             //TODO Get the connectionstring into appsettings.json
 
@@ -88,7 +88,7 @@ namespace wups_service.DataAccess
             MongoClient dbClient = new(mongoUrl);
 
             var database = dbClient.GetDatabase(databaseName);
-            var collection = database.GetCollection<Measurement>(collectionName);
+            var collection = database.GetCollection<WaterMeasurement>(collectionName);
 
             return collection;
         }
