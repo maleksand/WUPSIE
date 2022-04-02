@@ -7,12 +7,12 @@ using wups_service.Model;
 
 namespace wups_service.DataAccess
 {
-    public class MeasurementRepository : IRepository<List<Measurement>>
+    public class WaterMeasurementRepository : IRepository<List<Measurement>>
     {
         private string _connectionString;
         private string _databaseName;
 
-        public MeasurementRepository(IConfiguration config)
+        public WaterMeasurementRepository(IConfiguration config)
         {
 
             _connectionString = config.GetSection("MongoConnection")["ConnectionString"];

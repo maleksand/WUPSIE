@@ -8,15 +8,15 @@ namespace wups_service.Controllers
     [ApiController]
     [Route("[controller]")]
     [EnableCors("_myAllowSpecificOrigins")]
-    public class MeasurementsController : Controller
+    public class DevicesController : Controller
     {
-        private readonly MeasurementRepository _measurementRepository;
+        private readonly WaterMeasurementRepository _measurementRepository;
 
         private IConfiguration Config;
-        public MeasurementsController(IConfiguration config)
+        public DevicesController(IConfiguration config)
         {
             Config = config;
-            _measurementRepository = new MeasurementRepository(config);
+            _measurementRepository = new WaterMeasurementRepository(config);
         }
 
 
@@ -28,7 +28,7 @@ namespace wups_service.Controllers
         /// <param name="endDate">(optional) End date - YYYY-MM-DDT00:00:00</param>
         /// <returns>A json file with the timeseries data</returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}/measurements")]
         public ActionResult<List<Measurement>> Get(string id, string? startDate, string? endDate)
         {
             List<Measurement> measurements = new List<Measurement>();
