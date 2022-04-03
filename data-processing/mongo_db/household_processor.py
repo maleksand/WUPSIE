@@ -14,7 +14,7 @@ def format_record_to_dict(record: pd.Series, list: list):
     
     household = {
         "_id": household_id,
-        "user_id": user_id,
+        "userId": user_id,
         "devices": devices
     }
     list.append(household)

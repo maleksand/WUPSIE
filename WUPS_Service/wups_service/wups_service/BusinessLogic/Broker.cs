@@ -10,27 +10,59 @@ namespace wups_service.BusinessLogic
             _configuration = configuration;
         }
 
-        internal string Get(string id, ManagerTypes type)
+        public string GetOne(string id, ManagerTypes managerType)
         {
-            return ChooseManager(type).Get(id);
+            string result;
+            try
+            {
+                result = ChooseManager(managerType).GetOne(id); // If you can't find a normal manager...
+            }
+            catch (TypeAccessException)
+            {
+                result = ChoosemeasurementManager(managerType).GetOne(id); // ...try looking for a measurement manager.
+            }
+            return result;
         }
 
-        internal string GetByDate(string id, string startDate, ManagerTypes type)
+        public string GetMany(string id, ManagerTypes managerType)
         {
-            return ChooseManager(type).GetByDate(id, startDate);
+            string result;
+            try
+            {
+                result = ChooseManager(managerType).GetMany(id);
+            } catch (TypeAccessException)
+            {
+                result = ChoosemeasurementManager(managerType).GetMany(id);
+            }
+            return result;
         }
 
-        internal string GetByDateRange(string id, string startDate, string endDate, ManagerTypes type)
+        public string GetByDate(string id, string startDate, ManagerTypes managerType)
         {
-            return ChooseManager(type).GetByDateRange(id, startDate, endDate);
+            return ChoosemeasurementManager(managerType).GetByDate(id, startDate);
         }
 
-        private IMeasurementManager ChooseManager(ManagerTypes type)
+        public string GetByDateRange(string id, string startDate, string endDate, ManagerTypes managerType)
         {
-            IMeasurementManager manager = type switch
+            return ChoosemeasurementManager(managerType).GetByDateRange(id, startDate, endDate);
+        }
+        
+        private IManager ChooseManager(ManagerTypes managerType)
+        {
+            IManager manager = managerType switch
+            {
+                ManagerTypes.Device => new DeviceManager(_configuration),
+                _ => throw new TypeAccessException("No manager to serve following managerType: " + managerType),
+            };
+            return manager;
+        }
+
+        private IMeasurementManager ChoosemeasurementManager(ManagerTypes managerType)
+        {
+            IMeasurementManager manager = managerType switch
             {
                 ManagerTypes.WaterMeasurement => new WaterMeasurementManager(_configuration),
-                _ => throw new ArgumentException("No manager to serve following type: " + type),
+                _ => throw new TypeAccessException("No mesurement manager to serve following managerType: " + managerType),
             };
             return manager;
         }

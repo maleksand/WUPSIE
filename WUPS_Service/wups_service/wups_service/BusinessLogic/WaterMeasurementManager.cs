@@ -12,9 +12,15 @@ namespace wups_service.BusinessLogic
             _waterMeasurementRepository = new WaterMeasurementRepository(configuration);
         }
 
-        public string Get(string id)
+        public string GetOne(string id)
         {
-            List<WaterMeasurement> waterMeasurements = _waterMeasurementRepository.Get(id);
+            List<WaterMeasurement> waterMeasurements = _waterMeasurementRepository.GetOne(id);
+            return JsonSerializer.Serialize(waterMeasurements);
+        }
+
+        public string GetMany(string id)
+        {
+            List<WaterMeasurement> waterMeasurements = _waterMeasurementRepository.GetMany(id);
             return JsonSerializer.Serialize(waterMeasurements);
         }
 

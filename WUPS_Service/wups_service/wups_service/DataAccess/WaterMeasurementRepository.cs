@@ -1,7 +1,4 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.IO;
-using MongoDB.Driver;
-using MongoDB.Driver.Linq;
+﻿using MongoDB.Driver;
 using System.Globalization;
 using wups_service.Model;
 
@@ -9,58 +6,68 @@ namespace wups_service.DataAccess
 {
     public class WaterMeasurementRepository : IMeasurementRepository<List<WaterMeasurement>>
     {
-        private string _connectionString;
-        private string _databaseName;
+        private Database _database;
 
         public WaterMeasurementRepository(IConfiguration config)
         {
 
-            _connectionString = config.GetSection("MongoConnection")["ConnectionString"];
-            _databaseName = config.GetSection("MongoConnection")["Database"];
+            _database = new Database(config);
         }
         
+        public List<WaterMeasurement> GetOne(string measurementId)
+        {
+            List<WaterMeasurement> measurements = new List<WaterMeasurement>();
+
+            var collection = _database.GetMongoCollection<WaterMeasurement>("Water-measurements");
+
+            measurements = collection.Find(m => m.Id == measurementId).ToList();
+
+            return measurements;
+        }
+
         /// <summary>
         /// Get the full historical Measurement data
         /// </summary>
-        /// <param name="id"> the device id</param>
+        /// <param name="deviceId"> the device id</param>
         /// <returns>historical data related to the id as a json document. Null if nothing was found</returns>
-        public List<WaterMeasurement> Get(string id)
+        public List<WaterMeasurement> GetMany(string deviceId)
         {
             List<WaterMeasurement> measurements = new List<WaterMeasurement>();
         
-            var collection = GetMongoCollection(_databaseName, "Water-measurements");
+            var collection = _database.GetMongoCollection<WaterMeasurement>("Water-measurements");
 
-            measurements = collection.Find(m => m.Metadata.DeviceId == id).ToList();
+            measurements = collection.Find(m => m.Metadata.DeviceId == deviceId).ToList();
             
             return measurements;
 
         }
+
         /// <summary>
         /// Find the Measurements for the the wanted date
         /// </summary>
-        /// <param name="id">DevicdeId</param>
+        /// <param name="deviceId">DevicdeId</param>
         /// <param name="date">starting date point YYYY-MM-DDT00:00:00</param>
         /// <returns> history of the date + 1 day </returns>
-        public List<WaterMeasurement> GetByDate(string id, string date)
+        public List<WaterMeasurement> GetByDate(string deviceId, string date)
         {
             List<WaterMeasurement> measurements = new List<WaterMeasurement>();
 
-            var collection = GetMongoCollection(_databaseName, "Water-measurements");
+            var collection = _database.GetMongoCollection<WaterMeasurement>("Water-measurements");
 
             var stringDate = date;
             DateTime dateFilter = DateTime.Parse(stringDate, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
 
-            measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp >= dateFilter && m.Timestamp < dateFilter.AddDays(1)).ToList();
+            measurements = collection.Find(m => m.Metadata.DeviceId == deviceId && m.Timestamp >= dateFilter && m.Timestamp < dateFilter.AddDays(1)).ToList();
 
             return measurements;
 
         }
 
-        public List<WaterMeasurement> GetByDateRange(string id, string startDate, string endDate)
+        public List<WaterMeasurement> GetByDateRange(string deviceId, string startDate, string endDate)
         {
             List<WaterMeasurement> measurements = new List<WaterMeasurement>();
 
-            var collection = GetMongoCollection(_databaseName, "Water-measurements");
+            var collection = _database.GetMongoCollection<WaterMeasurement>("Water-measurements");
 
             var startString = startDate;
             var endString = endDate;
@@ -69,30 +76,9 @@ namespace wups_service.DataAccess
             DateTime startFilter = DateTime.Parse(startString, CultureInfo.InvariantCulture,DateTimeStyles.AssumeUniversal);
             DateTime endFilter = DateTime.Parse(endString, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
                 
-            measurements = collection.Find(m => m.Metadata.DeviceId == id && m.Timestamp >= startFilter && m.Timestamp < endFilter).ToList();
+            measurements = collection.Find(m => m.Metadata.DeviceId == deviceId && m.Timestamp >= startFilter && m.Timestamp < endFilter).ToList();
 
             return measurements;
         }
-        /// <summary>
-        /// Creating a connection to the mongoDB
-        /// </summary>
-        /// <param name="databaseName"></param>
-        /// <param name="collectionName"></param>
-        /// <returns></returns>
-        private IMongoCollection<WaterMeasurement> GetMongoCollection(string databaseName, string collectionName)
-        {
-            //TODO Get the connectionstring into appsettings.json
-
-            MongoUrl mongoUrl = new(_connectionString);
-
-            MongoClient dbClient = new(mongoUrl);
-
-            var database = dbClient.GetDatabase(databaseName);
-            var collection = database.GetCollection<WaterMeasurement>(collectionName);
-
-            return collection;
-        }
-
-
     }
 }

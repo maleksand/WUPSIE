@@ -1,14 +1,15 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System.Text.Json;
 
 namespace wups_service.Model
 {
-    [BsonIgnoreExtraElements]
     public class WaterMeasurement
     {
+        [BsonRepresentation(BsonType.ObjectId)] // https://mongodb.github.io/mongo-csharp-driver/2.10/reference/bson/mapping/#objectids
+        public string Id { get; set; }
+
         [BsonElement("metadata")]
-        public MeasuremnetMetadata Metadata { get; set; }
+        public WaterMeasuremnetMetadata Metadata { get; set; }
 
         [BsonElement("timestamp")]
         public DateTime Timestamp { get; set; }
@@ -17,7 +18,7 @@ namespace wups_service.Model
         public double Value { get; set; }
     }
 
-    public class MeasuremnetMetadata
+    public class WaterMeasuremnetMetadata
     {
         [BsonElement("deviceId")]
         public string DeviceId { get; set; }
