@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using wups_service.BusinessLogic;
 
 namespace wups_service.Controllers
@@ -27,7 +28,7 @@ namespace wups_service.Controllers
         /// <returns>A json file with the timeseries data</returns>
         [HttpGet]
         [Route("{deviceId}/measurements")]
-        public ActionResult<string> GetDeviceMesurements(string deviceId, ManagerTypes deviceType, string? startDate, string? endDate)
+        public ActionResult<string> GetDeviceMesurements(string deviceId, [BindRequired] ManagerTypes deviceType, string? startDate, string? endDate)
         {
             string measurements;
             try

@@ -17,7 +17,7 @@ namespace wups_service.BusinessLogic
             {
                 result = ChooseManager(managerType).GetOne(id); // If you can't find a normal manager...
             }
-            catch (TypeAccessException)
+            catch (NoManagerFoundException)
             {
                 result = ChoosemeasurementManager(managerType).GetOne(id); // ...try looking for a measurement manager.
             }
@@ -29,10 +29,10 @@ namespace wups_service.BusinessLogic
             string result;
             try
             {
-                result = ChooseManager(managerType).GetMany(id);
-            } catch (TypeAccessException)
+                result = ChooseManager(managerType).GetMany(id); // If you can't find a normal manager...
+            } catch (NoManagerFoundException ex)
             {
-                result = ChoosemeasurementManager(managerType).GetMany(id);
+                result = ChoosemeasurementManager(managerType).GetMany(id); // ...try looking for a measurement manager.
             }
             return result;
         }
@@ -52,7 +52,7 @@ namespace wups_service.BusinessLogic
             IManager manager = managerType switch
             {
                 ManagerTypes.Device => new DeviceManager(_configuration),
-                _ => throw new TypeAccessException("No manager to serve following managerType: " + managerType),
+                _ => throw new NoManagerFoundException("No manager to serve following managerType: " + managerType),
             };
             return manager;
         }
@@ -62,7 +62,7 @@ namespace wups_service.BusinessLogic
             IMeasurementManager manager = managerType switch
             {
                 ManagerTypes.WaterMeasurement => new WaterMeasurementManager(_configuration),
-                _ => throw new TypeAccessException("No mesurement manager to serve following managerType: " + managerType),
+                _ => throw new NoManagerFoundException("No mesurement manager to serve following managerType: " + managerType),
             };
             return manager;
         }
