@@ -31,7 +31,7 @@ namespace wups_service.Controllers
         /// <returns>A json file with the timeseries data</returns>
         [HttpGet]
         [Route("{id}/measurements")]
-        public ActionResult<string> Get(string id, string type, string? startDate, string? endDate)
+        public ActionResult<string> Get(string id, ManagerTypes type, string? startDate, string? endDate)
         {
             string measurements;
             try
@@ -63,16 +63,16 @@ namespace wups_service.Controllers
             }
 
         }
-        private ActionResult<string> decideResponse(string measurements)
+        private ActionResult<string> decideResponse(string jsonString)
         {
             //If the mongo driver does not find any it returns an empty JSON doc
-            if (string.IsNullOrEmpty(measurements))
+            if (string.IsNullOrEmpty(jsonString))
             {
                 return NotFound();
             }
             else
             {
-                return Content(measurements, "application/json");
+                return Content(jsonString, "application/json");
             }
         }
     }
