@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel } from "victory";
 import { reMap } from "./Mappings";
 import fetchedItem from "./FetchAPI";
@@ -17,14 +17,26 @@ const jsonData = require('./Data/Data.json');
 // console.log(fetchedItem)
 
 
-const meterType = jsonData.filter(item => item.metadata.meterType === Meter);
+// const meterType = jsonData.filter(item => item.metadata.meterType === Meter);
 
-const data = reMap(meterType);
+console.log(jsonData)
+//const data = reMap(jsonData);
 
 
-export default class GraphHotWater extends React.Component {
-  render() {
-    return (
+export default function GraphHotWater() {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    async function getData() {
+      let data = await fetchedItem()
+      console.log(data)
+      data = reMap(data)
+      setData(data)
+    }
+    getData()
+  }, [])
+  
+  return (
       <VictoryChart
         theme={VictoryTheme.material}
       >
@@ -60,5 +72,4 @@ export default class GraphHotWater extends React.Component {
       </VictoryChart>
 
     )
-  }
 }

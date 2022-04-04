@@ -8,11 +8,11 @@ const Overview = () => {
     return (
 
         <View style={styles.container}>
-            <GraphBox />
+            {/* <GraphBox />
             <GraphBoxCold />
-            <GraphBox />
+            <GraphBox /> */}
             <GraphBoxHot />
-            <GraphBox />
+            {/* <GraphBox /> */}
 
         </View>
 

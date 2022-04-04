@@ -19,7 +19,7 @@ const GraphBox = () => {
 
                 <GraphPlaceholder />
                 {/* <GraphColdWater /> */}
-                {/* <GraphHotWater /> */}
+                <GraphHotWater />
             </Pressable>
         </View>
     );

@@ -1,16 +1,10 @@
-import react from 'react';
-import React, { useState, useEffect } from 'react';
-
-const url = 'http://localhost:3030/api/devices/25F92BC417E53B3F/measurements'
-
-
-async function ManBeast (){
-
-  const res = await fetch(url)
-  const data = await res.json()
-  
-return data
-
+async function getData() {
+  const url = 'http://localhost:8080/measurements/25F92BC417E53B3F?startDate=11-02-2019'
+  let resposne = await fetch(url);
+  return await resposne.json()
 }
 
-ManBeast().then(data => {console.log(data)})
+async function FetchData() {
+  return (await getData())
+}
+export default FetchData;

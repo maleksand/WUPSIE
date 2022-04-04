@@ -1,5 +1,7 @@
 import moment from "moment";
 
+// const jsonData = require('./Data/Data.json');
+
 export const reMap = data => {
 
   let temp = 0
@@ -10,9 +12,9 @@ export const reMap = data => {
 
   return data.map(row => {
 
-    temp = row.measurement;
+    temp = row.value;
     temp2 = row.metadata.meterType;
-    temp3 = row.timestamp.$date;
+    temp3 = row.timestamp;
 
     if (tempMeasure < temp) {
       tempMeasTwo = temp - tempMeasure; tempMeasure = temp;
@@ -30,13 +32,18 @@ export const reMap = data => {
     if (temp === tempMeasTwo) { tempMeasTwo = 0 }
 
 
-    row = row.timestamp
+
+    
     row.date = moment(temp3).format('HH:MM, DD/MM/YYYY')
-    row.measurement = tempMeasTwo
+    row.measurement = temp
     row.meterType = temp2
-    delete (row.$date)
+    delete (row.metadata)
+    delete (row.timestamp)
+    delete (row.value)
 
 
     return row
   })
 };
+
+// const data = reMap(jsonData);
