@@ -7,33 +7,34 @@ namespace wups_service.Controllers
     [ApiController]
     [Route("[controller]")]
     [EnableCors("_myAllowSpecificOrigins")]
-    public class HouseholdsController : Controller
+    public class UsersController : Controller
     {
         private Broker _broker;
 
-        public HouseholdsController(IConfiguration configuration)
+        public UsersController(IConfiguration configuration)
         {
             _broker = new Broker(configuration);
         }
 
         [HttpGet]
-        [Route("{householdId}")]
-        public IActionResult GetHousehold(string householdId)
+        [Route("{userId}/households")]
+        public IActionResult GetUserHouseholds(string userId)
         {
             string jsonString;
             try
             {
-                jsonString = _broker.GetManager(ManagerTypes.Household).Get(householdId);
-            } catch (Exception ex)
+                jsonString = _broker.GetManager(ManagerTypes.Household).GetAll(userId);
+            }
+            catch (Exception ex)
             {
-                if (ex.Message == "Sequence contains no elements") return Problem($"Could not find household with ID: {householdId}", null, 404); // manuel 404 if this error happens
                 return Problem(ex.Message);
             }
 
             if (String.IsNullOrEmpty(jsonString))
             {
                 return NotFound();
-            } else
+            }
+            else
             {
                 return Content(jsonString, "application/json");
             }

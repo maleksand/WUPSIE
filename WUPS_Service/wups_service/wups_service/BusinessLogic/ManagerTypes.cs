@@ -4,6 +4,7 @@
     {
         Device,
         Household,
+        User,
         WaterMeasurement
     }
 }

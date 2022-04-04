@@ -16,15 +16,16 @@ namespace wups_service.BusinessLogic
 
         }
 
-        public string Get(string id)
+        public string Get(string householdId)
         {
-            Household household = _repository.Get(id).Single();
+            Household household = _repository.Get(householdId).Single();
             return JsonSerializer.Serialize(household, _jsonOptions);
         }
 
-        public string GetAll(string id)
+        public string GetAll(string userId)
         {
-            throw new NotImplementedException();
+            List<Household> household = _repository.GetAll(userId);
+            return JsonSerializer.Serialize(household, _jsonOptions);
         }
     }
 }

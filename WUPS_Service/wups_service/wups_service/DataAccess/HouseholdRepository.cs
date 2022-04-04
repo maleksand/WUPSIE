@@ -26,9 +26,17 @@ namespace wups_service.DataAccess
             return result;
         }
 
-        public List<Household> GetAll(string id)
+        public List<Household> GetAll(string userId)
         {
-            throw new NotImplementedException();
+            int id = int.Parse(userId);
+
+            var collection = _database.GetMongoCollection<Household>("Households");
+
+            List<Household> result = new List<Household>();
+
+            result = collection.Find(h => h.UserId == id).ToList();
+
+            return result;
         }
     }
 }

@@ -7,11 +7,11 @@ const path = require("path")
 const cors = require("cors")
 
 // Routers
-const apiRouter = require("./routers/api")
+const apiRouter = require("./routers/api/api")
 
 
 app.use(express.static("./build"))
-// change cors to only allow good origens
+// TODO: change cors to only allow good origens
 app.use(cors())
 
 app.use("/api", apiRouter)
