@@ -3,6 +3,7 @@
     public enum ManagerTypes
     {
         Device,
+        Household,
         WaterMeasurement
     }
 }

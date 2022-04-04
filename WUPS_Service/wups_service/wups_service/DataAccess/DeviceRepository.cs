@@ -13,7 +13,7 @@ namespace wups_service.DataAccess
             _database = new Database(config);
         }
 
-        public List<Device> GetOne(string deviceId)
+        public List<Device> Get(string deviceId)
         {
             var collection = _database.GetMongoCollection<Device>("Devices");
 
@@ -26,15 +26,9 @@ namespace wups_service.DataAccess
             return result;
         }
 
-        public List<Device> GetMany(string householdId)
+        public List<Device> GetAll(string id)
         {
-            var collection = _database.GetMongoCollection<Household>("Households");
-
-            List<Device> result = new List<Device>();
-
-            Household household = collection.Find(h => h.Id == householdId).Single();
-
-            return household.devices;
+            throw new NotImplementedException();
         }
     }
 }

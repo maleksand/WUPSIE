@@ -10,29 +10,30 @@ namespace wups_service.BusinessLogic
             _configuration = configuration;
         }
 
-        public string GetOne(string id, ManagerTypes managerType)
+        public string Get(string id, ManagerTypes managerType)
         {
             string result;
             try
             {
-                result = ChooseManager(managerType).GetOne(id); // If you can't find a normal manager...
+                result = ChooseManager(managerType).Get(id); // If you can't find a normal manager...
             }
             catch (NoManagerFoundException)
             {
-                result = ChoosemeasurementManager(managerType).GetOne(id); // ...try looking for a measurement manager.
+                result = ChoosemeasurementManager(managerType).Get(id); // ...try looking for a measurement manager.
             }
             return result;
         }
 
-        public string GetMany(string id, ManagerTypes managerType)
+        public string GetAll(string id, ManagerTypes managerType)
         {
             string result;
             try
             {
-                result = ChooseManager(managerType).GetMany(id); // If you can't find a normal manager...
-            } catch (NoManagerFoundException ex)
+                result = ChooseManager(managerType).GetAll(id); // If you can't find a normal manager...
+            }
+            catch (NoManagerFoundException)
             {
-                result = ChoosemeasurementManager(managerType).GetMany(id); // ...try looking for a measurement manager.
+                result = ChoosemeasurementManager(managerType).GetAll(id); // ...try looking for a measurement manager.
             }
             return result;
         }
@@ -52,6 +53,7 @@ namespace wups_service.BusinessLogic
             IManager manager = managerType switch
             {
                 ManagerTypes.Device => new DeviceManager(_configuration),
+                ManagerTypes.Household => new HouseholdManager(_configuration),
                 _ => throw new NoManagerFoundException("No manager to serve following managerType: " + managerType),
             };
             return manager;
@@ -62,7 +64,7 @@ namespace wups_service.BusinessLogic
             IMeasurementManager manager = managerType switch
             {
                 ManagerTypes.WaterMeasurement => new WaterMeasurementManager(_configuration),
-                _ => throw new NoManagerFoundException("No mesurement manager to serve following managerType: " + managerType),
+                _ => throw new NoManagerFoundException("No manager to serve following managerType: " + managerType),
             };
             return manager;
         }

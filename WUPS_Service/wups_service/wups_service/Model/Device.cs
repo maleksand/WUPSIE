@@ -6,7 +6,7 @@ namespace wups_service.Model
     [BsonNoId]
     public class Device
     {
-        [BsonElement("deviceId")]
+        [BsonRepresentation(BsonType.String)]
         public string Id { get; set; }
 
 

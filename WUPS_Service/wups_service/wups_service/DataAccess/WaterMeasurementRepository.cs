@@ -14,7 +14,7 @@ namespace wups_service.DataAccess
             _database = new Database(config);
         }
         
-        public List<WaterMeasurement> GetOne(string measurementId)
+        public List<WaterMeasurement> Get(string measurementId)
         {
             List<WaterMeasurement> measurements = new List<WaterMeasurement>();
 
@@ -25,22 +25,17 @@ namespace wups_service.DataAccess
             return measurements;
         }
 
-        /// <summary>
-        /// Get the full historical Measurement data
-        /// </summary>
-        /// <param name="deviceId"> the device id</param>
-        /// <returns>historical data related to the id as a json document. Null if nothing was found</returns>
-        public List<WaterMeasurement> GetMany(string deviceId)
+        public List<WaterMeasurement> GetAll(string deviceId)
         {
             List<WaterMeasurement> measurements = new List<WaterMeasurement>();
-        
+
             var collection = _database.GetMongoCollection<WaterMeasurement>("Water-measurements");
 
             measurements = collection.Find(m => m.Metadata.DeviceId == deviceId).ToList();
-            
-            return measurements;
 
+            return measurements;
         }
+
 
         /// <summary>
         /// Find the Measurements for the the wanted date

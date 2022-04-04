@@ -21,7 +21,7 @@ namespace wups_service.Controllers
         /// <summary>
         /// Returns measurements
         /// </summary>
-        /// <param name="deviceId">Device ID</param>
+        /// <param name="deviceId">Either a measurement or device ID</param>
         /// <param name="deviceType">Device type</param>
         /// <param name="startDate">(optional) Start date - YYYY-MM-DDT00:00:00</param>
         /// <param name="endDate">(optional) End date - YYYY-MM-DDT00:00:00</param>
@@ -33,9 +33,9 @@ namespace wups_service.Controllers
             string measurements;
             try
             {
-                if (startDate != null && startDate.Length > 0)
+                if(!String.IsNullOrEmpty(startDate))
                 {
-                    if (endDate != null && endDate.Length > 0)
+                    if (!String.IsNullOrEmpty(endDate))
                     {
                         // if both startDate and endDate is defined
                         measurements = _broker.GetByDateRange(deviceId, startDate, endDate, deviceType);
@@ -48,8 +48,7 @@ namespace wups_service.Controllers
                 }
                 else
                 {
-                    // if startDate and endDate is nor defined
-                    measurements = _broker.GetMany(deviceId, deviceType);
+                    measurements = _broker.GetAll(deviceId, deviceType);
                 }
 
                 return decideResponse(measurements);
@@ -58,8 +57,8 @@ namespace wups_service.Controllers
             {
                 return Problem(ex.Message);
             }
-
         }
+
         private ActionResult<string> decideResponse(string jsonString)
         {
             //If the mongo driver does not find any it returns an empty JSON doc

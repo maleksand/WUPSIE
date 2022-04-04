@@ -17,16 +17,17 @@ namespace wups_service.Controllers
             _broker = new Broker(configuration);
         }
 
-        [Route("{householdId}/devices")]
+        [HttpGet]
+        [Route("{householdId}")]
         public IActionResult GetHouseholdeDevices(string householdId)
         {
             string jsonString;
             try
             {
-                jsonString = _broker.GetMany(householdId, ManagerTypes.Device);
+                jsonString = _broker.Get(householdId, ManagerTypes.Household);
             } catch (Exception ex)
             {
-                //if (ex.Message == "Sequence contains no elements") return Problem("Could not find household", null, 404); // manuel 404 if this error happens
+                if (ex.Message == "Sequence contains no elements") return Problem("Could not find household", null, 404); // manuel 404 if this error happens
                 return Problem(ex.Message);
             }
 

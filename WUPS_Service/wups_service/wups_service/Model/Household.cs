@@ -5,13 +5,23 @@ namespace wups_service.Model
 {
     public class Household
     {
-        [BsonId]
+        [BsonRepresentation(BsonType.String)]
         public string Id { get; set; }
 
         [BsonElement("userId")]
         public int UserId { get; set; }
         
         [BsonElement("devices")]
-        public List<Device> devices { get; set; }
+        public List<HouseholdDevice> devices { get; set; }
+    
+        [BsonNoId]
+        public class HouseholdDevice
+        {
+            [BsonElement("deviceId")]
+            public string Id { get; set; }
+
+            [BsonElement("deviceType")]
+            public string Type { get; set; }
+        }
     }
 }

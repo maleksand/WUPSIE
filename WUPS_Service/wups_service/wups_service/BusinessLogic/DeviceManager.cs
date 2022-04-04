@@ -13,16 +13,16 @@ namespace wups_service.BusinessLogic
             _repository = new DeviceRepository(configuration);
         }
 
-        public string GetOne(string id)
+        public string Get(string id)
         {
-            Device device = _repository.GetOne(id).Single();
+            Device device = _repository.Get(id).Single();
             return JsonSerializer.Serialize(device);
         }
 
-        public string GetMany(string id)
+        public string GetAll(string id)
         {
-            List<Device> device = _repository.GetMany(id);
-            return JsonSerializer.Serialize(device);
+            List<Device> devices = _repository.GetAll(id);
+            return JsonSerializer.Serialize(devices);
         }
     }
 }

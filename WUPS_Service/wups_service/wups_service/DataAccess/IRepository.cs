@@ -2,7 +2,8 @@
 {
     public interface IRepository<out T>
     {
-        T GetOne(string id);
-        T GetMany(string id);
+        T Get(string id);
+
+        T GetAll(string id);
     }
 }
