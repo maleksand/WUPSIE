@@ -12,7 +12,7 @@ namespace wups_service.Model
         public int UserId { get; set; }
         
         [BsonElement("devices")]
-        public List<HouseholdDevice> devices { get; set; }
+        public List<HouseholdDevice> Devices { get; set; }
     
         [BsonNoId]
         public class HouseholdDevice

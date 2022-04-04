@@ -9,46 +9,8 @@ namespace wups_service.BusinessLogic
         {
             _configuration = configuration;
         }
-
-        public string Get(string id, ManagerTypes managerType)
-        {
-            string result;
-            try
-            {
-                result = ChooseManager(managerType).Get(id); // If you can't find a normal manager...
-            }
-            catch (NoManagerFoundException)
-            {
-                result = ChoosemeasurementManager(managerType).Get(id); // ...try looking for a measurement manager.
-            }
-            return result;
-        }
-
-        public string GetAll(string id, ManagerTypes managerType)
-        {
-            string result;
-            try
-            {
-                result = ChooseManager(managerType).GetAll(id); // If you can't find a normal manager...
-            }
-            catch (NoManagerFoundException)
-            {
-                result = ChoosemeasurementManager(managerType).GetAll(id); // ...try looking for a measurement manager.
-            }
-            return result;
-        }
-
-        public string GetByDate(string id, string startDate, ManagerTypes managerType)
-        {
-            return ChoosemeasurementManager(managerType).GetByDate(id, startDate);
-        }
-
-        public string GetByDateRange(string id, string startDate, string endDate, ManagerTypes managerType)
-        {
-            return ChoosemeasurementManager(managerType).GetByDateRange(id, startDate, endDate);
-        }
         
-        private IManager ChooseManager(ManagerTypes managerType)
+        public IManager GetManager(ManagerTypes managerType)
         {
             IManager manager = managerType switch
             {
@@ -59,12 +21,12 @@ namespace wups_service.BusinessLogic
             return manager;
         }
 
-        private IMeasurementManager ChoosemeasurementManager(ManagerTypes managerType)
+        public IMeasurementManager GetMeasurementManager(ManagerTypes managerType)
         {
             IMeasurementManager manager = managerType switch
             {
                 ManagerTypes.WaterMeasurement => new WaterMeasurementManager(_configuration),
-                _ => throw new NoManagerFoundException("No manager to serve following managerType: " + managerType),
+                _ => throw new NoManagerFoundException("No measurement manager to serve following managerType: " + managerType),
             };
             return manager;
         }

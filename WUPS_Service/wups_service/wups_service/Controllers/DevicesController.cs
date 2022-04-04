@@ -38,17 +38,17 @@ namespace wups_service.Controllers
                     if (!String.IsNullOrEmpty(endDate))
                     {
                         // if both startDate and endDate is defined
-                        measurements = _broker.GetByDateRange(deviceId, startDate, endDate, deviceType);
+                        measurements = _broker.GetMeasurementManager(deviceType).GetByDateRange(deviceId, startDate, endDate);
                     }
                     else
                     {
                         // if only startdate is defined
-                        measurements = _broker.GetByDate(deviceId, startDate, deviceType);
+                        measurements = _broker.GetMeasurementManager(deviceType).GetByDate(deviceId, startDate);
                     }
                 }
                 else
                 {
-                    measurements = _broker.GetAll(deviceId, deviceType);
+                    measurements = _broker.GetMeasurementManager(deviceType).GetAll(deviceId);
                 }
 
                 return decideResponse(measurements);

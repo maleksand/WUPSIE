@@ -6,23 +6,25 @@ namespace wups_service.BusinessLogic
 {
     public class DeviceManager : IManager
     {
-        public IRepository<List<Device>> _repository { get; set; }
+        private IRepository<List<Device>> _repository { get; set; }
+        private JsonSerializerOptions _jsonOptions { get; set; }
 
         public DeviceManager(IConfiguration configuration)
         {
             _repository = new DeviceRepository(configuration);
+            _jsonOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web);
         }
 
         public string Get(string id)
         {
             Device device = _repository.Get(id).Single();
-            return JsonSerializer.Serialize(device);
+            return JsonSerializer.Serialize(device, _jsonOptions);
         }
 
         public string GetAll(string id)
         {
             List<Device> devices = _repository.GetAll(id);
-            return JsonSerializer.Serialize(devices);
+            return JsonSerializer.Serialize(devices, _jsonOptions);
         }
     }
 }

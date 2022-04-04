@@ -24,7 +24,7 @@ namespace wups_service.Controllers
             string jsonString;
             try
             {
-                jsonString = _broker.Get(householdId, ManagerTypes.Household);
+                jsonString = _broker.GetManager(ManagerTypes.Household).Get(householdId);
             } catch (Exception ex)
             {
                 if (ex.Message == "Sequence contains no elements") return Problem("Could not find household", null, 404); // manuel 404 if this error happens
