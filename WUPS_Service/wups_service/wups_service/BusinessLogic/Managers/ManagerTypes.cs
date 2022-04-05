@@ -2,6 +2,7 @@
 {
     public enum ManagerTypes
     {
+        None,
         Device,
         Household,
         User,

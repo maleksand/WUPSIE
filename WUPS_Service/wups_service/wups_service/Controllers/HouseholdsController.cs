@@ -27,6 +27,7 @@ namespace wups_service.Controllers
                 jsonString = _broker.GetManager(ManagerTypes.Household).Get(householdId);
             } catch (Exception ex)
             {
+                // TODO: find better soolution
                 if (ex.Message == "Sequence contains no elements") return Problem($"Could not find household with ID: {householdId}", null, 404); // manuel 404 if this error happens
                 return Problem(ex.Message);
             }
@@ -44,7 +45,22 @@ namespace wups_service.Controllers
         [Route("{householdId}/devices/measurements")]
         public IActionResult GetHouseholdDevicesMeasurements(string householdId, string? startDate, string? endDate)
         {
-            throw new NotImplementedException();
+            Dictionary<string, string> queries = new Dictionary<string, string>();
+            queries.Add("requestType", "device measurements");
+            queries.Add("householdId", householdId);
+            if(!String.IsNullOrEmpty(startDate)) queries.Add("startDate", startDate);
+            if(!String.IsNullOrEmpty(endDate)) queries.Add("endDate", endDate);
+
+            string jsonString;
+            try
+            {
+                jsonString = _broker.GetManager(ManagerTypes.Household).ResolveRequest(queries);
+            } catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+
+            return Content(jsonString, "application/json");
         }
     }
 }

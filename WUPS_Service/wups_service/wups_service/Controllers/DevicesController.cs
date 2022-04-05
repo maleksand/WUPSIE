@@ -34,8 +34,8 @@ namespace wups_service.Controllers
             Dictionary<string, string> queries = new Dictionary<string, string>();
             queries.Add("deviceId", deviceId);
             #pragma warning disable CS8604 // Possible null reference argument.
-            if (String.IsNullOrEmpty(startDate)) queries.Add("startDate", startDate);
-            if (String.IsNullOrEmpty(endDate)) queries.Add("endDate", endDate);
+            if (!String.IsNullOrEmpty(startDate)) queries.Add("startDate", startDate);
+            if (!String.IsNullOrEmpty(endDate)) queries.Add("endDate", endDate);
             #pragma warning restore CS8604 // Possible null reference argument.
 
             try
