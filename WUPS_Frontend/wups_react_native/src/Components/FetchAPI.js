@@ -1,5 +1,5 @@
 async function getData() {
-  const url = 'http://localhost:8080/measurements/25F92BC417E53B3F?startDate=11-02-2019&enddate=12-02-2019'
+  const url = 'http://localhost:3030/api/devices/BBB60CC9ED69C910/measurements?startDate=2019-03-01&deviceType=watermeasurement'
   let resposne = await fetch(url);
   return await resposne.json()
 }
