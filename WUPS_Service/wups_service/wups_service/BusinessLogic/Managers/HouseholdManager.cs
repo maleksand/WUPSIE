@@ -2,7 +2,7 @@
 using wups_service.Model;
 using System.Text.Json;
 
-namespace wups_service.BusinessLogic
+namespace wups_service.BusinessLogic.Managers
 {
     public class HouseholdManager : IManager
     {
@@ -13,7 +13,6 @@ namespace wups_service.BusinessLogic
         {
             _repository = new HouseholdRepository(configuration);
             _jsonOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web);
-
         }
 
         public string Get(string householdId)
@@ -26,6 +25,11 @@ namespace wups_service.BusinessLogic
         {
             List<Household> household = _repository.GetAll(userId);
             return JsonSerializer.Serialize(household, _jsonOptions);
+        }
+
+        public string ResolveRequest(Dictionary<string, string> queries)
+        {
+            throw new NotImplementedException();
         }
     }
 }

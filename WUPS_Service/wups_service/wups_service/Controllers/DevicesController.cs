@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using wups_service.BusinessLogic;
+using wups_service.BusinessLogic.Managers;
 
 namespace wups_service.Controllers
 {
@@ -30,26 +31,16 @@ namespace wups_service.Controllers
         [Route("{deviceId}/measurements")]
         public ActionResult<string> GetDeviceMesurements(string deviceId, [BindRequired] ManagerTypes deviceType, string? startDate, string? endDate)
         {
-            string measurements;
+            Dictionary<string, string> queries = new Dictionary<string, string>();
+            queries.Add("deviceId", deviceId);
+            #pragma warning disable CS8604 // Possible null reference argument.
+            if (String.IsNullOrEmpty(startDate)) queries.Add("startDate", startDate);
+            if (String.IsNullOrEmpty(endDate)) queries.Add("endDate", endDate);
+            #pragma warning restore CS8604 // Possible null reference argument.
+
             try
             {
-                if(!String.IsNullOrEmpty(startDate))
-                {
-                    if (!String.IsNullOrEmpty(endDate))
-                    {
-                        // if both startDate and endDate is defined
-                        measurements = _broker.GetMeasurementManager(deviceType).GetByDateRange(deviceId, startDate, endDate);
-                    }
-                    else
-                    {
-                        // if only startdate is defined
-                        measurements = _broker.GetMeasurementManager(deviceType).GetByDate(deviceId, startDate);
-                    }
-                }
-                else
-                {
-                    measurements = _broker.GetMeasurementManager(deviceType).GetAll(deviceId);
-                }
+                string measurements = _broker.GetMeasurementManager(deviceType).ResolveRequest(queries);
 
                 return decideResponse(measurements);
             }

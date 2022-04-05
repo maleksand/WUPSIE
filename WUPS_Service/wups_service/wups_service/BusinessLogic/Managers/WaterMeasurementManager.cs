@@ -2,7 +2,7 @@
 using wups_service.Model;
 using System.Text.Json;
 
-namespace wups_service.BusinessLogic
+namespace wups_service.BusinessLogic.Managers
 {
     public class WaterMeasurementManager : IMeasurementManager
     {
@@ -38,6 +38,51 @@ namespace wups_service.BusinessLogic
         {
             List<WaterMeasurement> waterMeasurements = _waterMeasurementRepository.GetByDateRange(id, startDate, endDate);
             return JsonSerializer.Serialize(waterMeasurements, _jsonOptions);
+        }
+
+        public string ResolveRequest(Dictionary<string, string> queries)
+        {
+            string startDate = string.Empty;
+            string endDate = string.Empty;
+            string deviceId = string.Empty;
+
+            foreach (KeyValuePair<string, string> keyValuePair in queries)
+            {
+                switch (keyValuePair.Key)
+                {
+                    case "startDate":
+                        startDate = keyValuePair.Value;
+                        break;
+                    case "endDate":
+                        endDate = keyValuePair.Value;
+                        break;
+                    case "deviceId":
+                        deviceId = keyValuePair.Value;
+                        break;
+                }
+            }
+            
+            
+            string measurements;
+            if (!String.IsNullOrEmpty(startDate))
+            {
+                if (!String.IsNullOrEmpty(endDate))
+                {
+                    // if both startDate and endDate is defined
+                    measurements = GetByDateRange(deviceId, startDate, endDate);
+                }
+                else
+                {
+                    // if only startdate is defined
+                    measurements = GetByDate(deviceId, startDate);
+                }
+            }
+            else
+            {
+                measurements = GetAll(deviceId);
+            }
+
+            return measurements;
         }
     }
 }

@@ -2,7 +2,7 @@
 using wups_service.Model;
 using System.Text.Json;
 
-namespace wups_service.BusinessLogic
+namespace wups_service.BusinessLogic.Managers
 {
     public class DeviceManager : IManager
     {
@@ -25,6 +25,11 @@ namespace wups_service.BusinessLogic
         {
             List<Device> devices = _repository.GetAll(id);
             return JsonSerializer.Serialize(devices, _jsonOptions);
+        }
+
+        public string ResolveRequest(Dictionary<string, string> queries)
+        {
+            throw new NotImplementedException();
         }
     }
 }

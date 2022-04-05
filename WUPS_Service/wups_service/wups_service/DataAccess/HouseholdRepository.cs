@@ -17,11 +17,7 @@ namespace wups_service.DataAccess
         {
             var collection = _database.GetMongoCollection<Household>("Households");
 
-            List<Household> result = new List<Household>();
-
-            Household household = collection.Find(h => h.Id == householdId).Single();
-
-            result.Add(household);
+            List<Household> result = collection.Find(h => h.Id == householdId).ToList();
 
             return result;
         }
@@ -32,9 +28,7 @@ namespace wups_service.DataAccess
 
             var collection = _database.GetMongoCollection<Household>("Households");
 
-            List<Household> result = new List<Household>();
-
-            result = collection.Find(h => h.UserId == id).ToList();
+            List<Household> result = collection.Find(h => h.UserId == id).ToList();
 
             return result;
         }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using wups_service.BusinessLogic;
+using wups_service.BusinessLogic.Managers;
 
 namespace wups_service.Controllers
 {
@@ -37,6 +38,13 @@ namespace wups_service.Controllers
             {
                 return Content(jsonString, "application/json");
             }
+        }
+
+        [HttpGet]
+        [Route("{householdId}/devices/measurements")]
+        public IActionResult GetHouseholdDevicesMeasurements(string householdId, string? startDate, string? endDate)
+        {
+            throw new NotImplementedException();
         }
     }
 }

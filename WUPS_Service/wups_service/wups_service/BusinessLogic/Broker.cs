@@ -1,4 +1,4 @@
-﻿using wups_service.DataAccess;
+﻿using wups_service.BusinessLogic.Managers;
 
 namespace wups_service.BusinessLogic
 {

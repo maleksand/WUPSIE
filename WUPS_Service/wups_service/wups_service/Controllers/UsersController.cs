@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using wups_service.BusinessLogic;
+using wups_service.BusinessLogic.Managers;
 
 namespace wups_service.Controllers
 {

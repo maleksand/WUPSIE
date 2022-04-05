@@ -1,4 +1,4 @@
-﻿namespace wups_service.BusinessLogic
+﻿namespace wups_service.BusinessLogic.Managers
 {
     public class NoManagerFoundException : ApplicationException
     {
