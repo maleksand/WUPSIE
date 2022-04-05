@@ -1,26 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel, VictoryLine } from "victory";
-import { reMap } from "./Mappings";
+import { reMapByHour, reMapByDay } from "./Mappings";
 import fetchedItem from "./FetchAPI";
-import { reMapTwo } from './MappingsCopy';
 
-// const url = 'http://localhost:3030/api/devices/25F92BC417E53B3F/measurements'
 //Meter equals the value of meterType in jSon
 // const Meter = "hot water"
 //Meter equals the value of meterType in jSon
-
-
-//replace jsonDate with the Fetch constant
-// const jsonData = require('./Data/Data.json');
-//replace jsonDate with the Fetch constant
-
-// console.log(fetchedItem)
-
-
-// const meterType = jsonData.filter(item => item.metadata.meterType === Meter);
-
-// console.log(jsonData)
-//const data = reMap(jsonData);
 
 
 export default function GraphHotWater() {
@@ -29,13 +14,35 @@ export default function GraphHotWater() {
   useEffect(() => {
     async function getData() {
       let data = await fetchedItem()
-      console.log(data)
-      data = reMap(data)
-      setData(data)
+      
+      data = reMapByDay(data)
+      
+
+      const grouped = [];
+
+      data.forEach(function (i) {
+        return function (o) {
+            if (!i[o.date]) {
+                i[o.date] = { date: o.date, measurement: null, meterType: o.meterType };
+                grouped.push(i[o.date]);
+            }
+            Object.keys(o).forEach(function (k) {
+                if (k === 'date') {
+                    return;
+                }
+                i[o.date][k] = o[k];
+            });
+        };
+    }(Object.create(null)));
+
+    // console.log(grouped)
+
+      
+      setData(grouped)
     }
     getData()
   }, [])
-  
+  // console.log(data)
   return (
       <VictoryChart
         theme={VictoryTheme.material}
