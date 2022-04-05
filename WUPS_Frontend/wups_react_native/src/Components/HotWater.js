@@ -1,17 +1,17 @@
 import React, {useState, useEffect} from 'react';
-import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel } from "victory";
+import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel, VictoryLine } from "victory";
 import { reMap } from "./Mappings";
 import fetchedItem from "./FetchAPI";
 import { reMapTwo } from './MappingsCopy';
 
 // const url = 'http://localhost:3030/api/devices/25F92BC417E53B3F/measurements'
 //Meter equals the value of meterType in jSon
-const Meter = "hot water"
+// const Meter = "hot water"
 //Meter equals the value of meterType in jSon
 
 
 //replace jsonDate with the Fetch constant
-const jsonData = require('./Data/Data.json');
+// const jsonData = require('./Data/Data.json');
 //replace jsonDate with the Fetch constant
 
 // console.log(fetchedItem)
@@ -19,7 +19,7 @@ const jsonData = require('./Data/Data.json');
 
 // const meterType = jsonData.filter(item => item.metadata.meterType === Meter);
 
-console.log(jsonData)
+// console.log(jsonData)
 //const data = reMap(jsonData);
 
 
@@ -39,6 +39,7 @@ export default function GraphHotWater() {
   return (
       <VictoryChart
         theme={VictoryTheme.material}
+        // domain=
       >
 
         <VictoryAxis
@@ -64,7 +65,7 @@ export default function GraphHotWater() {
             }
           }}
         />
-        <VictoryBar
+        <VictoryLine
           data={data}
           x="date"
           y="measurement"
