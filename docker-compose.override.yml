@@ -1,0 +1,4 @@
+services:
+  api-service:
+    environment:
+      ASPNETCORE_ENVIRONMENT: DockerRemoteDatabase

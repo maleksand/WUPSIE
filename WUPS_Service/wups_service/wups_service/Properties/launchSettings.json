@@ -46,6 +46,16 @@
       },
       "publishAllPorts": true,
       "useSSL": true
+    },
+    "DockerRemoteDatabase": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "DockerRemoteDatabase"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
     }
   }
 }

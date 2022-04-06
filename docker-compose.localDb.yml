@@ -1,0 +1,24 @@
+services:
+  data-uploader: 
+    build: 
+      dockerfile: data-processing/Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      PYTHON_ENV: docker
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    volumes:
+      - mongodb:/data/db
+
+  api-service:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+  
+volumes:
+  mongodb:
