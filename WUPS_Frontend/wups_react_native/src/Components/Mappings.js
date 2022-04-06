@@ -1,4 +1,5 @@
 import moment from "moment";
+import 'moment/locale/da';
 
 // const jsonData = require('./Data/Data.json');
 
@@ -47,7 +48,7 @@ export const reMapByDay = data => {
     temp2 = row.metadata.meterType;
     temp3 = row.timestamp;
 
-    temp4 = moment(row.timestamp).format('DD/MM/YYYY')
+    temp4 = moment(row.timestamp).locale('da').format('dddd, DD/MM/YYYY')
     temp5 = moment.max(temp4)
     // console.log(temp5)
     temp3 = temp5
@@ -65,6 +66,8 @@ export const reMapByDay = data => {
     return row
   })
 };
+
+
 
 export const reMapByMonth = data => {
 
