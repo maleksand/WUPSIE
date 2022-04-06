@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel, VictoryLine } from "victory";
-import { reMapByHour, reMapByDay } from "./Mappings";
+import { reMapByHour, reMapByDay, reMapByMonth } from "./Mappings";
 import fetchedItem from "./FetchAPI";
 
 //Meter equals the value of meterType in jSon
@@ -15,7 +15,7 @@ export default function GraphHotWater() {
     async function getData() {
       let data = await fetchedItem()
       
-      data = reMapByDay(data)
+      data = reMapByMonth(data)
       
 
       const grouped = [];
@@ -35,7 +35,7 @@ export default function GraphHotWater() {
         };
     }(Object.create(null)));
 
-    // console.log(grouped)
+    console.log(grouped)
 
       
       setData(grouped)
