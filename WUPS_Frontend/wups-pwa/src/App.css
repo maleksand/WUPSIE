@@ -43,7 +43,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 10;
+  padding: 10px;
+  /* margin: 20px; */
 }
 
 img {
@@ -66,4 +67,21 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+
+.graph-button {
+  display: flex;
+  height: 40%;
+  width: 40%;
+  /* /* max-width: 50%; */
+  /* max-Height: 50%; */
+  justify-content: space-evenly;
+  align-items: center;
+  /* align-content: center; */
+  padding: 10px;
+  border-color: '#e5d9c5';
+  border-width: 1px;
+  background-color: #fefefe;
+  margin-bottom: 10px;
+  margin: 10px;
 }
