@@ -4,7 +4,7 @@ import '../../App.css';
 const Logo = () => {
 
     <div className="Logo">
-        <img src={'https://wisehome.dk/wp-content/uploads/2021/09/2x-mini-logo.png'} alt="Logo" />
+        <img src="https://wisehome.dk/wp-content/uploads/2021/09/2x-mini-logo.png" alt="Logo" />
     </div>
 }
 
