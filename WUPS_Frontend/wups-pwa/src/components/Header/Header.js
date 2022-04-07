@@ -7,7 +7,7 @@ import { Dropdown } from './Dropdown';
 
 function Nav() {
   const navStyle = {
-    color: 'white'
+    color: 'black'
   };
   return (
     <nav>
@@ -21,12 +21,17 @@ function Nav() {
         <Link style={navStyle} to='/about'>
           <li>About</li>
         </Link>
-        <Link style={navStyle} to='/profile'>
+        <Link style={navStyle} to='/'>
+          <li>Overview</li>
+        </Link>
+        
+
+        {/* <Link style={navStyle} to='/profile'>
           <li>Profile</li>
         </Link>
         <Link style={navStyle} to='/beers'>
           <li>Beers(ForTestApi)</li>
-        </Link>
+        </Link> */}
       </Dropdown>
 
     </nav>
