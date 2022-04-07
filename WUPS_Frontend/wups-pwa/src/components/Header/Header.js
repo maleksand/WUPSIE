@@ -4,7 +4,6 @@ import { Dropdown } from './Dropdown';
 
 
 
-
 function Nav() {
   return (
     <header>
@@ -16,13 +15,10 @@ function Nav() {
 
       <Dropdown>
         <NavLink to='/about'>
-          About
+            About
         </NavLink>
-        <NavLink to='/profile'>
-          Profile
-        </NavLink>
-        <NavLink to='/beers'>
-          Beers(ForTestApi)
+        <NavLink to='/'>
+            Overview
         </NavLink>
       </Dropdown>
 
