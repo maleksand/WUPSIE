@@ -45,3 +45,8 @@
   justify-content: 'space-evenly';
   padding: 10;
 }
+
+img {
+  height: auto;
+  max-width: 100%;
+}

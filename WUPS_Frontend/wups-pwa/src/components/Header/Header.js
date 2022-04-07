@@ -1,7 +1,7 @@
 import '../../App.css';
 import { Link } from 'react-router-dom';
 import { Dropdown } from './Dropdown';
-
+import Logo from './Logo';
 
 
 
@@ -13,6 +13,9 @@ function Nav() {
     <nav>
       <Link style={navStyle} to='/'>
         <h3>Logo</h3>
+
+        {/* <Logo /> */}
+
       </Link>
       This is WUPS IOT overview
       {/* Add a dropdown here */}
