@@ -7,7 +7,7 @@ import Logo from './Logo';
 
 function Nav() {
   const navStyle = {
-    color: 'black'
+    color: 'white'
   };
   return (
     <nav>
@@ -17,17 +17,20 @@ function Nav() {
         {/* <Logo /> */}
 
       </Link>
-      This is WUPS IOT overview
+      This is WUPS IOT Prototype
       {/* Add a dropdown here */}
 
       <Dropdown>
+        <div>
         <Link style={navStyle} to='/about'>
-          <li>About</li>
+          About
         </Link>
+        </div>
+        <div>
         <Link style={navStyle} to='/'>
-          <li>Overview</li>
+          Overview
         </Link>
-        
+        </div>
 
         {/* <Link style={navStyle} to='/profile'>
           <li>Profile</li>

@@ -38,15 +38,32 @@
 }
 
 .Overview-container {
-  display: 'flex';
+  display: flex;
   flex: 1;
-  flex-direction: 'row';
-  flex-wrap: 'wrap';
-  justify-content: 'space-evenly';
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 10;
 }
 
 img {
   height: auto;
   max-width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(72,79,82);
+  color: white;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
