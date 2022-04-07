@@ -1,5 +1,10 @@
-import '../App.css';
-import { Link } from 'react-router-dom'
+import '../../App.css';
+import { Link } from 'react-router-dom';
+import { Text } from 'react-native';
+import { Dropdown } from './Dropdown';
+
+
+
 
 function Nav() {
   const navStyle = {
@@ -10,7 +15,10 @@ function Nav() {
       <Link style={navStyle} to='/'>
         <h3>Logo</h3>
       </Link>
-      <ul className="nav-links">
+      <Text>This is WUPS IOT overview</Text>
+      {/* Add a dropdown here */}
+
+      <Dropdown>
         <Link style={navStyle} to='/about'>
           <li>About</li>
         </Link>
@@ -20,7 +28,8 @@ function Nav() {
         <Link style={navStyle} to='/beers'>
           <li>Beers(ForTestApi)</li>
         </Link>
-      </ul>
+      </Dropdown>
+
     </nav>
   );
 }

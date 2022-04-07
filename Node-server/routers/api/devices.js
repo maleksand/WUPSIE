@@ -1,17 +1,18 @@
-const config = require("../config")
+const config = require("../../config")
 
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const express = require("express")
 const router = express.Router()
 
-router.get("/devices/:deviceId/measurements", async (req, res) => {
+router.get("/:deviceId/measurements", async (req, res) => {
     // getting params
     let deviceId = req.params.deviceId
 
     // getting queries
     let startDate = req.query.startDate
     let endDate = req.query.endDate
+    let deviceType = req.query.deviceType
     
     // build api request queries
     let queries = {}
@@ -21,11 +22,14 @@ router.get("/devices/:deviceId/measurements", async (req, res) => {
     if(endDate) {
         queries.endDate = endDate
     }
+    if(deviceType) {
+        queries.deviceType = deviceType
+    }
 
     // Parse queries object to string
     queryString = new URLSearchParams(queries)
 
-    let url = `${config.baseAPIUrl}/measurements/${deviceId}?${queryString}`
+    let url = `${config.baseAPIUrl}/devices/${deviceId}/measurements?${queryString}`
     
     // don't think it's needed, but works
     let options = {
@@ -39,16 +43,17 @@ router.get("/devices/:deviceId/measurements", async (req, res) => {
         }
     }
 
-    let jsondata = null
+    let jsondata
 
     try {
         const response = await fetch(url, options)
-        jsondata = await response.json()
+        res.statusCode = response.status
+        jsondata = await response.json().catch(json => console.log(json))
     } catch (e) {
         console.log(e)
         jsondata = e
+        res.statusCode = 500
     }
-
     res.json(jsondata)
 })
 

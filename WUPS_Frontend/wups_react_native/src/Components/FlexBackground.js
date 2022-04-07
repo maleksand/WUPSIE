@@ -13,7 +13,7 @@ const FlexBackGround = () => {
             <View style={{ flex: 2, backgroundColor: "red" }}>
                 <Text>This is where a graph will go</Text>
             </View>
-            <View style={{ flex: 2, backgroundColor: "darkorange" }} >
+            <View style={{ flex: 1, backgroundColor: "darkorange" }} >
                 <Text>This is where graph 2 will go</Text>
 
             </View>

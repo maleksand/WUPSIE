@@ -1,8 +1,9 @@
 ﻿namespace wups_service.DataAccess
 {
-    public interface IRepository<T>
+    public interface IRepository<out T>
     {
         T Get(string id);
-        T GetByDate(string id, string date);
+
+        T GetAll(string id);
     }
 }

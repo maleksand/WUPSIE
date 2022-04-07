@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel, VictoryLine } from "victory";
 import { reMap } from "./Mappings";
 import fetchedItem from "./FetchAPI";
-import { reMapTwo } from './MappingsCopy';
 
 // const url = 'http://localhost:3030/api/devices/25F92BC417E53B3F/measurements'
 //Meter equals the value of meterType in jSon
