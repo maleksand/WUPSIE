@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Dimensions, StyleSheet, Pressable} from 'react-native';
 import GraphPlaceholder from './GraphPlaceholder';
 //import GraphColdWater from './ColdWater';
-//import GraphHotWater from './HotWater';
+import GraphHotWater from './HotWater';
 import PickDate from './PickDate';
 
 const GraphBox = () => {
@@ -21,7 +21,7 @@ const GraphBox = () => {
  
                 <GraphPlaceholder />
                 {/* <GraphColdWater /> */}
-                {/* <GraphHotWater /> */}
+                <GraphHotWater />
             </Pressable>
         </View>
     );
