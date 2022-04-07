@@ -8,9 +8,9 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["./WUPS_Service/wups_service/wups_service/wups_service.csproj", "wups_service/"]
+COPY ["./WUPS_Service/wups_service/wups_service.csproj", "wups_service/"]
 RUN dotnet restore "wups_service/wups_service.csproj"
-COPY ./WUPS_Service/wups_service/ .
+COPY ./WUPS_Service/ .
 WORKDIR "/src/wups_service"
 RUN dotnet build "wups_service.csproj" -c Release -o /app/build
 
