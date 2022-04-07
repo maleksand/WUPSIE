@@ -6,8 +6,9 @@ import Header from './components/Header/Header';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+      <p>hello</p>
+      <Router>
         <Header />
         {/* <Routes>
           <Route path='/' element={<Home />} />
@@ -17,8 +18,8 @@ function App() {
           <Route path="/beer/:id"element={<BeerDetails/>} />
           <Route path="*" element={<NotFound/>}/>
         </Routes> */}
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

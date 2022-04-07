@@ -3,10 +3,10 @@ import { useState } from 'react';
 
 function Dropdown(props) {
 
-    const [display, setDisplay] = useState('none')
+    const [displayValue, setDisplay] = useState('none')
 
     function handleClick() {
-        if (display == 'none') {
+        if (displayValue === 'none') {
             setDisplay('block')
         } else {
             setDisplay('none')
@@ -14,12 +14,16 @@ function Dropdown(props) {
     }
 
     return (
-        <div onClick={handleClick}
-            style={{ cursor: 'pointer', textDecorationLine: 'underline' }}
-        >
-            <h3>Menu</h3>
-            <div style={{ display: display }}>
-                {props.children}
+        <div>
+            <text onClick={handleClick} class="navButton">Menu</text>
+            <div class="menu" style={{display: displayValue}}>
+                {props.children.map((menuItem, key) => {
+                    return (
+                        <div key={key}>
+                            {menuItem}
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )
