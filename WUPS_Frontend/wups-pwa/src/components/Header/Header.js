@@ -2,7 +2,7 @@ import '../../App.css';
 import { NavLink } from 'react-router-dom';
 import { Dropdown } from './Dropdown';
 import Logo from './Logo';
-
+import UserID from './UserID';
 
 
 function Nav() {
@@ -11,7 +11,10 @@ function Nav() {
       <NavLink to='/'>
         <Logo />
       </NavLink>
-      This is WUPS IOT overview
+      {/* This is WUPS IOT overview */}
+
+      <UserID />
+      
       {/* Add a dropdown here */}
 
       <Dropdown>
