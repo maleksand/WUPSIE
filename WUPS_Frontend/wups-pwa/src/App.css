@@ -40,6 +40,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -59,19 +60,36 @@ header {
   justify-content: space-evenly;
 }
 
-.menu {
-  border-style: solid;
-  display: block;
-  background-color: var(--main-color);
-  position: absolute;
-  z-index: 1;
-}
-
 .navButton {
   font-weight: bold;
   cursor: pointer;
+  position: relative;
 }
+
+/* Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100px;
+  z-index: 1;
+}
+
+.menu>a {
+  border-style: solid;
+  border-width: 1px;
+  background-color: var(--main-color);
+  transform: translate(-50px, 10px);
+  width: inherit;
+}
+
+.menu>a:last-child {
+  border-top: none;
+}
+
+/* Menu */
 /* Header */
+
 
 
 /* global link decoration */
@@ -88,35 +106,39 @@ a:hover {
   text-decoration: underline;
 }
 
- a:active, .active {
-   font-weight: bold;
-   text-decoration: underline;
+a:active,
+.active {
+  font-weight: bold;
+  text-decoration: underline;
 }
+
 /* global link decoration */
 
-
-
-/* Styling Overview page */ 
+/* Styling Overview page */
 .graph-button {
   display: flex;
   height: 40%;
   width: 40%;
+  min-width: 300px;
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
   border-color: #e5d9c5;
   border-width: 1px;
   background-color: #fefefe;
-  margin-bottom: 10px;
-  margin: 10px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 660px) {
+  .graph-button {
+    width: 100%;
+  }
 }
 
 .Overview-container {
   display: flex;
-  flex: 1;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 10px;
+  justify-content: center;
 }
-/* Styling Overview page */ 
+
+/* Styling Overview page */
