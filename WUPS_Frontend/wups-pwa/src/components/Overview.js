@@ -6,9 +6,9 @@ const Overview = () => {
     
     return(
         <div className='Overview-container'>
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
+            <GraphPlaceholder id="1"/>
+            <GraphPlaceholder id={2}/>
+            <GraphPlaceholder id={1}/>
             <GraphPlaceholder />
             <GraphPlaceholder />
             <GraphPlaceholder />
