@@ -15,10 +15,9 @@ function Dropdown(props) {
 
     return (
         <div>
-            <text onClick={handleClick} class="navButton">Menu</text>
-            <div class="menu" style={{ display: displayValue }}>
+            <span onClick={handleClick} className="navButton">Menu</span>
+            <div className="menu" style={{ display: displayValue }}>
                 {props.children.map((menuItem) => {
-                    console.log(menuItem)
                     return (
                         menuItem
                     )
