@@ -4,11 +4,7 @@ import '../../../App.css';
 
 const GraphPlaceholder = (prop) => {
     const onPressHandler = () => {
-        if(prop.id===1){
-        window.alert('Routing still not implemented')
-        }else{
-            window.alert('You are not routed')
-        }
+        window.alert(prop.id)
 
     }
     return (
