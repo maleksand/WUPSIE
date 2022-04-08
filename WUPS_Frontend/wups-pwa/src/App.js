@@ -26,7 +26,6 @@ function App() {
 
 const Home = () => (
   <div>
-    {/* <h1>Under construction</h1> */}
     <Overview />
   </div>
 )

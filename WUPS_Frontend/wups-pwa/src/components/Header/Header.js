@@ -14,15 +14,15 @@ function Nav() {
       {/* This is WUPS IOT overview */}
 
       <UserID />
-      
+
       {/* Add a dropdown here */}
 
       <Dropdown>
         <NavLink to='/about'>
-            About
+          About
         </NavLink>
         <NavLink to='/'>
-            Overview
+          Overview
         </NavLink>
       </Dropdown>
 

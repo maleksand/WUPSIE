@@ -11,7 +11,7 @@ function UserID() {
     
     return (
         <div>
-            <label for="userID">UserID between 1 and 24 </label>
+            <label /*for="userID"*/>UserID between 1 and 24 </label>
             <input type="number" id="userID" name="userID" min="1" max="24" value={currentUser} onChange={inputChange} />
         </div>
     );
