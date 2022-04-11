@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../../logo.svg';
 import '../../../App.css';
 
+
 const GraphPlaceholder = (prop) => {
     const onPressHandler = () => {
         window.alert(prop.id)

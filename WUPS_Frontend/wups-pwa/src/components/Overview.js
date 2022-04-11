@@ -1,12 +1,14 @@
 import React from 'react';
 import '../App.css';
 import GraphPlaceholder from './Graphs/CommonGraphElement/GraphPlaceholder';
+import WaterGraph from './Graphs/CommonGraphElement/WaterGraph';
 
 const Overview = () => {
     
     return(
         <div className='Overview-container'>
             <GraphPlaceholder id={1}/>
+            <WaterGraph id={666}/>
             <GraphPlaceholder id={2}/>
             <GraphPlaceholder id={3}/>
             <GraphPlaceholder id={4}/>
