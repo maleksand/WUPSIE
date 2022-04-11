@@ -14,22 +14,25 @@ const GraphPlaceholder = () => {
     useEffect(() => {
         
         async function getData() {
-            let data = await FetchAPI()
+            let json = await FetchAPI()
             // console.log(json)
-            setData(data)
-            console.log(data)
+            setData(json)
         }
 
         getData()
      
     }, [])
 
+    useEffect(() => {
+        console.log(data)
+    }, [data])
+
     return (
         
         <div>
             <button onClick={onPressHandler} className='graph-button'>
                 <img src={logo} className="App-logo" alt="logo" />
-                {/* <h1>this is for test {console.log(data)}</h1> */}
+                {/* <h1>this is for test {data}</h1> */}
             </button>
         </div>
     );
