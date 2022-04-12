@@ -9,8 +9,13 @@ import SumPrice from './components/Logic/SumPrice';
 
 
 function App() {
-  //For testing purpose of SumPrice. Can be removed when it has been throug peer review
-  console.log(SumPrice(require('./localData/DataFor24Hours.json')))
+
+  
+  // //For testing purpose of SumPrice. Can be removed when it has been throug peer review
+  var data = require('./localData/DataFor24Hours.json')
+  console.log(SumPrice(data, '1'))
+
+
 
   return (
     <div className="App">
@@ -22,7 +27,7 @@ function App() {
           {/* <Route path='/profile' element={<Profile />} /> */}
           {/* <Route path='/beers' element={<Beers />} /> */}
           {/* <Route path="/beer/:id"element={<BeerDetails/>} /> */}
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
