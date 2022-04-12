@@ -7,7 +7,7 @@ function Dropdown(props) {
 
     function handleClick() {
         if (displayValue === 'none') {
-            setDisplay('block')
+            setDisplay('flex')
         } else {
             setDisplay('none')
         }
@@ -15,16 +15,11 @@ function Dropdown(props) {
 
     return (
         <div>
-            <div onClick={handleClick} className="navButton">
-                {/* <text onClick={handleClick} className="navButton">Menu</text> */}
-                Menu
-            </div>
+            <span onClick={handleClick} className="navButton">Menu</span>
             <div className="menu" style={{ display: displayValue }}>
-                {props.children.map((menuItem, key) => {
+                {props.children.map((menuItem) => {
                     return (
-                        <div key={key}>
-                            {menuItem}
-                        </div>
+                        menuItem
                     )
                 })}
             </div>
