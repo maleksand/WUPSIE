@@ -1,33 +1,44 @@
-import React from "react";
-import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel} from "victory";
+import React, {useState, useEffect} from 'react';
+import { VictoryBar, VictoryChart, VictoryTheme, VictoryAxis, VictoryLabel, VictoryLine } from "victory";
 import { reMap } from "./Mappings";
+import fetchedItem from "./FetchAPI";
 
-
-
+// const url = 'http://localhost:3030/api/devices/25F92BC417E53B3F/measurements'
 //Meter equals the value of meterType in jSon
-const Meter = "cold water"
+// const Meter = "hot water"
 //Meter equals the value of meterType in jSon
 
 
 //replace jsonDate with the Fetch constant
-const jsonData = require('./Data/Data.json');
+// const jsonData = require('./Data/Data.json');
 //replace jsonDate with the Fetch constant
 
+// console.log(fetchedItem)
 
 
-const meterType = jsonData.filter(item => item.metadata.meterType === Meter);
+// const meterType = jsonData.filter(item => item.metadata.meterType === Meter);
 
-const data = reMap(meterType);
-
-
-
-export default class GraphColdWater extends React.Component {
-  render() {
+// console.log(jsonData)
+//const data = reMap(jsonData);
 
 
-    return (
+export default function GraphColdWater() {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    async function getData() {
+      let data = await fetchedItem()
+      console.log(data)
+      data = reMap(data)
+      setData(data)
+    }
+    getData()
+  }, [])
+  
+  return (
       <VictoryChart
         theme={VictoryTheme.material}
+        // domain=
       >
 
         <VictoryAxis
@@ -43,6 +54,7 @@ export default class GraphColdWater extends React.Component {
             }
           }}
         />
+
         <VictoryAxis
           dependentAxis
           tickFormat={(x) => (x)}
@@ -52,7 +64,7 @@ export default class GraphColdWater extends React.Component {
             }
           }}
         />
-        <VictoryBar
+        <VictoryLine
           data={data}
           x="date"
           y="measurement"
@@ -60,5 +72,4 @@ export default class GraphColdWater extends React.Component {
       </VictoryChart>
 
     )
-  }
 }

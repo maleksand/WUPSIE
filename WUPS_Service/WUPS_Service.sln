@@ -1,13 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wups_service", "wups_service\wups_service.csproj", "{6E6455A6-16F2-424F-8DBC-F43202BC045B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wups_service_test", "wups_service_test\wups_service_test.csproj", "{F5C0A0B8-0CC6-4E70-90EC-2BE24F450442}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E6455A6-16F2-424F-8DBC-F43202BC045B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6455A6-16F2-424F-8DBC-F43202BC045B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6455A6-16F2-424F-8DBC-F43202BC045B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6455A6-16F2-424F-8DBC-F43202BC045B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C0A0B8-0CC6-4E70-90EC-2BE24F450442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C0A0B8-0CC6-4E70-90EC-2BE24F450442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C0A0B8-0CC6-4E70-90EC-2BE24F450442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C0A0B8-0CC6-4E70-90EC-2BE24F450442}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A2E867A8-47F1-41CC-8271-6660B4BBADD0}
+		SolutionGuid = {AFCC8FE8-908B-4D53-98A1-815D17949B4C}
 	EndGlobalSection
 EndGlobal

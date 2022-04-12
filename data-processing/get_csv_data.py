@@ -15,6 +15,16 @@ def get_devices_df():
     devices_df = pd.read_csv(f"csv-data/device.csv")
     return devices_df
 
+def get_hum_temp_df():
+    hum_temp_df = pd.read_csv(f"csv-data/KAG_energydata_complete.csv")
+    hum_temp_df['date'] = pd.to_datetime(hum_temp_df["date"])
+    return hum_temp_df
+
+def get_region_prices():
+    price_data = pd.read_csv(f"csv-data/region.csv")
+    price_data['pricePrCubic'] = pd.to_numeric(price_data['pricePrCubic'])
+    return price_data
+
 
 def format_measurements_df(df):
     df['value'] = df['value'].apply(lambda x: x.split(' ')[0]) # removes the 'm3' from the value column
