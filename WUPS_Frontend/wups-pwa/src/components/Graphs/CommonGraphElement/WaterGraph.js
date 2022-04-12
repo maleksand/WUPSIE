@@ -4,7 +4,6 @@ import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } fr
 
 //This needs local data
 const jsonData = require('./Data/Data.json');
-//console.log(jsonData)
 
 
 const WaterGraph = (prop) => {
