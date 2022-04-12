@@ -15,7 +15,8 @@ namespace wups_service.BusinessLogic
             IManager manager = managerType switch
             {
                 ManagerTypes.Device => new DeviceManager(_configuration),
-                ManagerTypes.Household => new HouseholdManager(_configuration),
+                ManagerTypes.Household => new HouseholdManager(_configuration), 
+                ManagerTypes.RegionPrice => new RegionPriceManager(_configuration),
                 _ => throw new NoManagerFoundException("No manager to serve following managerType: " + managerType),
             };
             return manager;

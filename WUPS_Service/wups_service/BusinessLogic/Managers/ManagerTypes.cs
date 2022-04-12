@@ -6,6 +6,7 @@
         Device,
         Household,
         User,
-        WaterMeasurement
+        WaterMeasurement,
+        RegionPrice
     }
 }
