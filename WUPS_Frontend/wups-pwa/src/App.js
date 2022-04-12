@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import NotFound from './components/NotFound';
 import About from './components/About';
 import Overview from './components/Overview';
-import SumPrice from './Logic/SumPrice';
-import FetchAPI from './components/FetchData/FetchAPI';
-
 
 function App() {
   return (
