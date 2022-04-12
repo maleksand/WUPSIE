@@ -12,13 +12,13 @@ export default async function SumPrice(data, regionId) {
     }
     
     data.forEach(obj => {
-        if (obj.measurement > highValue) {
-            highValue = obj.measurement
+        if (obj.value > highValue) {
+            highValue = obj.value
         }
-        if (lowValue === 0 || obj.measurement < lowValue) {
-            lowValue = obj.measurement
+        if (lowValue === 0 || obj.value < lowValue) {
+            lowValue = obj.value
         }
     })
-
+    
     return ((highValue - lowValue) * await getRegionPrice())
 }
