@@ -13,7 +13,10 @@ function App() {
   
   // //For testing purpose of SumPrice. Can be removed when it has been throug peer review
   var data = require('./localData/DataFor24Hours.json')
-  console.log(SumPrice(data, '1'))
+  async function getSumPrice() {
+    console.log(await SumPrice(data, '1'))
+  }
+  getSumPrice()
 
 
 
