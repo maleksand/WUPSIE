@@ -3,9 +3,11 @@ import logo from '../../../logo.svg';
 import '../../../App.css';
 import FetchAPI from '../../FetchData/FetchAPI';
 
-const GraphPlaceholder = () => {
+
+const GraphPlaceholder = (prop) => {
     const onPressHandler = () => {
-        window.alert('Routing still not implemented')
+        window.alert(prop.id)
+
     }
 
 
