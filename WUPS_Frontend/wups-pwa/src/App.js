@@ -5,8 +5,13 @@ import Header from './components/Header/Header';
 import NotFound from './components/NotFound';
 import About from './components/About';
 import Overview from './components/Overview';
+import SumPrice from './components/Logic/SumPrice';
+
 
 function App() {
+  //For testing purpose of SumPrice. Can be removed when it has been throug peer review
+  console.log(SumPrice(require('./localData/DataFor24Hours.json')))
+
   return (
     <div className="App">
       <Router>
