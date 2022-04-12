@@ -14,7 +14,7 @@ function Beers() {
     const data = await fetch('https://api.punkapi.com/v2/beers');
 
     const items = await data.json();
-    console.log(items);
+// console.log(items);
     setItems(items);
   };
 

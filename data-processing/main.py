@@ -1,4 +1,4 @@
-from mongo_db import measurement_processor, household_processor, device_processor
+from mongo_db import measurement_processor, household_processor, device_processor, price_processor, humidity_temp_processor
 import get_csv_data
 
 import time
@@ -15,6 +15,16 @@ def run():
     devices_df = get_csv_data.get_devices_df()
     print("Processing devices...")
     timer(lambda: device_processor.insert_df(devices_df), "Processing devices")
+
+    hum_temp_df = get_csv_data.get_hum_temp_df()
+    print("Processing hum_temp...")
+    timer(lambda: humidity_temp_processor.insert_df(hum_temp_df), "Processing humidity and temperature data")
+
+    region_prices = get_csv_data.get_region_prices()
+    print("Processing prices...")
+    timer(lambda: price_processor.insert_df(region_prices), "Processing region prices")
+
+
 
 
 def timer(func: "function", name: str = "This"):

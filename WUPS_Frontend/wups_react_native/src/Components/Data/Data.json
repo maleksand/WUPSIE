@@ -1,301 +1,602 @@
 [
 	{
-		"timestamp": {
-			"$date": 1596240242000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ee7"
-		},
-		"measurement": 34.643
-	},
-	{
-		"timestamp": {
-			"$date": 1596248558000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ee8"
-		},
-		"measurement": 34.643
-	},
-	{
-		"timestamp": {
-			"$date": 1596249438000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ee9"
-		},
-		"measurement": 34.643
-	},
-	{
-		"timestamp": {
-			"$date": 1596255613000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550eea"
-		},
-		"measurement": 34.643
-	},
-	{
-		"timestamp": {
-			"$date": 1596258796000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550eeb"
-		},
-		"measurement": 34.643
-	},
-	{
-		"timestamp": {
-			"$date": 1596263287000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550eec"
-		},
-		"measurement": 34.643
-	},
-	{
-		"timestamp": {
-			"$date": 1596264818000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550eed"
-		},
-		"measurement": 34.643
-	},
-	{
-		"timestamp": {
-			"$date": 1596270302000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550eee"
-		},
-		"measurement": 34.645
-	},
-	{
-		"timestamp": {
-			"$date": 1596273761000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550eef"
-		},
-		"measurement": 34.646
-	},
-	{
-		"timestamp": {
-			"$date": 1596276731000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef0"
-		},
-		"measurement": 34.648
-	},
-	{
-		"timestamp": {
-			"$date": 1596281203000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef1"
-		},
-		"measurement": 34.659
-	},
-	{
-		"timestamp": {
-			"$date": 1596284796000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef2"
-		},
-		"measurement": 34.659
-	},
-	{
-		"timestamp": {
-			"$date": 1596288382000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef3"
-		},
-		"measurement": 34.659
-	},
-	{
-		"timestamp": {
-			"$date": 1596291959000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef4"
-		},
-		"measurement": 34.659
-	},
-	{
-		"timestamp": {
-			"$date": 1596295661000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef5"
-		},
-		"measurement": 34.662
-	},
-	{
-		"timestamp": {
-			"$date": 1596299234000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef6"
-		},
-		"measurement": 34.662
-	},
-	{
-		"timestamp": {
-			"$date": 1596302815000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef7"
-		},
-		"measurement": 34.662
-	},
-	{
-		"timestamp": {
-			"$date": 1596306403000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef8"
-		},
-		"measurement": 34.671
-	},
-	{
-		"timestamp": {
-			"$date": 1596310000000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550ef9"
-		},
-		"measurement": 34.692
-	},
-	{
-		"timestamp": {
-			"$date": 1596313596000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550efa"
-		},
-		"measurement": 34.694
-	},
-	{
-		"timestamp": {
-			"$date": 1596317183000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550efb"
-		},
-		"measurement": 34.694
-	},
-	{
-		"timestamp": {
-			"$date": 1596320763000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550efc"
-		},
-		"measurement": 34.694
-	},
-	{
-		"timestamp": {
-			"$date": 1596324466000
-		},
-		"metadata": {
-			"deviceId": "25F92BC417E53B3F",
-			"meterType": "hot water"
-		},
-		"_id": {
-			"$oid": "623452a2e9ed959426550efd"
-		},
-		"measurement": 34.694
-	}
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T12:46:07Z",
+        "value": 2.73
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T13:45:42Z",
+        "value": 2.73
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T14:43:02Z",
+        "value": 2.73
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T15:46:58Z",
+        "value": 2.73
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T16:46:41Z",
+        "value": 2.73
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T17:46:32Z",
+        "value": 2.73
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T18:46:30Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T19:46:23Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T20:46:08Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T21:45:46Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T22:45:16Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-02T23:47:01Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T00:46:41Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T01:46:30Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T02:46:27Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T03:46:22Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T04:46:10Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T05:45:49Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T06:45:21Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T07:44:53Z",
+        "value": 2.731
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T08:46:42Z",
+        "value": 2.781
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T09:46:29Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T10:46:24Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T11:46:21Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T12:46:10Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T13:45:52Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T14:45:26Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T15:44:56Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T16:46:44Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T17:46:28Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T18:46:21Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T19:46:19Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T20:46:11Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T21:45:54Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T22:45:30Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-03T23:45:00Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T00:46:46Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T01:46:29Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T02:46:19Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T03:46:17Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T04:46:11Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T05:45:56Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T06:45:33Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T07:45:04Z",
+        "value": 2.787
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T08:46:48Z",
+        "value": 2.798
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T09:46:29Z",
+        "value": 2.798
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T10:46:18Z",
+        "value": 2.798
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T11:46:14Z",
+        "value": 2.798
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T12:46:10Z",
+        "value": 2.798
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T13:45:57Z",
+        "value": 2.798
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T14:45:36Z",
+        "value": 2.798
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T15:45:08Z",
+        "value": 2.841
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T16:46:51Z",
+        "value": 2.846
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T17:46:30Z",
+        "value": 2.846
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T18:46:17Z",
+        "value": 2.846
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T19:46:11Z",
+        "value": 2.846
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T20:46:09Z",
+        "value": 2.846
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T21:45:57Z",
+        "value": 2.869
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T22:45:39Z",
+        "value": 2.869
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-04T23:45:13Z",
+        "value": 2.869
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T00:46:54Z",
+        "value": 2.869
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T01:46:30Z",
+        "value": 2.869
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T02:46:15Z",
+        "value": 2.869
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T03:46:08Z",
+        "value": 2.869
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T04:46:06Z",
+        "value": 2.869
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T05:45:57Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T06:45:41Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T07:45:16Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T08:46:58Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T09:46:32Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T10:46:15Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T11:46:06Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T12:46:04Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T13:45:57Z",
+        "value": 2.872
+    },
+    {
+        "metadata": {
+            "deviceId": "25F92BC417E53B3F",
+            "meterType": "hot water"
+        },
+        "timestamp": "2018-11-05T14:45:43Z",
+        "value": 2.872
+    }
 ]
