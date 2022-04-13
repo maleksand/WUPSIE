@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import '../../../App.css';
 import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } from 'recharts';
+import FetchAPI from '../../FetchData/FetchAPI';
 
 //This needs local data
 const jsonData = require('./Data/Data.json');
@@ -10,15 +11,40 @@ const jsonData = require('./Data/Data.json');
 const WaterGraph = (prop) => {
     const onPressHandler = () => {
         window.alert(prop.id)
-
     }
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        
+        async function getData() {
+            let json = await FetchAPI()
+            // console.log(json)
+            setData(json)
+        }
+
+        getData()
+     
+    }, [])
+
+    useEffect(() => {
+    //  console.log(data)
+
+    }, [data])
+    
+// FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
+  const FilterResult  = data.filter(o => o.metadata.meterType === "hot water");
+
+    console.log(FilterResult)
+//FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
+
     return (
         <div className='graph-button' >
 
             <BarChart 
                 height={400}
                 width={600}
-                data={jsonData}
+                data={FilterResult}
                 onClick={onPressHandler}
                 margin={{ 
                     top: 15, 
@@ -29,7 +55,7 @@ const WaterGraph = (prop) => {
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis 
-                    dataKey='timestamp.$date'
+                    dataKey='timestamp'
                     angle={90} 
                     interval={0} 
                     scaleToFit={true} 
@@ -57,7 +83,7 @@ const WaterGraph = (prop) => {
                         color: "#167c1f"
                     }]}
                 />
-                <Bar dataKey="measurement" fill="#167c1f" />
+                <Bar dataKey="value" fill="#167c1f" />
             </BarChart>
 
         </div>
