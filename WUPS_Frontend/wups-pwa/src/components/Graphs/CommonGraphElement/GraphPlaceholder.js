@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import logo from '../../../logo.svg';
 import '../../../App.css';
-import FetchAPI from '../../FetchData/FetchAPI';
+
+
 
 
 const GraphPlaceholder = (prop) => {
@@ -10,19 +11,6 @@ const GraphPlaceholder = (prop) => {
 
     }
 
-
- const [data, setData] = useState([]);
-
-    useEffect(() => {
-        
-        async function getData() {
-            let json = await FetchAPI()
-            setData(json)
-        }
-
-        getData()
-     
-    }, [])
 
     return (
         

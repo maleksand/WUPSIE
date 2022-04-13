@@ -5,11 +5,13 @@ import FetchAPI from '../../FetchData/FetchAPI';
 import { NavLink } from 'react-router-dom';
 
 
+
 const WaterGraph = () => {
     function onPressHandler() {
         window.alert('Routing in progress')
 
      }
+
 
     const [data, setData] = useState([]);
 
@@ -29,12 +31,11 @@ const WaterGraph = () => {
     }, [])
 
     useEffect(() => {
-        console.log(data)
-    }, [data])
+        //  console.log(data)
 
 
     return (
-        <div className='graph-button'>
+        <div className='graph-button' >
             <NavLink to="/notFound">
                 <BarChart
                     height={400}
@@ -69,6 +70,7 @@ const WaterGraph = () => {
                             position={'left'}
                         />
                     </YAxis>
+                    
                     <Tooltip />
                     <Legend
                         wrapperStyle={{ position: 'bottom' }}
@@ -96,5 +98,4 @@ function UnixConversion(tick) {
         + (unixDate.getHours("hh") < 10 ? '0' + unixDate.getHours() : unixDate.getHours()) + ':'
         + (unixDate.getMinutes('mm') < 10 ? '0' + unixDate.getMinutes() : unixDate.getMinutes())
     return unixFormatted;
-
 }
