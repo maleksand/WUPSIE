@@ -31,7 +31,8 @@ const WaterGraph = (prop) => {
     //  console.log(data)
 
     }, [data])
-    
+    console.log(data)
+    console.log(data[1].metadata.meterType)
 // FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
   const FilterResult  = data.filter(o => o.metadata.meterType === "hot water");
 
@@ -40,11 +41,11 @@ const WaterGraph = (prop) => {
 
     return (
         <div className='graph-button' >
-
+            <h2>{data[0].metadata.meterType}</h2>
             <BarChart 
                 height={400}
                 width={600}
-                data={FilterResult}
+                data={data}
                 onClick={onPressHandler}
                 margin={{ 
                     top: 15, 
