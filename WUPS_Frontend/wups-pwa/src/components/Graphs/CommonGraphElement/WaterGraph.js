@@ -4,28 +4,22 @@ import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } fr
 import FetchAPI from '../../FetchData/FetchAPI';
 import { NavLink } from 'react-router-dom';
 
-// //This needs local data
-// const jsonData = require('./Data/Data.json');
-// //console.log(jsonData)
-
 
 const WaterGraph = () => {
     function onPressHandler() {
         window.alert('Routing in progress')
-    //     // <Link to='about'> Yo this is fucked up</Link>
-    //     //return (<About/>)
-    //     console.log(props.value)
 
      }
 
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        var startDate='2019-03-03';
-        var endDate='20219-03-01';
+        // Must take timespan to make it more universal
+        var startDate='2019-03-01 00:00:00';
+        var endDate='2019-03-01 23:59:59';
 
         async function getData() {
-            let json = await FetchAPI(startDate/*, endDate*/)
+            let json = await FetchAPI(startDate, endDate)
             // console.log(json)
             setData(json)
         }
@@ -37,8 +31,6 @@ const WaterGraph = () => {
     useEffect(() => {
         console.log(data)
     }, [data])
-
-
 
 
     return (
