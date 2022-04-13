@@ -5,17 +5,23 @@ import FetchAPI from '../../FetchData/FetchAPI';
 import { NavLink } from 'react-router-dom';
 
 
-const WaterGraph = (prop) => {
-    const onPressHandler = () => {
-        window.alert(prop.id)
-    }
+
+const WaterGraph = () => {
+    function onPressHandler() {
+        window.alert('Routing in progress')
+
+     }
+
 
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        // Must take timespan to make it more universal
+        var startDate='2019-03-01 00:00:00';
+        var endDate='2019-03-01 23:59:59';
 
         async function getData() {
-            let json = await FetchAPI()
+            let json = await FetchAPI(startDate, endDate)
             // console.log(json)
             setData(json)
         }
@@ -27,13 +33,6 @@ const WaterGraph = (prop) => {
     useEffect(() => {
         //  console.log(data)
 
-    }, [data])
-    console.log(data)
-    // FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
-    const FilterResult = data.filter(o => o.metadata.meterType === "hot water");
-
-    console.log(FilterResult)
-    //FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
 
     return (
         <div className='graph-button' >
