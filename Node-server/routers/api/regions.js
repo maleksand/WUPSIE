@@ -8,7 +8,7 @@ const router = express.Router()
 router.get("/:regionId/price", async (req, res) => {
 
     let regionId = req.params.regionId
-    url = `${config.baseAPIUrl}/RegionPrices/${regionId}/price`
+    url = `${config.baseAPIUrl}/regions/${regionId}/price`
 
     let jsondata
 

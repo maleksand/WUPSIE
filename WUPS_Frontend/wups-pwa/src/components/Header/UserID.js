@@ -6,7 +6,6 @@ function UserID() {
 
     function inputChange(event) {
         setCurrentUser(event.target.value)
-        console.log(event.target.value)
     }
     
     return (
