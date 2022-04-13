@@ -4,24 +4,16 @@ import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } fr
 import FetchAPI from '../../FetchData/FetchAPI';
 import { NavLink } from 'react-router-dom';
 
-// //This needs local data
-// const jsonData = require('./Data/Data.json');
-// //console.log(jsonData)
 
-
-const WaterGraph = () => {
-    function onPressHandler() {
-        window.alert('Routing in progress')
-    //     // <Link to='about'> Yo this is fucked up</Link>
-    //     //return (<About/>)
-    //     console.log(props.value)
-
-     }
+const WaterGraph = (prop) => {
+    const onPressHandler = () => {
+        window.alert(prop.id)
+    }
 
     const [data, setData] = useState([]);
 
     useEffect(() => {
-
+        
         async function getData() {
             let json = await FetchAPI()
             // console.log(json)
@@ -29,18 +21,24 @@ const WaterGraph = () => {
         }
 
         getData()
-
+     
     }, [])
 
     useEffect(() => {
-        console.log(data)
+    //  console.log(data)
+
     }, [data])
+    console.log(data)
+    console.log(data[1].metadata.meterType)
+// FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
+  const FilterResult  = data.filter(o => o.metadata.meterType === "hot water");
 
-
-
+    console.log(FilterResult)
+//FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
 
     return (
-        <div className='graph-button'>
+        <div className='graph-button' >
+            <h2>{data[0].metadata.meterType}</h2>
             <NavLink to="/notFound">
                 <BarChart
                     height={400}
@@ -64,6 +62,7 @@ const WaterGraph = () => {
                         fontSize={12}
                         tickFormatter={(tick) => UnixConversion(tick)
                         } />
+
 
                     <YAxis
                         type="number"
