@@ -13,7 +13,7 @@ const WaterGraph = (prop) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        
+
         async function getData() {
             let json = await FetchAPI()
             // console.log(json)
@@ -21,24 +21,22 @@ const WaterGraph = (prop) => {
         }
 
         getData()
-     
+
     }, [])
 
     useEffect(() => {
-    //  console.log(data)
+        //  console.log(data)
 
     }, [data])
     console.log(data)
-    console.log(data[1].metadata.meterType)
-// FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
-  const FilterResult  = data.filter(o => o.metadata.meterType === "hot water");
+    // FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
+    const FilterResult = data.filter(o => o.metadata.meterType === "hot water");
 
     console.log(FilterResult)
-//FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
+    //FILTER FUNCTION, CHANGE THE HOT WATER TO THE METER NEEDED
 
     return (
         <div className='graph-button' >
-            <h2>{data[0].metadata.meterType}</h2>
             <NavLink to="/notFound">
                 <BarChart
                     height={400}
@@ -63,7 +61,6 @@ const WaterGraph = (prop) => {
                         tickFormatter={(tick) => UnixConversion(tick)
                         } />
 
-
                     <YAxis
                         type="number"
                         domain={['auto', 'auto']}
@@ -74,6 +71,7 @@ const WaterGraph = (prop) => {
                             position={'left'}
                         />
                     </YAxis>
+                    
                     <Tooltip />
                     <Legend
                         wrapperStyle={{ position: 'bottom' }}
@@ -101,5 +99,4 @@ function UnixConversion(tick) {
         + (unixDate.getHours("hh") < 10 ? '0' + unixDate.getHours() : unixDate.getHours()) + ':'
         + (unixDate.getMinutes('mm') < 10 ? '0' + unixDate.getMinutes() : unixDate.getMinutes())
     return unixFormatted;
-
 }
