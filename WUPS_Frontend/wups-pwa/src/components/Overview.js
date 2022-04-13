@@ -9,7 +9,15 @@ const Overview = () => {
         <div className='Overview-container'>
             <GraphPlaceholder />
             <WaterGraph />
+            <WaterGraph />
 
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
         </div>
 
     )
