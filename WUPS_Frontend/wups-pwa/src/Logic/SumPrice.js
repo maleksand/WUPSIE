@@ -19,6 +19,9 @@ export default async function SumPrice(data, regionId) {
             lowValue = obj.value
         }
     })
+
     
-    return ((highValue - lowValue) * await getRegionPrice())
+    
+    let value =((highValue - lowValue) * await getRegionPrice())
+    return Math.round(value * 100)/100
 }
