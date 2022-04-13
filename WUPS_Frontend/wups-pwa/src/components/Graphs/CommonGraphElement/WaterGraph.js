@@ -2,22 +2,21 @@ import React, { useState, useEffect } from 'react';
 import '../../../App.css';
 import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } from 'recharts';
 import FetchAPI from '../../FetchData/FetchAPI';
-import { NavLink, Link, useNavigate, useRoutes, Navigate } from 'react-router-dom';
-import About from '../../About';
+import { NavLink } from 'react-router-dom';
 
-//This needs local data
-const jsonData = require('./Data/Data.json');
-//console.log(jsonData)
+// //This needs local data
+// const jsonData = require('./Data/Data.json');
+// //console.log(jsonData)
 
 
 const WaterGraph = () => {
-    const OnPressHandler = () => {
+    function onPressHandler() {
         window.alert('Routing in progress')
-        // <Link to='about'> Yo this is fucked up</Link>
+    //     // <Link to='about'> Yo this is fucked up</Link>
+    //     //return (<About/>)
+    //     console.log(props.value)
 
-
-
-    }
+     }
 
     const [data, setData] = useState([]);
 
@@ -41,15 +40,13 @@ const WaterGraph = () => {
 
 
     return (
-        <div className='graph-button' onClick={OnPressHandler} >
-            <NavLink to="/about">
+        <div className='graph-button'>
+            <NavLink to="/notFound">
                 <BarChart
                     height={400}
                     width={600}
-                    //height={800}
-                    //width={1200}
                     data={data}
-                    //onClick={onPressHandler}
+                    //onClick={onPressHandler()}
                     margin={{
                         top: 15,
                         right: 10,
@@ -82,12 +79,12 @@ const WaterGraph = () => {
                     <Legend
                         wrapperStyle={{ position: 'bottom' }}
                         payload={[{
-                            value: 'Hot water',
+                            value: 'Hot water', //ToDo Make this dynamic
                             type: 'rect',
                             color: "#167c1f"
                         }]}
                     />
-                    <Bar dataKey="value" fill="#167c1f" /*onClick={onPressHandler}*/ />
+                    <Bar dataKey="value" fill="#167c1f" /*onClick={onPressHandler()}*/ />
                 </BarChart>
             </NavLink>
         </div>
