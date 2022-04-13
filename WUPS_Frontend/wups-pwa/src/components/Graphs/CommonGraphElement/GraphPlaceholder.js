@@ -17,17 +17,12 @@ const GraphPlaceholder = (prop) => {
         
         async function getData() {
             let json = await FetchAPI()
-            // console.log(json)
             setData(json)
         }
 
         getData()
      
     }, [])
-
-    useEffect(() => {
-        console.log(data)
-    }, [data])
 
     return (
         
