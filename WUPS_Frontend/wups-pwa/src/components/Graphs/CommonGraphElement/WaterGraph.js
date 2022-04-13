@@ -21,9 +21,11 @@ const WaterGraph = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        var startDate='2019-03-03';
+        var endDate='20219-03-01';
 
         async function getData() {
-            let json = await FetchAPI()
+            let json = await FetchAPI(startDate/*, endDate*/)
             // console.log(json)
             setData(json)
         }
