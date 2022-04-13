@@ -7,9 +7,17 @@ const Overview = () => {
     
     return(
         <div className='Overview-container'>
-            <GraphPlaceholder />
+            {/* <GraphPlaceholder /> */}
             <WaterGraph />
+            {/* <WaterGraph /> */}
 
+            {/* <GraphPlaceholder /> */}
+            {/* <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder /> */}
         </div>
 
     )
