@@ -24,6 +24,15 @@ const Overview = () => {
             <GraphPlaceholder />
             <WaterGraph />
             <UsageComponent data={dataApi} />
+            <WaterGraph />
+
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
+            <GraphPlaceholder />
         </div>
 
     )
