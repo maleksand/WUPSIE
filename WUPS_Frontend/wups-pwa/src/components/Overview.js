@@ -7,17 +7,17 @@ const Overview = () => {
     
     return(
         <div className='Overview-container'>
-            <GraphPlaceholder />
+            <GraphPlaceholder id={'Pie Chart Spike'} />
             <WaterGraph />
             <WaterGraph />
 
+            {/* <GraphPlaceholder />
             <GraphPlaceholder />
             <GraphPlaceholder />
             <GraphPlaceholder />
             <GraphPlaceholder />
             <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
+            <GraphPlaceholder /> */}
         </div>
 
     )
