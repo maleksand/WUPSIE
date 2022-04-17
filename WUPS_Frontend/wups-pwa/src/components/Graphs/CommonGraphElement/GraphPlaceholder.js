@@ -33,13 +33,10 @@ const GraphPlaceholder = (prop) => {
                 {/* It is a test of Pie Charts */}
             {/* </button> */}
             <PieChart width={730} height={350} backgroundColor="yellow">
-                <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" labelLine={true} />
-                <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" /*label*/>
-                    <Sector label={'Pølle'} fill='red'>
+                <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8"  />
+                <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label={'${data02}'} >
 
-                        {/* {`${((Math.PI/360) * 100).toFixed(0)}%`} */}
-                    
-                    </Sector>
+  
                 </Pie>
             </PieChart>
         </div>
