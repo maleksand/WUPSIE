@@ -30,13 +30,35 @@ const WaterGraph = () => {
 
     }, [])
 
+
+
+let temp = [{"value": 0}]
+
+    for (let i = 1; i < data.length; i++) {
+        temp.push({"value": + ( data[i].value - data[i-1].value)})
+        
+    }
+
+var output = [];
+Object.keys(temp).forEach(key => {
+    if (temp[key] instanceof Object) {
+        output[key] = Object.assign({}, data[key], temp[key]);
+    } else {
+        output[key] = temp[key];
+    }
+});
+
+console.log(output);
+
+
+
         return (
             <div className='graph-button' >
                 <NavLink to="/notFound">
                     <BarChart
                         height={400}
                         width={600}
-                        data={data}
+                        data={output}
                         //onClick={onPressHandler()}
                         margin={{
                             top: 15,
