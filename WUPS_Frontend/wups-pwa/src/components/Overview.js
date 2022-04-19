@@ -13,7 +13,7 @@ const Overview = () => {
 
     useEffect(() => {
         async function getDataApi() {
-            let json = await FetchAPI()
+            let json = await FetchAPI('2019-01-01', '2019-01-02')
             setDataApi(json)
         }
         getDataApi()

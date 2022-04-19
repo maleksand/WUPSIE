@@ -1,10 +1,11 @@
-import react, { useState, useEffect } from "react"
-import SumPrice from "../../logic/SumPrice"
+import React, { useState, useEffect } from "react"
+import SumPrice from "../../Logic/SumPrice"
 
 export default function Pizzas(props) {
 
     const [usePrice, setUseprice] = useState()
     const [meterType, setMeterType] = useState()
+    console.log(props.data)
     
     useEffect(() => {
         async function getPrice() {
