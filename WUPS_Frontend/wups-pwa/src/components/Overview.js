@@ -36,7 +36,7 @@ const Overview = () => {
         <div className='Overview-container'>
             <GraphPlaceholder />
             <WaterGraph />
-            {/* <UsageComponent data={dataApi} /> */}
+            <UsageComponent dataCold={dataApiCold} dataHot={dataApiHot} />
             <WaterGraph />
 
             {/* <GraphPlaceholder />
