@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from "react"
-import SumPrice from "../../Logic/SumPrice"
+import SumPrice from "../../logic/SumPrice"
+import dateLogic from "../../logic/DateLogic"
 
 export default function Pizzas(props) {
 
-    const [usePrice, setUseprice] = useState()
+    const [useResult, setUseResult] = useState({})
     const [meterType, setMeterType] = useState()
-    console.log(props.data)
+
+
     
     useEffect(() => {
         async function getPrice() {
-            let price = await SumPrice(props.data, "1")
-            setUseprice(price)
+            let result = await SumPrice(props.data, "1")
+            setUseResult(result)
             setMeterType(props.data[0].metadata.meterType)
         }
-        getPrice()
-    }, )
+        getPrice()  
+    },[props])
 
     const [pizzaPrice, setPrice] = useState(65);
 
-    
     const handleSubmit = (event) => {
         event.preventDefault();
         alert(`Do you really pay ${pizzaPrice} kr. for a pizza?`)
@@ -33,8 +34,8 @@ export default function Pizzas(props) {
                 </label>
                 
             </form>
-            <p>Your consumption has been pizzas in the given period</p>
-            <p>you have use for {Math.round(usePrice *100)/100} on {meterType} which equate to { Math.round((usePrice / pizzaPrice)*100)/100} pizzas</p>
+            <p>Between the {dateLogic.ConvDayMonYeaHouMin(useResult.startDate)} and {dateLogic.ConvDayMonYeaHouMin(useResult.endDate)}</p>
+            <p>you have use for {Math.round(useResult.sumPrice *100)/100} DKK on {meterType} which equate to { Math.round((useResult.sumPrice / pizzaPrice)*100)/100} pizzas</p>
         </div>
     )
 }
