@@ -59,7 +59,7 @@ const GraphPlaceholder = (prop) => {
             {/* </button> */}
             <PieChart width={600} height={400} backgroundColor="yellow">
                 <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={70} fill="#8884d8" label={renderLabelNamesValue} />
-                {/* <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={80} outerRadius={100} fill="#82ca9d"  />               */}
+                <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={80} outerRadius={100} fill="#82ca9d" label={renderLabelNamesValue} /> 
   
                 
                 <Tooltip />

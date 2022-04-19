@@ -21,7 +21,7 @@ const Overview = () => {
 
     return (
         <div className='Overview-container'>
-            <GraphPlaceholder id={'Pie Chart Spike'} />
+            <GraphPlaceholder />
             <WaterGraph />
             <UsageComponent data={dataApi} />
             <WaterGraph />
