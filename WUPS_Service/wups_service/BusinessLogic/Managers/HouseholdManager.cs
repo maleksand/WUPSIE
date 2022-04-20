@@ -51,14 +51,14 @@ namespace wups_service.BusinessLogic.Managers
             Household household = _repository.Get(householdId).Single();
 
             
-            string jsonString = "{"; // start json object
+            string jsonString = "["; // start json object
 
             int i = 0;
             foreach(Household.HouseholdDevice device in household.Devices)
             {
                 ManagerTypes manager = (ManagerTypes)Enum.Parse(typeof(ManagerTypes), device.Type, true);
 
-                jsonString += $"\"{device.Id}\":"; // set measurements inside attribute 
+                jsonString += "{" + $"\"deviceId\":\"{device.Id}\",\"measurements\":"; // set measurements inside attribute 
                 
                 if (!String.IsNullOrEmpty(startDate))
                 {
@@ -78,10 +78,11 @@ namespace wups_service.BusinessLogic.Managers
                     jsonString += _broker.GetMeasurementManager(manager).GetAll(device.Id); // add measurements to json
                 }
                 
+                jsonString += "}";
                 if (++i < household.Devices.Count()) jsonString += ","; // add comma in jsonString
             }
 
-            jsonString += "}";
+            jsonString += "]";
 
             return jsonString;
         }
