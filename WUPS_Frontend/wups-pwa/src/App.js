@@ -8,11 +8,21 @@ import Overview from './components/Overview';
 import processData from "./Logic/processDataToSumStructure"
 
 function App() {
+
+  /*
+   * Review start:
+   * Delete this before merge with main
+   */
   const [data, setData] = useState({})
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch("http://localhost:3030/api/households/01C21CA24FBCECE7/devices/measurements?startDate=2019-02-01&endDate=2019-08-01")
+      let e = new Date("2019-01-19 00:00")
+      e.setHours(e.getHours() + e.getTimezoneOffset() / 60)
+      let ee = new Date("2019-02-19 00:00")
+      ee.setHours(ee.getHours() + ee.getTimezoneOffset() / 60)
+
+      const response = await fetch("http://localhost:3030/api/households/01C21CA24FBCECE7/devices/measurements?startDate=" + e.toISOString() + "&endDate=" + ee.toISOString())
       const jsonData = await response.json()
       setData(processData(jsonData))
     }
@@ -22,6 +32,9 @@ function App() {
   useEffect(() => {
     console.log(data)
   }, [data])
+  /**
+   * Review end
+   */
 
 
 
