@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import NotFound from './components/NotFound';
 import About from './components/About';
 import Overview from './components/Overview';
-import processData from "./Logic/processDataToSumStructure"
+import processData from "./logic/processDataToSumStructure"
 
 function App() {
 
