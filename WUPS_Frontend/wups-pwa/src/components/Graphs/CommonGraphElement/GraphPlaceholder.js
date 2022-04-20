@@ -10,20 +10,6 @@ const GraphPlaceholder = (prop) => {
 
     }
 
-
- const [data, setData] = useState([]);
-
-    useEffect(() => {
-        
-        async function getData() {
-            let json = await FetchAPI()
-            setData(json)
-        }
-
-        getData()
-     
-    }, [])
-
     return (
         
         <div>
