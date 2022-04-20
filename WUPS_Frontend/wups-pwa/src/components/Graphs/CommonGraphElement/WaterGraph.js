@@ -32,10 +32,12 @@ const WaterGraph = () => {
 
 
 
-let temp = [{"value": 0}]
+
+
+let temp = [{"value": '0'}]
 
     for (let i = 1; i < data.length; i++) {
-        temp.push({"value": + ( data[i].value - data[i-1].value)})
+        temp.push({"value": (( data[i].value - data[i-1].value) * 1000).toFixed(0)})
         
     }
 
@@ -48,7 +50,14 @@ Object.keys(temp).forEach(key => {
     }
 });
 
-console.log(output);
+
+// >>>I have an idea to make the graph legend dependent on the metertype, but I get errors, I think because the data is a bit delayed and it is nondefined at first. We talked about fixing this later, not urgent. -Lars
+
+// const measureType = output[0].metadata.meterType
+// console.log(measureType) 
+
+// <<< -Lars
+
 
 
 
@@ -70,7 +79,7 @@ console.log(output);
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis
                             dataKey='timestamp'
-                            angle={90}
+                            angle={45}
                             interval={0}
                             scaleToFit={true}
                             textAnchor={'inherit'}
@@ -80,10 +89,10 @@ console.log(output);
 
                         <YAxis
                             type="number"
-                            domain={['auto', 'auto']}
+                            domain={[0, 100]}
                         >
                             <Label
-                                value={'Cubic meters'}
+                                value={'Liters'}
                                 angle={-90}
                                 position={'left'}
                             />
