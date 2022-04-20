@@ -19,9 +19,6 @@ dateLogic.ConvDayMonYeaHouMin = (date) => {
         + dateObj.getUTCFullYear() + " "
         + (dateObj.getUTCHours() < 10 ? '0' + (dateObj.getUTCHours()) : dateObj.getUTCHours() )+ ":"
         + (dateObj.getUTCMinutes() < 10 ? '0' + (dateObj.getUTCMinutes()) : dateObj.getUTCMinutes())
-
-    console.log(date)
-    console.log(dateFormat)
     return dateFormat;
 }
 

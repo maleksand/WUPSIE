@@ -1,42 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import '../../../App.css';
 import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } from 'recharts';
-import FetchAPI from '../../FetchData/FetchAPI';
+import FetchAPI from '../../../logic/FetchAPI';
 import { NavLink } from 'react-router-dom';
 
 
 
-const WaterGraph = () => {
+const WaterGraph = (props) => {
     function onPressHandler() {
         window.alert('Routing in progress')
 
     }
-
-
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        // Must take timespan to make it more universal
-        var startDate = '2019-03-01 00:00:00';
-        var endDate = '2019-03-01 23:59:59';
-
-        async function getData() {
-            let json = await FetchAPI(startDate, endDate)
-            // console.log(json)
-            setData(json)
-        }
-
-        getData()
-
-    }, [])
-
         return (
             <div className='graph-button' >
                 <NavLink to="/notFound">
                     <BarChart
                         height={400}
                         width={600}
-                        data={data}
+                        data={props.data}
                         //onClick={onPressHandler()}
                         margin={{
                             top: 15,

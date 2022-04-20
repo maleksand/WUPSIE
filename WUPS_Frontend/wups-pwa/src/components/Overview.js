@@ -3,7 +3,7 @@ import '../App.css';
 import GraphPlaceholder from './Graphs/CommonGraphElement/GraphPlaceholder';
 import WaterGraph from './Graphs/CommonGraphElement/WaterGraph';
 import UsageComponent from './Usage/UsageMainComponent';
-import FetchAPI from './FetchData/FetchAPI';
+import FetchAPI from '../logic/FetchAPI';
 
 
 const Overview = () => {
@@ -22,7 +22,7 @@ const Overview = () => {
     return (
         <div className='Overview-container'>
             <GraphPlaceholder />
-            <WaterGraph />
+            <WaterGraph data={dataApi} />
             <UsageComponent data={dataApi} />
             <WaterGraph />
 
