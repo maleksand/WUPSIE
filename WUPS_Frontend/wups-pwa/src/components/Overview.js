@@ -3,7 +3,7 @@ import '../App.css';
 import GraphPlaceholder from './Graphs/CommonGraphElement/GraphPlaceholder';
 import WaterGraph from './Graphs/CommonGraphElement/WaterGraph';
 import UsageComponent from './Usage/UsageMainComponent';
-import FetchAPI from '../logic/FetchAPI';
+import fetchApi from '../logic/FetchAPI';
 
 
 const Overview = () => {
@@ -13,7 +13,7 @@ const Overview = () => {
 
     useEffect(() => {
         async function getDataApi() {
-            let json = await FetchAPI('2019-01-01', '2019-01-02')
+            let json = await fetchApi.getFromDateRange('BBB60CC9ED69C910' ,'2019-01-01', '2019-01-06')
             setDataApi(json)
         }
         getDataApi()
