@@ -13,13 +13,6 @@ const Overview = () => {
             <UsageTextComponent />
 
 
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
         </div>
 
     )
