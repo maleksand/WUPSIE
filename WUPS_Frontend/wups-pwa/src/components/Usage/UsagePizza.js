@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import SumPrice from "../../Logic/SumPrice"
-import dateLogic from "../../Logic/DateLogic"
+import SumPrice from "../../logic/SumPrice"
+import dateLogic from "../../logic/DateLogic"
 
 export default function Pizzas(props) {
 
