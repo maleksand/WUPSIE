@@ -32,7 +32,7 @@ function createTree(data) {
 
             processedData[device.deviceId][date.getFullYear()][date.getMonth() + 1][date.getDate()] = { sum: 0, measurements: [] }
         }
-        date.setDate(date.getDate() + 1) // this can skip a day, fix it
+        date.setDate(date.getDate() + 1)
     }
 
     // add all leafs to the branches of the tree
