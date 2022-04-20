@@ -77,6 +77,8 @@ function addUsageToData(data) {
     return data
 }
 
+// console.log(addUsageToData())
+
 export default function processData(data) {
     const dataWithUsage = addUsageToData(data)
     const processedData = createTree(dataWithUsage)
