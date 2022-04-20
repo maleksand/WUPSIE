@@ -13,8 +13,11 @@ const Overview = () => {
 
     useEffect(() => {
         async function getDataApi() {
-            let json = await fetchApi.getFromDateRange('BBB60CC9ED69C910' ,'2019-01-01', '2019-01-06')
+            let json = await fetchApi.getFromDateRange('BBB60CC9ED69C910' ,'2019-01-01', '2019-01-02' )
             setDataApi(json)
+            let householdJson = await fetchApi.getHouseholdFromDateRange('01C21CA24FBCECE7','2019-01-01', '2019-01-02' )
+            console.log(householdJson)
+            console.log(json)
         }
         getDataApi()
     }, [])
