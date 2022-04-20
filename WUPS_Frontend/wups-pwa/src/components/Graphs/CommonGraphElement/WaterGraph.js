@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../../../App.css';
 import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } from 'recharts';
 import FetchAPI from '../../../logic/FetchAPI';
@@ -66,13 +66,14 @@ const WaterGraph = (props) => {
 
 export default WaterGraph;
 
-    function UnixConversion(tick) {
-        let unixDate = new Date(tick)
-        var unixFormatted = ''
-            + (unixDate.getDate("DD") < 10 ? '0' + unixDate.getDate() : unixDate.getDate()) + '-'
-            + (unixDate.getMonth("MM") < 10 ? '0' + unixDate.getMonth() : unixDate.getMonth()) + '-'
-            + unixDate.getFullYear() + ' '
-            + (unixDate.getHours("hh") < 10 ? '0' + unixDate.getHours() : unixDate.getHours()) + ':'
-            + (unixDate.getMinutes('mm') < 10 ? '0' + unixDate.getMinutes() : unixDate.getMinutes())
-        return unixFormatted;
-    }
+function UnixConversion(tick) {
+    let unixDate = new Date(tick)
+    var unixFormatted = ''
+        + (unixDate.getDate("DD") < 10 ? '0' + unixDate.getDate() : unixDate.getDate()) + '-'
+        + (unixDate.getMonth("MM") < 10 ? '0' + unixDate.getMonth() : unixDate.getMonth()) + '-'
+        + unixDate.getFullYear() + ' '
+        + (unixDate.getHours("hh") < 10 ? '0' + unixDate.getHours() : unixDate.getHours()) + ':'
+        + (unixDate.getMinutes('mm') < 10 ? '0' + unixDate.getMinutes() : unixDate.getMinutes())
+    return unixFormatted;
+
+}
