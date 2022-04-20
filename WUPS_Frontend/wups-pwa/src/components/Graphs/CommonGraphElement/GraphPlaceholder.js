@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 //import logo from '../../../logo.svg';
 import '../../../App.css';
 import { PieChart, Pie, Label, Sector, Tooltip } from 'recharts';
@@ -6,7 +6,6 @@ import { PieChart, Pie, Label, Sector, Tooltip } from 'recharts';
 const GraphPlaceholder = (prop) => {
     const onPressHandler = () => {
         window.alert(prop.id)
-
     }
 
     const data01 = [
@@ -57,11 +56,9 @@ const GraphPlaceholder = (prop) => {
                 {/* <h1>this is for test {data}</h1> */}
                 {/* It is a test of Pie Charts */}
             {/* </button> */}
-            <PieChart width={600} height={400} backgroundColor="yellow">
+            <PieChart width={740} height={400} backgroundColor="yellow">
                 <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={70} fill="#8884d8" label={renderLabelNamesValue} />
                 <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={80} outerRadius={100} fill="#82ca9d" label={renderLabelNamesValue} /> 
-  
-                
                 <Tooltip />
             </PieChart>
         </div>

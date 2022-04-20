@@ -15,7 +15,7 @@ const Overview = () => {
 
     useEffect(() => {
         async function getDataApi() {
-            let json = await FetchAPI('2019-01-01', '2019-01-02', 'B32FA9312E1013B7') //B32FA9312E1013B7 is COLD WATER device
+            let json = await FetchAPI('2019-01-01', '2019-01-14', 'B32FA9312E1013B7') //B32FA9312E1013B7 is COLD WATER device
             setDataApiCold(json)
         }
         getDataApi()
@@ -25,19 +25,20 @@ const Overview = () => {
 
     useEffect(() => {
         async function getDataApi() {
-            let json = await FetchAPI('2019-01-01', '2019-01-02', 'A92C3B84F9F4E0AF') //A92C3B84F9F4E0AF is HOT WATER device
+            let json = await FetchAPI('2019-01-01', '2019-01-14', 'A92C3B84F9F4E0AF') //A92C3B84F9F4E0AF is HOT WATER device
             setDataApiHot(json)
         }
         getDataApi()
     }, [])
-
+//console.log(dataApiHot)
+//console.log(dataApiCold)
 
     return (
         <div className='Overview-container'>
-            <GraphPlaceholder />
-            <WaterGraph />
+            {/* <GraphPlaceholder /> */}
+            {/* <WaterGraph /> */}
             <UsageComponent dataCold={dataApiCold} dataHot={dataApiHot} />
-            <WaterGraph />
+            {/* <WaterGraph /> */}
 
             {/* <GraphPlaceholder />
             <GraphPlaceholder />
