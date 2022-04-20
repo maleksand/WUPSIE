@@ -7,6 +7,7 @@ export default async function SumPrice(data, regionId) {
     let sumPrice = 0
     let startDate = null
     let endDate = null
+    let totalusage = 0
     
     async function getRegionPrice(){
         const response = await fetch('http://localhost:3030/api/regions/' + regionId + '/price')
@@ -32,7 +33,8 @@ export default async function SumPrice(data, regionId) {
             
         }
     })
+    totalusage = highValue - lowValue
 
     sumPrice = (highValue - lowValue) * await getRegionPrice()
-    return {sumPrice: sumPrice, startDate: startDate, endDate: endDate}
+    return {sumPrice: sumPrice, startDate: startDate, endDate: endDate, totalUsage: totalusage}
 }

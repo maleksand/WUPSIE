@@ -26,13 +26,6 @@ const Overview = () => {
             <UsageComponent data={dataApi} />
             <WaterGraph />
 
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
-            <GraphPlaceholder />
         </div>
 
     )

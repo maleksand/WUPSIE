@@ -6,6 +6,7 @@ export default function Pizzas(props) {
 
     const [useResult, setUseResult] = useState({})
     const [meterType, setMeterType] = useState()
+    const [totalUsage, setUsage] = useState()
 
 
     
@@ -34,8 +35,24 @@ export default function Pizzas(props) {
                 </label>
                 
             </form>
-            <p>Between the {dateLogic.ConvDayMonYeaHouMin(useResult.startDate)} and {dateLogic.ConvDayMonYeaHouMin(useResult.endDate)}</p>
-            <p>you have use for {Math.round(useResult.sumPrice *100)/100} DKK on {meterType} which equate to { Math.round((useResult.sumPrice / pizzaPrice)*100)/100} pizzas</p>
+
+            <p>
+                You have used {Math.round(useResult.totalUsage * 100)/100} cubic meters of {meterType}.
+            </p>
+            <p>
+                This has cost you {Math.round(useResult.sumPrice *100)/100} DKK which equates to { Math.round((useResult.sumPrice / pizzaPrice)*100)/100} pizzas!
+
+
+            </p>
+            <p>
+                This is for time period between {dateLogic.ConvDayMonYeaHouMin(useResult.startDate)} and {dateLogic.ConvDayMonYeaHouMin(useResult.endDate)}.
+            </p>
+
+
+
+            
+
+
         </div>
     )
 }
