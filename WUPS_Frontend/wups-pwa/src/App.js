@@ -8,7 +8,20 @@ import Overview from './components/Overview';
 import processData from "./logic/processDataToSumStructure"
 
 function App() {
+  const [data, setData] = useState([])
 
+  useEffect(() => {
+    async function getData() {
+      const response = await fetch(`http://localhost:3030/api/households/01C21CA24FBCECE7/devices/measurements`)
+      const json = await response.json()
+      setData(processData(json))
+    }
+    getData()
+  }, [])
+
+  useEffect(() => {
+    console.log(data)
+  }, [data])
 
 
 

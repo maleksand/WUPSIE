@@ -19,18 +19,38 @@ function findMinMaxDate(data) {
 }
 
 function createTree(data) {
-    let processedData = {}
+    let processedData = []
     const [minDate, maxDate] = findMinMaxDate(data)
     let date = minDate
-    
+
     // create the structure
     while (date <= maxDate) {
         for (let device of data) {
-            if (!processedData[device.deviceId]) processedData[device.deviceId] = { sum: 0 }
-            if (!processedData[device.deviceId][date.getFullYear()]) processedData[device.deviceId][date.getFullYear()] = { sum: 0 }
-            if (!processedData[device.deviceId][date.getFullYear()][date.getMonth() + 1]) processedData[device.deviceId][date.getFullYear()][date.getMonth() + 1] = { sum: 0 }
+            const devicesExists = processedData.some(pd => pd.id === device.deviceId)
+            const newDevice = devicesExists ? 
+            processedData.find(pd => pd.id === device.deviceId) : 
+            { id: device.deviceId, sum: 0, years: [] }
+            if(!devicesExists) processedData.push(newDevice)
+            
+            const yearExists = newDevice.years.some(y => y.id === date.getFullYear())
+            const year = yearExists ?
+                newDevice.years.find(y => y.id === date.getFullYear()) :
+                { id: date.getFullYear(), sum: 0, months: [] }
+            if(!yearExists) newDevice.years.push(year)
+            
+            const monthExists = year.months.some(m => m.id === date.getMonth() + 1)
+            const month = monthExists ?
+                year.months.find(m => m.id === date.getMonth() + 1) :
+                { id: date.getMonth() + 1, sum: 0, days: [] }
+            if(!monthExists) year.months.push(month)
 
-            processedData[device.deviceId][date.getFullYear()][date.getMonth() + 1][date.getDate()] = { sum: 0, measurements: [] }
+            const dayExists = month.days.some(d => d.id === date.getDate())
+            const day = dayExists ?
+                month.days.find(d => d.id === date.getDate()) :
+                { id: date.getDate(), sum: 0, measurements: [] }
+            if(!dayExists) month.days.push(day)
+
+            
         }
         date.setDate(date.getDate() + 1)
     }
@@ -39,45 +59,43 @@ function createTree(data) {
     for (let device of data) {
         for (let measurement of device.measurements) {
             const measurementDate = new Date(measurement.timestamp)
-            processedData[device.deviceId][measurementDate.getFullYear()][measurementDate.getMonth() + 1][measurementDate.getDate()].measurements.push(measurement)
+            processedData.find(pd => pd.id === device.deviceId)
+            .years.find(y => y.id === measurementDate.getFullYear())
+            .months.find(m => m.id === measurementDate.getMonth() + 1)
+            .days.find(d => d.id === measurementDate.getDate())
+            .measurements.push(measurement)
         }
     }
 
     // calculate the sums for device, year, month and day
-    for (let device in processedData){
-        if(device === "sum") continue
-        for(let year in processedData[device]){
-            if(year === "sum") continue
-            for(let month in processedData[device][year]) {
-                if(month === "sum") continue
-                for(let day in processedData[device][year][month]){
-                    if(day === "sum") continue
-                    for(let measurement of processedData[device][year][month][day].measurements) {
-                        processedData[device][year][month][day].sum += measurement.usage
+    for (let device of processedData) {
+        for (let year of device.years) {
+            for (let month of year.months) {
+                for (let day of month.days) {
+                    for (let measurement of day.measurements) {
+                        day.sum += measurement.usage
                     }
-                    processedData[device][year][month].sum += processedData[device][year][month][day].sum
+                    month.sum += day.sum
                 }
-                processedData[device][year].sum += processedData[device][year][month].sum
+                year.sum += month.sum
             }
-            processedData[device].sum += processedData[device][year].sum
+            device.sum += year.sum
         }
     }
     return processedData
 }
 
 function addUsageToData(data) {
-    for(let device of data) {
+    for (let device of data) {
         let lastMeasurementValue
-        for(let measurement of device.measurements) {
-            if(!lastMeasurementValue) lastMeasurementValue = measurement.value
+        for (let measurement of device.measurements) {
+            if (!lastMeasurementValue) lastMeasurementValue = measurement.value
             measurement.usage = measurement.value - lastMeasurementValue
             lastMeasurementValue = measurement.value
         }
     }
     return data
 }
-
-// console.log(addUsageToData())
 
 export default function processData(data) {
     const dataWithUsage = addUsageToData(data)
