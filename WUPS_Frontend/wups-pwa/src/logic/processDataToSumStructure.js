@@ -58,11 +58,11 @@ function createTree(data) {
     // add all leafs to the branches of the tree
     for (let device of data) {
         for (let measurement of device.measurements) {
-            const measurementDate = new Date(measurement.timestamp)
+            measurement.timestamp = new Date(measurement.timestamp)
             processedData.find(pd => pd.id === device.deviceId)
-                .subArray.find(y => y.id === measurementDate.getFullYear())  // year
-                .subArray.find(m => m.id === measurementDate.getMonth() + 1) // month
-                .subArray.find(d => d.id === measurementDate.getDate())      // day
+                .subArray.find(y => y.id === measurement.timestamp.getFullYear())  // year
+                .subArray.find(m => m.id === measurement.timestamp.getMonth() + 1) // month
+                .subArray.find(d => d.id === measurement.timestamp.getDate())      // day
                 .subArray.push(measurement)                                  // measurements
         }
     }
