@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../../App.css';
-import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } from 'recharts';
+import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend, LabelList } from 'recharts';
 import FetchAPI from '../../../logic/FetchAPI';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,58 +12,57 @@ const WaterGraph = (props) => {
 
 
     }
-        return (
-            <div className='graph-button' >
-                <NavLink to="/notFound">
-                    <BarChart
-                        height={400}
-                        width={600}
-                        data={props.data}
-                        //onClick={onPressHandler()}
-                        margin={{
-                            top: 15,
-                            right: 10,
-                            left: 15,
-                            bottom: 52
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis
-                            dataKey='timestamp'
-                            angle={90}
-                            interval={0}
-                            scaleToFit={true}
-                            textAnchor={'inherit'}
-                            fontSize={12}
-                            tickFormatter={(tick) => UnixConversion(tick)
-                            } />
 
-                        <YAxis
-                            type="number"
-                            domain={['auto', 'auto']}
-                        >
-                            <Label
-                                value={'Cubic meters'}
-                                angle={-90}
-                                position={'left'}
-                            />
-                        </YAxis>
+    return (
+        <div>
+            <h1>{`Device: ${props.device.id}`}</h1>
+            <BarChart
+                height={400}
+                width={600}
+                data={props.device?.subArray[0]?.subArray} // ?. optional chaining. instead of trowing an error when subarray does not exist, return undefined.
+                //onClick={onPressHandler()}
+                margin={{
+                    top: 15,
+                    right: 10,
+                    left: 15,
+                    bottom: 52
+                }}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis
+                    dataKey='name'
+                    angle={90}
+                    interval={0}
+                    scaleToFit={true}
+                    textAnchor={'inherit'}
+                    fontSize={12}
+                />
 
-                        <Tooltip />
-                        <Legend
-                            wrapperStyle={{ position: 'bottom' }}
-                            payload={[{
-                                value: 'Hot water', //ToDo Make this dynamic
-                                type: 'rect',
-                                color: "#167c1f"
-                            }]}
-                        />
-                        <Bar dataKey="value" fill="#167c1f" /*onClick={onPressHandler()}*/ />
-                    </BarChart>
-                </NavLink>
-            </div>
-        );
-    }
+                <YAxis
+                    type="number"
+                    domain={['dataMin', 'auto']}
+                >
+                    <Label
+                        value={'Cubic meters'}
+                        angle={-90}
+                        position={'left'}
+                    />
+                </YAxis>
+
+                <Tooltip />
+                <Legend
+                    wrapperStyle={{ position: 'bottom' }}
+                    payload={[{
+                        value: 'Hot water', //ToDo Make this dynamic
+                        type: 'rect',
+                        color: "#167c1f"
+                    }]}
+                />
+                <Bar dataKey="sum" fill="#167c1f" /*onClick={onPressHandler()}*/ />
+            </BarChart>
+        </div>
+    );
+}
 
 export default WaterGraph;
 

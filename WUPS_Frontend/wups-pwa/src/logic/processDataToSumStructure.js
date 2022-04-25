@@ -41,7 +41,7 @@ function createTree(data) {
             const monthExists = year.subArray.some(m => m.id === date.getMonth() + 1)
             const month = monthExists ?
                 year.subArray.find(m => m.id === date.getMonth() + 1) :
-                { id: date.getMonth() + 1, description: "month", sum: 0, subArray: [] }
+                { id: date.getMonth() + 1, description: "month", name: date.toLocaleString('default', { month: 'long' }), sum: 0, subArray: [] }
             if (!monthExists) year.subArray.push(month)
 
             const dayExists = month.subArray.some(d => d.id === date.getDate())
@@ -74,7 +74,7 @@ function createTree(data) {
         for(let obj of arr) {
             if(subArrayExists){
                 tempSum += calculateFromSubArray(obj.subArray)
-                obj.sum = tempSum
+                obj.sum = Math.round((tempSum + Number.EPSILON) * 1000) / 1000 // rounds to 3 decimals. Number.EPSILON reference https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
             } else {
                 tempSum += obj.usage // this should be a measurement, and we sum the usage.
             }

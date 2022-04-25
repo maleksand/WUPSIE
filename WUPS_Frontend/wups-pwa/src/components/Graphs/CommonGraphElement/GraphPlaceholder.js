@@ -28,7 +28,7 @@ const GraphPlaceholder = (prop) => {
         
         <div>
             <button onClick={onPressHandler} className='graph-button'>
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} alt="logo" />
                 {/* <h1>this is for test {data}</h1> */}
             </button>
         </div>

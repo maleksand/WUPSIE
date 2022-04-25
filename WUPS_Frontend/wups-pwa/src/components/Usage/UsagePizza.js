@@ -14,7 +14,7 @@ export default function Pizzas(props) {
         async function getPrice() {
             let result = await SumPrice(props.data, "1")
             setUseResult(result)
-            setMeterType(props.data[0].metadata.meterType)
+            setMeterType(props.data[0]?.metadata?.meterType) // ?. optional chaining. Instead of throwing an error when chain does not exist, return undifined.
         }
         getPrice()  
     },[props])
