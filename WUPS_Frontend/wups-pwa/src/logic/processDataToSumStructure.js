@@ -91,8 +91,8 @@ function addUsageToData(data) {
     for (let device of data) {
         let lastMeasurementValue
         for (let measurement of device.measurements) {
-            if (!lastMeasurementValue) lastMeasurementValue = measurement.value
-            measurement.usage = measurement.value - lastMeasurementValue
+            if (!lastMeasurementValue) lastMeasurementValue = measurement.value // The first measuremnt for a device, will always have a usage of 0
+            measurement.usage = Math.round((measurement.value - lastMeasurementValue + Number.EPSILON) * 1000) / 1000 // rounds to 3 decimals. Number.EPSILON reference https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
             lastMeasurementValue = measurement.value
         }
     }
