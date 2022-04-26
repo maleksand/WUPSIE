@@ -14,9 +14,7 @@ const Overview = () => {
         <div className='Overview-container'>
             {data.map(device => {
                 return (
-                    <Link key={device.id} to={`/overview/${device.id}`}>
-                        <WaterGraph device={device} />
-                    </Link>
+                    <WaterGraph key={device.id} device={device} />
                 )
             })}
         </div>
