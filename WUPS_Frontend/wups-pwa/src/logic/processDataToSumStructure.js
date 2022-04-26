@@ -33,6 +33,7 @@ function createTree(data) {
                     id: device.deviceId,
                     description: "device",
                     name: device.deviceId,
+                    meterType: device.measurements[0].metadata.meterType,
                     usageSum: 0,
                     subArray: []
                 } // ... or create a new one

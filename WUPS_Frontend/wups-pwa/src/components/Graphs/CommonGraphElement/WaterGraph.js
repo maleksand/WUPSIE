@@ -79,12 +79,12 @@ const WaterGraph = (props) => {
                 <Legend
                     verticalAlign='top'
                     payload={[{
-                        value: 'Hot water', //ToDo Make this dynamic
+                        value: props.device.meterType,
                         type: 'rect',
-                        color: "#167c1f"
+                        color: props.device.meterType === "cold water" ? "#6A7FDB" : "#A93F55"
                     }]}
                 />
-                <Bar dataKey="usageSum" fill="#167c1f" onClick={onPressHandler}/> {/* onclick reference: https://codesandbox.io/s/bar-chart-with-customized-event-4k1bd?file=/src/App.tsx:789-800 */}
+                <Bar dataKey="usageSum" fill={props.device.meterType === "cold water" ? "#6A7FDB" : "#A93F55"} onClick={onPressHandler}/> {/* onclick reference: https://codesandbox.io/s/bar-chart-with-customized-event-4k1bd?file=/src/App.tsx:789-800 */}
             </BarChart>
         </div>
     );
