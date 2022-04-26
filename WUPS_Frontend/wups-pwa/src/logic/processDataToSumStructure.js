@@ -32,6 +32,7 @@ function createTree(data) {
                 {
                     id: device.deviceId,
                     description: "device",
+                    name: device.deviceId,
                     usageSum: 0,
                     subArray: []
                 } // ... or create a new one

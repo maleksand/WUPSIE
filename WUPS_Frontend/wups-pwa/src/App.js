@@ -32,7 +32,7 @@ function Home() {
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(`http://localhost:3030/api/households/01C21CA24FBCECE7/devices/measurements?startDate=2019-02-01&endDate=2019-08-01`)
+      const response = await fetch(`http://localhost:3030/api/households/01C21CA24FBCECE7/devices/measurements?startDate=2019-06-01&endDate=2020-06-01`)
       const json = await response.json()
       setData(processData(json))
     }

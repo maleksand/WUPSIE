@@ -34,7 +34,7 @@ const WaterGraph = (props) => {
 
     return (
         <div>
-            <h1 align="center">{`Device: ${props.device.id}`}</h1>
+            <h1 align="center">{`${parents[parents.length -1 ].description}: ${parents[parents.length -1 ].name}`}</h1>
             <span style={{ marginLeft: 70 }} /> {/* pushing the button to the side */}
             <button type="button" onClick={backHandler} disabled={isButtonDisabled}>Back</button>
             <BarChart
@@ -55,6 +55,7 @@ const WaterGraph = (props) => {
                     angle={isDayOrMeasurement() ? 45 : 0}
                     textAnchor={isDayOrMeasurement() ? 'inherent' : "middle"}
                     fontSize={12}
+                    onClick={onPressHandler}
                 >
                     <Label
                         value={data[0].description}
@@ -83,7 +84,7 @@ const WaterGraph = (props) => {
                         color: "#167c1f"
                     }]}
                 />
-                <Bar dataKey="usageSum" fill="#167c1f" maraginTop={"100%"} onClick={onPressHandler} /> {/* onclick reference: https://codesandbox.io/s/bar-chart-with-customized-event-4k1bd?file=/src/App.tsx:789-800 */}
+                <Bar dataKey="usageSum" fill="#167c1f" /> {/* onclick reference: https://codesandbox.io/s/bar-chart-with-customized-event-4k1bd?file=/src/App.tsx:789-800 */}
             </BarChart>
         </div>
     );
