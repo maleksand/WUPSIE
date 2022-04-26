@@ -16,7 +16,6 @@ const WaterGraph = (props) => {
             setParents(newParents)
             setIsButtonDisabled(false)
             setData(entry.subArray)
-            console.log(entry)
         }
     }, [setData, setParents, setIsButtonDisabled, parents])
 
