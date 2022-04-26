@@ -84,7 +84,7 @@ const WaterGraph = (props) => {
                         color: "#167c1f"
                     }]}
                 />
-                <Bar dataKey="usageSum" fill="#167c1f" /> {/* onclick reference: https://codesandbox.io/s/bar-chart-with-customized-event-4k1bd?file=/src/App.tsx:789-800 */}
+                <Bar dataKey="usageSum" fill="#167c1f" onClick={onPressHandler}/> {/* onclick reference: https://codesandbox.io/s/bar-chart-with-customized-event-4k1bd?file=/src/App.tsx:789-800 */}
             </BarChart>
         </div>
     );
