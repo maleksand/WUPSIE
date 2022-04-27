@@ -11,7 +11,10 @@ const WaterGraph = (props) => {
         window.alert('Routing in progress')
 
 
+
     }
+
+    
         return (
             <div className='graph-button' >
                 <NavLink to="/notFound">

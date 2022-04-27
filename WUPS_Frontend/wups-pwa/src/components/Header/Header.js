@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Dropdown } from './Dropdown';
 import Logo from './Logo';
 import UserID from './UserID';
+import DateRange from './DateRange';
 
 
 function Nav() {
@@ -14,7 +15,7 @@ function Nav() {
       {/* This is WUPS IOT overview */}
 
       <UserID />
-
+      <DateRange />
       {/* Add a dropdown here */}
 
       <Dropdown>

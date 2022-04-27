@@ -58,6 +58,7 @@ header {
   height: var(--header-height);
   align-items: center;
   justify-content: space-evenly;
+  z-index: 100;
 }
 
 .navButton {
