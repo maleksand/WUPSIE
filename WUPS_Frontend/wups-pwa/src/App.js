@@ -31,7 +31,8 @@ function Home() {
     async function getData() {
       // const response = await fetch("http://localhost:3030/api/households/01C21CA24FBCECE7/devices/measurements?startDate=2019-06-01&endDate=2020-06-01")
       const response = await fetchApi.getHouseholdFromDateRange("01C21CA24FBCECE7", "2019-06-01", "2020-06-01" )
-      setData(processData(response))
+      const theData = processData(response)
+      setData(theData)
       console.log(data)
     }
     getData()
@@ -39,7 +40,7 @@ function Home() {
 
   return (
     <DataContext.Provider value={data}>
-      <Overview />
+      {data.length ? <Overview/> : <h1> Loading ...</h1>}
     </DataContext.Provider>
   )
 }

@@ -12,12 +12,11 @@ const Overview = () => {
 
     return (
         <div className='Overview-container'>
-            {data.length ? 
-            data.map(device => {
-                return (
-                    <WaterGraph key={device.id} device={device} />
-                )
-            }) : <h1>Loading...</h1>}
+            {data.map(device => {
+                return (<WaterGraph key={device.id} device={device} />)
+            })
+            }
+            <UsageComponent />
         </div>
 
     )
