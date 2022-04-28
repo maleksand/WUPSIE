@@ -6,7 +6,7 @@ import NotFound from './components/NotFound';
 import About from './components/About';
 import Overview from './components/Overview';
 import processData from "./logic/processDataToSumStructure"
-
+import fetchApi from './logic/FetchAPI';
 export const DataContext = createContext()
 
 function App() {
@@ -29,9 +29,10 @@ function Home() {
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(`http://localhost:3030/api/households/01C21CA24FBCECE7/devices/measurements?startDate=2019-06-01&endDate=2020-06-01`)
-      const json = await response.json()
-      setData(processData(json))
+      // const response = await fetch("http://localhost:3030/api/households/01C21CA24FBCECE7/devices/measurements?startDate=2019-06-01&endDate=2020-06-01")
+      const response = await fetchApi.getHouseholdFromDateRange("01C21CA24FBCECE7", "2019-06-01", "2020-06-01" )
+      setData(processData(response))
+      console.log(data)
     }
     getData()
   }, [])
