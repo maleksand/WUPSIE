@@ -49,7 +49,7 @@ function App() {
 function Home(props) {
   return (
     <DataContext.Provider value={props.data}>
-      <Overview />
+      {props.data.length ? <Overview/> : <h1> Loading ...</h1>}
     </DataContext.Provider>
   )
 }
