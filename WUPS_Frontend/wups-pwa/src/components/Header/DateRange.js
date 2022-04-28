@@ -1,33 +1,59 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-date-picker';
-import Moment from 'moment';
+import React, { useState, Component } from 'react';
+// import DatePicker from 'react-date-picker';
+import moment from 'moment';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 
-npm install react-datepicker
-function DateRange() {
-    
 
-    const [valueStart, onChange] = useState(new Date());
+class DateRange extends Component {
 
-const rangeStart = Moment(valueStart).format('YYYY-MM-DD')
+    constructor (props) {
+      super(props)
+      this.state = {
+        startDate: moment()
+      };
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+  
+    handleChange(date) {
+      this.setState({
+        startDate: date
+      })
+    }
+  
+    handleSubmit(e) {
+      e.preventDefault();
+      let main = this.state.startDate
+    //   console.log(main.format('L'));
+    }
+  
 
+    render() {
+        return (
+          <div className = "container">
+            <h3>React Datepicker Example</h3>
+            <form onSubmit={ this.handleSubmit }>
+              <div className="form-group">
+                <label>Select Date: </label>
+                <DatePicker
+                  selected={ this.state.startDate }
+                  onChange={ this.handleChange }
+                  name="startDate"
+                  dateFormat="MM/dd/yyyy"
+                />
+              </div>
+              <div className="form-group">
+                <button className="btn btn-success">Add Date</button>
+              </div>
+            </form>
+          </div>
+        );
+      }
 
-console.log(rangeStart)
-    
-    return (
-        <div>
-            <label>Set date</label>
-        <DatePicker 
-             onChange={onChange} 
-             value={valueStart}
-        />
-
-            </div>
-    );
-
-    
-}
+  }
 
 
 
