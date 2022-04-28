@@ -33,7 +33,6 @@ function Home() {
       const response = await fetchApi.getHouseholdFromDateRange("01C21CA24FBCECE7", "2019-06-01", "2020-06-01" )
       const theData = processData(response)
       setData(theData)
-      console.log(data)
     }
     getData()
   }, [])

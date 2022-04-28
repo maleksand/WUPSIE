@@ -16,9 +16,8 @@ const Overview = () => {
                 return (<WaterGraph key={device.id} device={device} />)
             })
             }
-            <UsageComponent />
+            <UsageComponent data={data}/>
         </div>
-
     )
 }
 
