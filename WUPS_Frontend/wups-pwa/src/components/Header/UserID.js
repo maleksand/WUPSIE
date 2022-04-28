@@ -1,17 +1,27 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { setCurrentUserContext } from "../../App";
 
 function UserID() {
-    const [currentUser, setCurrentUser] = useState(1)
-    
+    const setCurrentUser = useContext(setCurrentUserContext)
 
     function inputChange(event) {
         setCurrentUser(event.target.value)
     }
-    
+
+    function createOptions() {
+        let options = []
+        for (let i = 1; i <= 24; i++) {
+            options.push(<option key={i} value={i}>{i}</option>)
+        }
+        return options
+    }
+
     return (
         <div>
-            <label /*for="userID"*/>UserID between 1 and 24 </label>
-            <input type="number" id="userID" name="userID" min="1" max="24" value={currentUser} onChange={inputChange} />
+            <label>UserID between 1 and 24 </label>
+            <select onChange={inputChange}>
+                {createOptions()}
+            </select>
         </div>
     );
 }

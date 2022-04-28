@@ -33,4 +33,10 @@ fetchApi.getHouseholdFromDateRange = async (householdId, startDate, endDate) => 
     return await getData(url)
 }
 
+fetchApi.getUserHouseholdsDevices = async (userId, startDate, endDate) => {
+    const households = await getData(`http://localhost:3030/api/users/${userId}/households`)
+    const householdId = households[0].id
+    return fetchApi.getHouseholdFromDateRange(householdId, startDate, endDate)
+}
+
 export default fetchApi;
