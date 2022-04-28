@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext } from "react";
-import { setCurrentUserContext } from "../../App";
+import { setAppStateContext } from "../../App";
 
 function UserID() {
-    const setCurrentUser = useContext(setCurrentUserContext)
+    const globalState = useContext(setAppStateContext)
 
     function inputChange(event) {
-        setCurrentUser(event.target.value)
+        globalState.setCurrentUser(event.target.value)
+        globalState.setIsloading(true)
     }
 
     function createOptions() {

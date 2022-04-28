@@ -8,36 +8,38 @@ import Overview from './components/Overview';
 import processData from "./logic/processDataToSumStructure"
 import fetchApi from './logic/FetchAPI';
 export const DataContext = createContext()
-export const setCurrentUserContext = createContext()
+export const setAppStateContext = createContext()
 
 function App() {
   const [currentUser, setCurrentUser] = useState(1)
   const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     async function getData() {
       const response = await fetchApi.getUserHouseholdsDevices(currentUser, "2019-09-01", "2020-3-01")
       setData(processData(response))
+      setIsLoading(false)
     }
     getData()
   }, [currentUser])
 
-  useEffect(() => {
-    console.log(currentUser)
-  }, [currentUser])
-
-  const changeCurrentUser = useCallback((userId) => {
+  function changeCurrentUser(userId) {
     setCurrentUser(userId)
-  }, [])
+  }
+
+  function changeIsLoading(bool) {
+    setIsLoading(bool)
+  }
 
   return (
     <div className="App">
       <Router>
-        <setCurrentUserContext.Provider value={changeCurrentUser}>
-          <Header setCurrentUser={changeCurrentUser} />
-        </setCurrentUserContext.Provider>
+        <setAppStateContext.Provider value={{ setCurrentUser: changeCurrentUser, setIsloading: changeIsLoading }}>
+          <Header />
+        </setAppStateContext.Provider>
         <Routes>
-          <Route path='/' element={<Home data={data} />} />
+          <Route path='/' element={<Home data={data} isLoading={isLoading} />} />
           <Route path='/about' element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
@@ -49,7 +51,7 @@ function App() {
 function Home(props) {
   return (
     <DataContext.Provider value={props.data}>
-      {props.data.length ? <Overview/> : <h1> Loading ...</h1>}
+      {props.isLoading ? <h1> Loading ...</h1> : <Overview />}
     </DataContext.Provider>
   )
 }
