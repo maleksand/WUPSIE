@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import NotFound from './components/NotFound';
 import About from './components/About';
 import Overview from './components/Overview';
+import processData from "./logic/processDataToSumStructure"
 
 function App() {
+
+
+
+
+
   return (
     <div className="App">
       <Router>
