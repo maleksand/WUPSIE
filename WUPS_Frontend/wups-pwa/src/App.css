@@ -9,7 +9,7 @@
   position: absolute;
   top: var(--header-height);
   width: 100%;
-  height: 100%;
+  height: 100% - var(--header-height);
 }
 
 .App-logo {
