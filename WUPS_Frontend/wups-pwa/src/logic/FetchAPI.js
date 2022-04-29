@@ -39,4 +39,10 @@ fetchApi.getUserHouseholdsDevices = async (userId, startDate, endDate) => {
     return fetchApi.getHouseholdFromDateRange(householdId, startDate, endDate)
 }
 
+fetchApi.getRegionPrice = async (regionId) =>{
+    const url = `http://localhost:3030/api/regions/${regionId}/price`
+    const regionData = await getData(url)
+    return regionData.pricePerCubic
+}
+
 export default fetchApi;
