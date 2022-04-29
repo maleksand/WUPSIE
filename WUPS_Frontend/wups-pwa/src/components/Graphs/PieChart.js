@@ -20,7 +20,7 @@ export default function ExamplePieChart(props) {
     }, [])
     
     return (
-        <div >
+        <div style={{ width: "100%" }}>
             <h1>This is your "pizza" chart of usage</h1>
                 <button type="button" onClick={backHandler} disabled={isButtonDisabled}>Back</button>
             <PieChart width={600} height={400}>

@@ -122,9 +122,16 @@ a:active,
 
 .Overview-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, auto));
+  grid-template-columns: repeat(auto-fit, minmax( 250px, 600px ));
   gap: 20px;
   justify-content: space-evenly;
 }
+
+/* Make charts scale */
+.recharts-wrapper, .recharts-wrapper .recharts-surface, .recharts-wrapper .recharts-legend-wrapper {
+  width: inherit !important;
+  height: inherit !important;
+}
+/* Make charts scale */
 
 /* Styling Overview page */

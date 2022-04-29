@@ -19,7 +19,7 @@ function UserID() {
 
     return (
         <div>
-            <label>UserID between 1 and 24 </label>
+            <label>UserID</label>
             <select onChange={inputChange}>
                 {createOptions()}
             </select>

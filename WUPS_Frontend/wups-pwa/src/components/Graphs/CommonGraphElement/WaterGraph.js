@@ -32,7 +32,7 @@ const WaterGraph = (props) => {
     }
 
     return (
-        <div>
+        <div style={{ width: "100%"}}>
             <h1 align="center">{`${parents[parents.length -1 ].description}: ${parents[parents.length -1 ].name}`}</h1>
             <span style={{ marginLeft: 70 }} /> {/* pushing the button to the side */}
             <button type="button" onClick={backHandler} disabled={isButtonDisabled}>Back</button>
