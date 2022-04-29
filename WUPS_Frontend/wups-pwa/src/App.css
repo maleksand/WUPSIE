@@ -128,7 +128,9 @@ a:active,
 }
 
 /* Make charts scale */
-.recharts-wrapper, .recharts-wrapper .recharts-surface, .recharts-wrapper .recharts-legend-wrapper {
+.recharts-wrapper,
+.recharts-wrapper .recharts-surface,
+.recharts-wrapper .recharts-legend-wrapper {
   width: inherit !important;
   height: inherit !important;
 }
