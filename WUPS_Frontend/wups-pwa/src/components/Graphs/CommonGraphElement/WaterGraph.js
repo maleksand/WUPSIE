@@ -1,80 +1,92 @@
-import React from 'react';
+import { useCallback, useState } from 'react';
 import '../../../App.css';
 import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Label, Legend } from 'recharts';
-import FetchAPI from '../../../logic/FetchAPI';
-import { NavLink } from 'react-router-dom';
 
 
 
 const WaterGraph = (props) => {
-    function onPressHandler() {
-        window.alert('Routing in progress')
+    const [data, setData] = useState(props.device?.subArray) // ?. optional chaining. instead of trowing an error when subarray does not exist, return undefined.
+    const [parents, setParents] = useState([props.device])
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true)
 
+    const onPressHandler = useCallback((entry, index) => { // useCallback should memorize things, whcih means less rerenderes. I don't understand it that well.
+        if (entry?.subArray) {
+            const newParents = Array.from(parents)
+            newParents.push(entry)
+            setParents(newParents)
+            setIsButtonDisabled(false)
+            setData(entry.subArray)
+        }
+    }, [setData, setParents, setIsButtonDisabled, parents])
 
+    const backHandler = useCallback(() => {
+        const newParents = Array.from(parents)
+        const aParent = newParents.pop()
+        if (aParent.description === "year") setIsButtonDisabled(true)
+        setParents(newParents)
+        setData(newParents[newParents.length - 1].subArray) // get the last element of newParents array
+    }, [setData, setParents, setIsButtonDisabled, parents])
+
+    function isDayOrMeasurement() {
+        return data[0].description === "day" || data[0].description === "measurement"
     }
-        return (
-            <div className='graph-button' >
-                <NavLink to="/notFound">
-                    <BarChart
-                        height={400}
-                        width={600}
-                        data={props.data}
-                        //onClick={onPressHandler()}
-                        margin={{
-                            top: 15,
-                            right: 10,
-                            left: 15,
-                            bottom: 52
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis
-                            dataKey='timestamp'
-                            angle={90}
-                            interval={0}
-                            scaleToFit={true}
-                            textAnchor={'inherit'}
-                            fontSize={12}
-                            tickFormatter={(tick) => UnixConversion(tick)
-                            } />
 
-                        <YAxis
-                            type="number"
-                            domain={['auto', 'auto']}
-                        >
-                            <Label
-                                value={'Cubic meters'}
-                                angle={-90}
-                                position={'left'}
-                            />
-                        </YAxis>
+    return (
+        <div style={{ width: "100%"}}>
+            <h1 align="center">{`${parents[parents.length -1 ].description}: ${parents[parents.length -1 ].name}`}</h1>
+            <span style={{ marginLeft: 70 }} /> {/* pushing the button to the side */}
+            <button type="button" onClick={backHandler} disabled={isButtonDisabled}>Back</button>
+            <BarChart
+                height={400}
+                width={600}
+                data={data}
+                margin={{
+                    top: 0,
+                    right: isDayOrMeasurement() ? 15 : 0,
+                    left: 10,
+                    bottom: isDayOrMeasurement() ? 40 : 10
+                }}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis
+                    dataKey='name'
+                    interval={0}
+                    angle={isDayOrMeasurement() ? 45 : 0}
+                    textAnchor={isDayOrMeasurement() ? 'inherent' : "middle"}
+                    fontSize={12}
+                    onClick={onPressHandler}
+                >
+                    <Label
+                        value={data[0].description}
+                        position="bottom"
+                        offset={isDayOrMeasurement() ? 25 : -5}
+                    />
+                </XAxis>
 
-                        <Tooltip />
-                        <Legend
-                            wrapperStyle={{ position: 'bottom' }}
-                            payload={[{
-                                value: 'Hot water', //ToDo Make this dynamic
-                                type: 'rect',
-                                color: "#167c1f"
-                            }]}
-                        />
-                        <Bar dataKey="value" fill="#167c1f" /*onClick={onPressHandler()}*/ />
-                    </BarChart>
-                </NavLink>
-            </div>
-        );
-    }
+                <YAxis
+                    type="number"
+                    domain={[0, "auto"]}
+                    allowDataOverflow={true}
+                >
+                    <Label
+                        value={'Cubic meters (m3)'}
+                        angle={-90}
+                    />
+                </YAxis>
+
+                <Tooltip />
+                <Legend
+                    verticalAlign='top'
+                    payload={[{
+                        value: props.device.meterType,
+                        type: 'rect',
+                        color: props.device.meterType === "cold water" ? "#6A7FDB" : "#A93F55"
+                    }]}
+                />
+                <Bar dataKey="usageSum" fill={props.device.meterType === "cold water" ? "#6A7FDB" : "#A93F55"} onClick={onPressHandler}/> {/* onclick reference: https://codesandbox.io/s/bar-chart-with-customized-event-4k1bd?file=/src/App.tsx:789-800 */}
+            </BarChart>
+        </div>
+    );
+}
 
 export default WaterGraph;
-
-function UnixConversion(tick) {
-    let unixDate = new Date(tick)
-    var unixFormatted = ''
-        + (unixDate.getDate("DD") < 10 ? '0' + unixDate.getDate() : unixDate.getDate()) + '-'
-        + (unixDate.getMonth("MM") < 10 ? '0' + unixDate.getMonth() : unixDate.getMonth()) + '-'
-        + unixDate.getFullYear() + ' '
-        + (unixDate.getHours("hh") < 10 ? '0' + unixDate.getHours() : unixDate.getHours()) + ':'
-        + (unixDate.getMinutes('mm') < 10 ? '0' + unixDate.getMinutes() : unixDate.getMinutes())
-    return unixFormatted;
-
-}

@@ -8,7 +8,7 @@ function findMinMaxDate(data) {
             if (maxDate < measurementDate) maxDate = measurementDate
         }
     }
-    /*
+    /**
      * because we are iterating on day to day basis,
      * setting the time to 00:00:00 ensures all days are acounted for.
      * In other words, don't delete the next two lines
@@ -19,18 +19,66 @@ function findMinMaxDate(data) {
 }
 
 function createTree(data) {
-    let processedData = {}
+    let processedData = []
     const [minDate, maxDate] = findMinMaxDate(data)
     let date = minDate
-    
+
     // create the structure
     while (date <= maxDate) {
         for (let device of data) {
-            if (!processedData[device.deviceId]) processedData[device.deviceId] = { sum: 0 }
-            if (!processedData[device.deviceId][date.getFullYear()]) processedData[device.deviceId][date.getFullYear()] = { sum: 0 }
-            if (!processedData[device.deviceId][date.getFullYear()][date.getMonth() + 1]) processedData[device.deviceId][date.getFullYear()][date.getMonth() + 1] = { sum: 0 }
+            const devicesExists = processedData.some(pd => pd.id === device.deviceId)
+            const newDevice = devicesExists ?
+                processedData.find(pd => pd.id === device.deviceId) : // if device exists already, use the device
+                {
+                    id: device.deviceId,
+                    description: "device",
+                    name: device.deviceId,
+                    meterType: device.measurements[0].metadata.meterType,
+                    usageSum: 0,
+                    subArray: []
+                } // ... or create a new one
+            if (!devicesExists) processedData.push(newDevice) // only add device to array if it didn't exist already
 
-            processedData[device.deviceId][date.getFullYear()][date.getMonth() + 1][date.getDate()] = { sum: 0, measurements: [] }
+            const yearExists = newDevice.subArray.some(y => y.id === date.getFullYear())
+            const year = yearExists ?
+                newDevice.subArray.find(y => y.id === date.getFullYear()) : // same as device above, just year
+                {
+                    id: date.getFullYear(),
+                    parentId: newDevice.id,
+                    description: "year",
+                    name: date.getFullYear(),
+                    usageSum: 0,
+                    subArray: []
+                } // ... look above
+            if (!yearExists) newDevice.subArray.push(year) // ... look above
+
+            const monthExists = year.subArray.some(m => m.id === date.getMonth() + 1)
+            const month = monthExists ?
+                year.subArray.find(m => m.id === date.getMonth() + 1) :
+                {
+                    id: date.getMonth() + 1,
+                    parentId: year.id,
+                    description: "month",
+                    name: date.toLocaleString('default', { month: 'long' }),
+                    usageSum: 0,
+                    subArray: []
+                }
+            if (!monthExists) year.subArray.push(month)
+
+            const dayExists = month.subArray.some(d => d.id === date.getDate())
+            const day = dayExists ?
+                month.subArray.find(d => d.id === date.getDate()) :
+                {
+                    id: date.getDate(),
+                    parentId: month.id,
+                    description: "day",
+                    name: `${date.toLocaleString("default", {weekday: "short"})}. ${date.getDate()}`,
+                    usageSum: 0,
+                    subArray: []
+                }
+            if (!dayExists) month.subArray.push(day)
+
+
         }
         date.setDate(date.getDate() + 1)
     }
@@ -38,46 +86,58 @@ function createTree(data) {
     // add all leafs to the branches of the tree
     for (let device of data) {
         for (let measurement of device.measurements) {
-            const measurementDate = new Date(measurement.timestamp)
-            processedData[device.deviceId][measurementDate.getFullYear()][measurementDate.getMonth() + 1][measurementDate.getDate()].measurements.push(measurement)
+            measurement.description = "measurement"
+            measurement.timestamp = new Date(measurement.timestamp)
+            measurement.name = measurement.timestamp.toLocaleTimeString("default", {hour: "numeric", minute: "numeric"})
+            measurement.parentId = measurement.timestamp.getDate()
+            processedData.find(pd => pd.id === device.deviceId)
+                .subArray.find(y => y.id === measurement.timestamp.getFullYear())  // year
+                .subArray.find(m => m.id === measurement.timestamp.getMonth() + 1) // month
+                .subArray.find(d => d.id === measurement.timestamp.getDate())      // day
+                .subArray.push(measurement)                                  // measurements
         }
     }
 
     // calculate the sums for device, year, month and day
-    for (let device in processedData){
-        if(device === "sum") continue
-        for(let year in processedData[device]){
-            if(year === "sum") continue
-            for(let month in processedData[device][year]) {
-                if(month === "sum") continue
-                for(let day in processedData[device][year][month]){
-                    if(day === "sum") continue
-                    for(let measurement of processedData[device][year][month][day].measurements) {
-                        processedData[device][year][month][day].sum += measurement.usage
-                    }
-                    processedData[device][year][month].sum += processedData[device][year][month][day].sum
-                }
-                processedData[device][year].sum += processedData[device][year][month].sum
+    function calculateFromSubArray(arr) {
+        const subArrayExists = arr[0]?.subArray ? true : false // it's expected that if one object in the array has a subArray, then all have one.
+        let globalSum = 0
+        let objects = []
+        for (let obj of arr) {
+            let localSum = 0
+            if (subArrayExists) {
+                const objSum = calculateFromSubArray(obj.subArray)
+                localSum += objSum
+                obj.usageSum = Math.round((localSum + Number.EPSILON) * 1000) / 1000 // rounds to 3 decimals. Number.EPSILON reference https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
+            } else {
+                localSum += obj.usageSum // this should be a measurement, and we sum the usage.
             }
-            processedData[device].sum += processedData[device][year].sum
+            globalSum += localSum
+            objects.push(obj)
         }
+
+        for(let obj of objects) {
+            obj.usageAverage = Math.round((globalSum / objects.length + Number.EPSILON) * 1000) / 1000
+        }
+        return globalSum
     }
+
+    calculateFromSubArray(processedData)
+
     return processedData
 }
 
 function addUsageToData(data) {
-    for(let device of data) {
+    for (let device of data) {
         let lastMeasurementValue
-        for(let measurement of device.measurements) {
-            if(!lastMeasurementValue) lastMeasurementValue = measurement.value
-            measurement.usage = measurement.value - lastMeasurementValue
+        for (let measurement of device.measurements) {
+            if (!lastMeasurementValue) lastMeasurementValue = measurement.value // The first measuremnt for a device, will always have a usage of 0
+            measurement.usageSum = Math.round((measurement.value - lastMeasurementValue + Number.EPSILON) * 1000) / 1000 // rounds to 3 decimals. Number.EPSILON reference https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
             lastMeasurementValue = measurement.value
         }
     }
     return data
 }
-
-// console.log(addUsageToData())
 
 export default function processData(data) {
     const dataWithUsage = addUsageToData(data)
