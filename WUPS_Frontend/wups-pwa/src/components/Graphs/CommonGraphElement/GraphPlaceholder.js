@@ -11,19 +11,6 @@ const GraphPlaceholder = (prop) => {
     }
 
 
- const [data, setData] = useState([]);
-
-    useEffect(() => {
-        
-        async function getData() {
-            let json = await FetchAPI("2019-01-01", "2019-01-02")
-            setData(json)
-        }
-
-        getData()
-     
-    }, [])
-
     return (
         
         <div>

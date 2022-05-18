@@ -1,0 +1,2739 @@
+[
+  {
+    "_id": {
+      "$oid": "624d62139115eef59faa3ad8"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T00:00:00Z"
+    },
+    "T_Kit": 21.39,
+    "H_Kit": 44.56,
+    "T_Liv": 20.79,
+    "H_Liv": 43.863333333333294,
+    "T_Bat": 19.2,
+    "H_Bat": 45.7,
+    "T_Bed": 16.89,
+    "H_Bed": 45.7
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ad9"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T00:10:00Z"
+    },
+    "T_Kit": 21.29,
+    "H_Kit": 44.8266666666667,
+    "T_Liv": 20.7,
+    "H_Liv": 44,
+    "T_Bat": 19.2,
+    "H_Bat": 45.79,
+    "T_Bed": 16.89,
+    "H_Bed": 45.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ada"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T00:20:00Z"
+    },
+    "T_Kit": 21.29,
+    "H_Kit": 44.9666666666667,
+    "T_Liv": 20.6333333333333,
+    "H_Liv": 44,
+    "T_Bat": 19.2,
+    "H_Bat": 45.863333333333294,
+    "T_Bed": 16.89,
+    "H_Bed": 45.863333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3adb"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T00:30:00Z"
+    },
+    "T_Kit": 21.26,
+    "H_Kit": 45.09,
+    "T_Liv": 20.6,
+    "H_Liv": 44.03,
+    "T_Bat": 19.1666666666667,
+    "H_Bat": 45.9,
+    "T_Bed": 16.89,
+    "H_Bed": 45.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3adc"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T00:40:00Z"
+    },
+    "T_Kit": 21.2,
+    "H_Kit": 45.09,
+    "T_Liv": 20.6,
+    "H_Liv": 44.09,
+    "T_Bat": 19.1,
+    "H_Bat": 45.9666666666667,
+    "T_Bed": 16.89,
+    "H_Bed": 45.9666666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3add"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T00:50:00Z"
+    },
+    "T_Kit": 21.1666666666667,
+    "H_Kit": 45.23,
+    "T_Liv": 20.5,
+    "H_Liv": 44.1266666666667,
+    "T_Bat": 19.066666666666695,
+    "H_Bat": 46.03,
+    "T_Bed": 16.89,
+    "H_Bed": 46.03
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ade"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T01:00:00Z"
+    },
+    "T_Kit": 21.075,
+    "H_Kit": 45.3725,
+    "T_Liv": 20.5,
+    "H_Liv": 44.2,
+    "T_Bat": 19,
+    "H_Bat": 46.09,
+    "T_Bed": 16.89,
+    "H_Bed": 46.09
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3adf"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T01:10:00Z"
+    },
+    "T_Kit": 21,
+    "H_Kit": 45.4,
+    "T_Liv": 20.39,
+    "H_Liv": 44.2,
+    "T_Bat": 19,
+    "H_Bat": 46.2,
+    "T_Bed": 16.89,
+    "H_Bed": 46.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae0"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T01:20:00Z"
+    },
+    "T_Kit": 21,
+    "H_Kit": 45.59,
+    "T_Liv": 20.39,
+    "H_Liv": 44.26,
+    "T_Bat": 19,
+    "H_Bat": 46.2,
+    "T_Bed": 16.89,
+    "H_Bed": 46.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae1"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T01:30:00Z"
+    },
+    "T_Kit": 20.9266666666667,
+    "H_Kit": 45.59,
+    "T_Liv": 20.29,
+    "H_Liv": 44.29,
+    "T_Bat": 19,
+    "H_Bat": 46.29,
+    "T_Bed": 16.89,
+    "H_Bed": 46.29
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae2"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T01:40:00Z"
+    },
+    "T_Kit": 20.89,
+    "H_Kit": 45.66666666666671,
+    "T_Liv": 20.23,
+    "H_Liv": 44.29,
+    "T_Bat": 18.9266666666667,
+    "H_Bat": 46.433333333333294,
+    "T_Bed": 16.89,
+    "H_Bed": 46.433333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae3"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T01:50:00Z"
+    },
+    "T_Kit": 20.89,
+    "H_Kit": 46.06,
+    "T_Liv": 20.2,
+    "H_Liv": 44.4,
+    "T_Bat": 18.89,
+    "H_Bat": 46.6333333333333,
+    "T_Bed": 16.89,
+    "H_Bed": 46.6333333333333
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae4"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T02:00:00Z"
+    },
+    "T_Kit": 20.79,
+    "H_Kit": 46.2,
+    "T_Liv": 20.2,
+    "H_Liv": 44.4666666666667,
+    "T_Bat": 18.89,
+    "H_Bat": 46.8266666666667,
+    "T_Bed": 16.89,
+    "H_Bed": 46.8266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae5"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T02:10:00Z"
+    },
+    "T_Kit": 20.79,
+    "H_Kit": 46.2,
+    "T_Liv": 20.1,
+    "H_Liv": 44.53,
+    "T_Bat": 18.89,
+    "H_Bat": 46.9666666666667,
+    "T_Bed": 16.9633333333333,
+    "H_Bed": 46.9666666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae6"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T02:20:00Z"
+    },
+    "T_Kit": 20.7,
+    "H_Kit": 46.26,
+    "T_Liv": 20.1,
+    "H_Liv": 44.59,
+    "T_Bat": 18.79,
+    "H_Bat": 47.23,
+    "T_Bed": 17,
+    "H_Bed": 47.23
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae7"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T02:30:00Z"
+    },
+    "T_Kit": 20.7,
+    "H_Kit": 46.2,
+    "T_Liv": 20,
+    "H_Liv": 44.433333333333294,
+    "T_Bat": 18.79,
+    "H_Bat": 47.363333333333294,
+    "T_Bed": 17,
+    "H_Bed": 47.363333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae8"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T02:40:00Z"
+    },
+    "T_Kit": 20.6,
+    "H_Kit": 46.2,
+    "T_Liv": 20,
+    "H_Liv": 44.5,
+    "T_Bat": 18.79,
+    "H_Bat": 47.53,
+    "T_Bed": 17,
+    "H_Bed": 47.53
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3ae9"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T02:50:00Z"
+    },
+    "T_Kit": 20.6,
+    "H_Kit": 46.1266666666667,
+    "T_Liv": 20,
+    "H_Liv": 44.5,
+    "T_Bat": 18.73,
+    "H_Bat": 47.6633333333333,
+    "T_Bed": 17,
+    "H_Bed": 47.6633333333333
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3aea"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T03:00:00Z"
+    },
+    "T_Kit": 20.566666666666695,
+    "H_Kit": 46.0666666666667,
+    "T_Liv": 19.89,
+    "H_Liv": 44.59,
+    "T_Bat": 18.7,
+    "H_Bat": 47.8266666666667,
+    "T_Bed": 17,
+    "H_Bed": 47.8266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3aeb"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T03:10:00Z"
+    },
+    "T_Kit": 20.5,
+    "H_Kit": 46.2,
+    "T_Liv": 19.823333333333295,
+    "H_Liv": 44.53,
+    "T_Bat": 18.7,
+    "H_Bat": 47.9,
+    "T_Bed": 17,
+    "H_Bed": 47.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3aec"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T03:20:00Z"
+    },
+    "T_Kit": 20.5,
+    "H_Kit": 46.29,
+    "T_Liv": 19.79,
+    "H_Liv": 44.53,
+    "T_Bat": 18.7,
+    "H_Bat": 48.03,
+    "T_Bed": 17,
+    "H_Bed": 48.03
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3aed"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T03:30:00Z"
+    },
+    "T_Kit": 20.4266666666667,
+    "H_Kit": 46.23,
+    "T_Liv": 19.79,
+    "H_Liv": 44.53,
+    "T_Bat": 18.6333333333333,
+    "H_Bat": 48.09,
+    "T_Bed": 17,
+    "H_Bed": 48.09
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3aee"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T03:40:00Z"
+    },
+    "T_Kit": 20.39,
+    "H_Kit": 46.29,
+    "T_Liv": 19.76,
+    "H_Liv": 44.59,
+    "T_Bat": 18.6,
+    "H_Bat": 48.29,
+    "T_Bed": 17.0666666666667,
+    "H_Bed": 48.29
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3aef"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T03:50:00Z"
+    },
+    "T_Kit": 20.39,
+    "H_Kit": 46.363333333333294,
+    "T_Liv": 19.7,
+    "H_Liv": 44.59,
+    "T_Bat": 18.6,
+    "H_Bat": 48.363333333333294,
+    "T_Bed": 17.0666666666667,
+    "H_Bed": 48.363333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af0"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T04:00:00Z"
+    },
+    "T_Kit": 20.29,
+    "H_Kit": 46.5,
+    "T_Liv": 19.7,
+    "H_Liv": 44.7,
+    "T_Bat": 18.6,
+    "H_Bat": 48.463333333333296,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 48.463333333333296
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af1"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T04:10:00Z"
+    },
+    "T_Kit": 20.29,
+    "H_Kit": 46.545,
+    "T_Liv": 19.6333333333333,
+    "H_Liv": 44.6266666666667,
+    "T_Bat": 18.533333333333296,
+    "H_Bat": 48.59,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 48.59
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af2"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T04:20:00Z"
+    },
+    "T_Kit": 20.23,
+    "H_Kit": 46.5,
+    "T_Liv": 19.6,
+    "H_Liv": 44.59,
+    "T_Bat": 18.5,
+    "H_Bat": 48.7666666666667,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 48.7666666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af3"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T04:30:00Z"
+    },
+    "T_Kit": 20.2,
+    "H_Kit": 46.433333333333294,
+    "T_Liv": 19.6,
+    "H_Liv": 44.59,
+    "T_Bat": 18.5,
+    "H_Bat": 48.9,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 48.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af4"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T04:40:00Z"
+    },
+    "T_Kit": 20.2,
+    "H_Kit": 46.56,
+    "T_Liv": 19.566666666666695,
+    "H_Liv": 44.7,
+    "T_Bat": 18.5,
+    "H_Bat": 49.045,
+    "T_Bed": 17.1,
+    "H_Bed": 49.045
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af5"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T04:50:00Z"
+    },
+    "T_Kit": 20.1666666666667,
+    "H_Kit": 46.363333333333294,
+    "T_Liv": 19.5,
+    "H_Liv": 44.7,
+    "T_Bat": 18.5,
+    "H_Bat": 49.2,
+    "T_Bed": 17.1,
+    "H_Bed": 49.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af6"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T05:00:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 46.363333333333294,
+    "T_Liv": 19.5,
+    "H_Liv": 44.79,
+    "T_Bat": 18.5,
+    "H_Bat": 49.26,
+    "T_Bed": 17.1,
+    "H_Bed": 49.26
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af7"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T05:10:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 46.5,
+    "T_Liv": 19.4266666666667,
+    "H_Liv": 44.73,
+    "T_Bat": 18.4725,
+    "H_Bat": 49.29,
+    "T_Bed": 17.1,
+    "H_Bed": 49.29
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af8"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T05:20:00Z"
+    },
+    "T_Kit": 20.033333333333296,
+    "H_Kit": 46.36,
+    "T_Liv": 19.39,
+    "H_Liv": 44.73,
+    "T_Bat": 18.39,
+    "H_Bat": 49.363333333333294,
+    "T_Bed": 17.1,
+    "H_Bed": 49.363333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3af9"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T05:30:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 46.29,
+    "T_Liv": 19.39,
+    "H_Liv": 44.79,
+    "T_Bat": 18.39,
+    "H_Bat": 49.433333333333294,
+    "T_Bed": 17.1,
+    "H_Bed": 49.433333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3afa"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T05:40:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 46.29,
+    "T_Liv": 19.39,
+    "H_Liv": 44.79,
+    "T_Bat": 18.39,
+    "H_Bat": 49.56,
+    "T_Bed": 17.1,
+    "H_Bed": 49.56
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3afb"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T05:50:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 46.23,
+    "T_Liv": 19.39,
+    "H_Liv": 44.79,
+    "T_Bat": 18.39,
+    "H_Bat": 49.6266666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 49.6266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3afc"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T06:00:00Z"
+    },
+    "T_Kit": 19.9266666666667,
+    "H_Kit": 46.23,
+    "T_Liv": 19.29,
+    "H_Liv": 44.9,
+    "T_Bat": 18.39,
+    "H_Bat": 49.7,
+    "T_Bed": 17.1,
+    "H_Bed": 49.7
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3afd"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T06:10:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 46.23,
+    "T_Liv": 19.29,
+    "H_Liv": 44.925,
+    "T_Bat": 18.3566666666667,
+    "H_Bat": 49.8266666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 49.8266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3afe"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T06:20:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 46.43,
+    "T_Liv": 19.29,
+    "H_Liv": 45,
+    "T_Bat": 18.29,
+    "H_Bat": 49.9666666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 49.9666666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3aff"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T06:30:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 46.6266666666667,
+    "T_Liv": 19.29,
+    "H_Liv": 45.1266666666667,
+    "T_Bat": 18.29,
+    "H_Bat": 50,
+    "T_Bed": 17.1333333333333,
+    "H_Bed": 50
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b00"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T06:40:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 46.7,
+    "T_Liv": 19.218,
+    "H_Liv": 45.2,
+    "T_Bat": 18.29,
+    "H_Bat": 50,
+    "T_Bed": 17.2,
+    "H_Bed": 50
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b01"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T06:50:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 46.863333333333294,
+    "T_Liv": 19.2,
+    "H_Liv": 45.245,
+    "T_Bat": 18.29,
+    "H_Bat": 50,
+    "T_Bed": 17.2,
+    "H_Bed": 50
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b02"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T07:00:00Z"
+    },
+    "T_Kit": 19.823333333333295,
+    "H_Kit": 46.863333333333294,
+    "T_Liv": 19.2,
+    "H_Liv": 45.363333333333294,
+    "T_Bat": 18.29,
+    "H_Bat": 50,
+    "T_Bed": 17.2,
+    "H_Bed": 50
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b03"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T07:10:00Z"
+    },
+    "T_Kit": 19.8566666666667,
+    "H_Kit": 46.93,
+    "T_Liv": 19.2,
+    "H_Liv": 45.4,
+    "T_Bat": 18.29,
+    "H_Bat": 50.09,
+    "T_Bed": 17.2,
+    "H_Bed": 50.09
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b04"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T07:20:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 46.79,
+    "T_Liv": 19.2,
+    "H_Liv": 45.3266666666667,
+    "T_Bat": 18.23,
+    "H_Bat": 49.963333333333296,
+    "T_Bed": 17.2,
+    "H_Bed": 49.963333333333296
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b05"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T07:30:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 46.895,
+    "T_Liv": 19.175,
+    "H_Liv": 45.195,
+    "T_Bat": 18.2,
+    "H_Bat": 49.723333333333294,
+    "T_Bed": 17.2,
+    "H_Bed": 49.723333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b06"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T07:40:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 47.4266666666667,
+    "T_Liv": 19.1,
+    "H_Liv": 45.03,
+    "T_Bat": 18.2,
+    "H_Bat": 49.463333333333296,
+    "T_Bed": 17.2,
+    "H_Bed": 49.463333333333296
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b07"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T07:50:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 48.3666666666667,
+    "T_Liv": 19.1,
+    "H_Liv": 45,
+    "T_Bat": 18.1,
+    "H_Bat": 48.995,
+    "T_Bed": 17.15,
+    "H_Bed": 48.995
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b08"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T08:00:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 48.66666666666671,
+    "T_Liv": 19.1,
+    "H_Liv": 45,
+    "T_Bat": 18.1,
+    "H_Bat": 48.6333333333333,
+    "T_Bed": 17.1,
+    "H_Bed": 48.6333333333333
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b09"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T08:10:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 48.533333333333296,
+    "T_Liv": 19.066666666666695,
+    "H_Liv": 45.06,
+    "T_Bat": 18.1,
+    "H_Bat": 48.36,
+    "T_Bed": 17.1,
+    "H_Bed": 48.36
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b0a"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T08:20:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 50,
+    "T_Liv": 19.0222222222222,
+    "H_Liv": 45.0444444444444,
+    "T_Bat": 18.033333333333296,
+    "H_Bat": 48.0266666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 48.0266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b0b"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T08:30:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 48.7333333333333,
+    "T_Liv": 19.1,
+    "H_Liv": 45.2,
+    "T_Bat": 18.05,
+    "H_Bat": 47.7666666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 47.7666666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b0c"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T08:40:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 48.0266666666667,
+    "T_Liv": 19.033333333333296,
+    "H_Liv": 45.1266666666667,
+    "T_Bat": 18,
+    "H_Bat": 47.4666666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 47.4666666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b0d"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T08:50:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 47.6333333333333,
+    "T_Liv": 19,
+    "H_Liv": 45.09,
+    "T_Bat": 18,
+    "H_Bat": 47.2666666666667,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 47.2666666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b0e"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T09:00:00Z"
+    },
+    "T_Kit": 19.8566666666667,
+    "H_Kit": 47.0633333333333,
+    "T_Liv": 19,
+    "H_Liv": 45.03,
+    "T_Bat": 18,
+    "H_Bat": 46.93,
+    "T_Bed": 17,
+    "H_Bed": 46.93
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b0f"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T09:10:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 46.6566666666667,
+    "T_Liv": 19,
+    "H_Liv": 44.9666666666667,
+    "T_Bat": 17.9266666666667,
+    "H_Bat": 46.79,
+    "T_Bed": 17.0666666666667,
+    "H_Bed": 46.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b10"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T09:20:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 46.33333333333329,
+    "T_Liv": 19,
+    "H_Liv": 44.8266666666667,
+    "T_Bat": 17.89,
+    "H_Bat": 46.59,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 46.59
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b11"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T09:30:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 46.0666666666667,
+    "T_Liv": 19,
+    "H_Liv": 44.645,
+    "T_Bat": 17.89,
+    "H_Bat": 46.39,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 46.39
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b12"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T09:40:00Z"
+    },
+    "T_Kit": 19.76,
+    "H_Kit": 45.863333333333294,
+    "T_Liv": 18.963333333333296,
+    "H_Liv": 44.56,
+    "T_Bat": 18,
+    "H_Bat": 46.1633333333333,
+    "T_Bed": 17,
+    "H_Bed": 46.1633333333333
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b13"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T09:50:00Z"
+    },
+    "T_Kit": 19.7,
+    "H_Kit": 45.79,
+    "T_Liv": 18.963333333333296,
+    "H_Liv": 44.433333333333294,
+    "T_Bat": 18,
+    "H_Bat": 46.03,
+    "T_Bed": 17,
+    "H_Bed": 46.03
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b14"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T10:00:00Z"
+    },
+    "T_Kit": 19.7,
+    "H_Kit": 45.6633333333333,
+    "T_Liv": 18.89,
+    "H_Liv": 44.29,
+    "T_Bat": 18,
+    "H_Bat": 45.863333333333294,
+    "T_Bed": 17,
+    "H_Bed": 45.863333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b15"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T10:10:00Z"
+    },
+    "T_Kit": 19.7,
+    "H_Kit": 45.59,
+    "T_Liv": 18.89,
+    "H_Liv": 44.23,
+    "T_Bat": 18,
+    "H_Bat": 45.73,
+    "T_Bed": 17,
+    "H_Bed": 45.73
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b16"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T10:20:00Z"
+    },
+    "T_Kit": 19.73,
+    "H_Kit": 47.793333333333294,
+    "T_Liv": 18.9266666666667,
+    "H_Liv": 44.23,
+    "T_Bat": 18,
+    "H_Bat": 45.6633333333333,
+    "T_Bed": 17,
+    "H_Bed": 45.6633333333333
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b17"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T10:30:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 48.793333333333294,
+    "T_Liv": 19,
+    "H_Liv": 44.363333333333294,
+    "T_Bat": 18,
+    "H_Bat": 45.463333333333296,
+    "T_Bed": 17,
+    "H_Bed": 45.463333333333296
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b18"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T10:40:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 47.94,
+    "T_Liv": 19.033333333333296,
+    "H_Liv": 44.5666666666667,
+    "T_Bat": 18.033333333333296,
+    "H_Bat": 45.29,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 45.29
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b19"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T10:50:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 47.16,
+    "T_Liv": 19.033333333333296,
+    "H_Liv": 44.5666666666667,
+    "T_Bat": 18.1,
+    "H_Bat": 45.23,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 45.23
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b1a"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T11:00:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 46.7666666666667,
+    "T_Liv": 19.033333333333296,
+    "H_Liv": 44.5,
+    "T_Bat": 18.033333333333296,
+    "H_Bat": 45.245,
+    "T_Bed": 17.05,
+    "H_Bed": 45.245
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b1b"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T11:10:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 46.2966666666667,
+    "T_Liv": 19.1,
+    "H_Liv": 44.5,
+    "T_Bat": 18.1,
+    "H_Bat": 45.29,
+    "T_Bed": 17.1,
+    "H_Bed": 45.29
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b1c"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T11:20:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 45.963333333333296,
+    "T_Liv": 19.1,
+    "H_Liv": 44.4666666666667,
+    "T_Bat": 18.1,
+    "H_Bat": 45.23,
+    "T_Bed": 17.1,
+    "H_Bed": 45.23
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b1d"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T11:30:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 46.223333333333294,
+    "T_Liv": 19.1,
+    "H_Liv": 44.4,
+    "T_Bat": 18.1,
+    "H_Bat": 45.2,
+    "T_Bed": 17.1,
+    "H_Bed": 45.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b1e"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T11:40:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 45.963333333333296,
+    "T_Liv": 19.1,
+    "H_Liv": 44.29,
+    "T_Bat": 18.1,
+    "H_Bat": 45.1266666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 45.1266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b1f"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T11:50:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 45.723333333333294,
+    "T_Liv": 19.15,
+    "H_Liv": 44.245,
+    "T_Bat": 18.1,
+    "H_Bat": 45.2,
+    "T_Bed": 17.1,
+    "H_Bed": 45.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b20"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T12:00:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 45.6633333333333,
+    "T_Liv": 19.2,
+    "H_Liv": 44.2,
+    "T_Bat": 18.1,
+    "H_Bat": 45.2,
+    "T_Bed": 17.1,
+    "H_Bed": 45.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b21"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T12:10:00Z"
+    },
+    "T_Kit": 20.033333333333296,
+    "H_Kit": 45.5,
+    "T_Liv": 19.2,
+    "H_Liv": 44.1266666666667,
+    "T_Bat": 18.066666666666695,
+    "H_Bat": 45.06,
+    "T_Bed": 17.1,
+    "H_Bed": 45.06
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b22"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T12:20:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 45.69333333333329,
+    "T_Liv": 19.2,
+    "H_Liv": 43.9,
+    "T_Bat": 18,
+    "H_Bat": 45,
+    "T_Bed": 17.1,
+    "H_Bed": 45
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b23"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T12:30:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 45.4,
+    "T_Liv": 19.2,
+    "H_Liv": 43.9,
+    "T_Bat": 17.9633333333333,
+    "H_Bat": 44.863333333333294,
+    "T_Bed": 17.1,
+    "H_Bed": 44.863333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b24"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T12:40:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 45.3266666666667,
+    "T_Liv": 19.2,
+    "H_Liv": 43.856,
+    "T_Bat": 17.89,
+    "H_Bat": 44.79,
+    "T_Bed": 17.1,
+    "H_Bed": 44.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b25"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T12:50:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 45.3266666666667,
+    "T_Liv": 19.2,
+    "H_Liv": 43.7,
+    "T_Bat": 17.89,
+    "H_Bat": 44.7,
+    "T_Bed": 17.1,
+    "H_Bed": 44.7
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b26"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T13:00:00Z"
+    },
+    "T_Kit": 20.1666666666667,
+    "H_Kit": 46.9933333333333,
+    "T_Liv": 19.2,
+    "H_Liv": 43.76,
+    "T_Bat": 17.89,
+    "H_Bat": 44.6266666666667,
+    "T_Bed": 17.1666666666667,
+    "H_Bed": 44.6266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b27"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T13:10:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 46.43,
+    "T_Liv": 19.1,
+    "H_Liv": 43.8175,
+    "T_Bat": 17.8566666666667,
+    "H_Bat": 44.56,
+    "T_Bed": 17.1666666666667,
+    "H_Bed": 44.56
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b28"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T13:20:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 46.03,
+    "T_Liv": 19.1,
+    "H_Liv": 43.838125,
+    "T_Bat": 17.8566666666667,
+    "H_Bat": 44.5,
+    "T_Bed": 17.1,
+    "H_Bed": 44.5
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b29"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T13:30:00Z"
+    },
+    "T_Kit": 20.066666666666695,
+    "H_Kit": 45.363333333333294,
+    "T_Liv": 19.1,
+    "H_Liv": 43.745,
+    "T_Bat": 17.79,
+    "H_Bat": 44.4,
+    "T_Bed": 17.1,
+    "H_Bed": 44.4
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b2a"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T13:40:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.963333333333296,
+    "T_Liv": 19.1,
+    "H_Liv": 43.5955555555556,
+    "T_Bat": 17.79,
+    "H_Bat": 44.3266666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 44.3266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b2b"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T13:50:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.76,
+    "T_Liv": 19.1,
+    "H_Liv": 43.488888888888894,
+    "T_Bat": 17.79,
+    "H_Bat": 44.29,
+    "T_Bed": 17.1,
+    "H_Bed": 44.29
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b2c"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T14:00:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.595,
+    "T_Liv": 19.1,
+    "H_Liv": 43.425,
+    "T_Bat": 17.79,
+    "H_Bat": 44.23,
+    "T_Bed": 17.1,
+    "H_Bed": 44.23
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b2d"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T14:10:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.433333333333294,
+    "T_Liv": 19.1,
+    "H_Liv": 43.334,
+    "T_Bat": 17.79,
+    "H_Bat": 44.2,
+    "T_Bed": 17.1,
+    "H_Bed": 44.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b2e"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T14:20:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.26,
+    "T_Liv": 19.1,
+    "H_Liv": 43.29,
+    "T_Bat": 17.79,
+    "H_Bat": 44.2,
+    "T_Bed": 17.1,
+    "H_Bed": 44.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b2f"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T14:30:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.2,
+    "T_Liv": 19.1,
+    "H_Liv": 43.29,
+    "T_Bat": 17.73,
+    "H_Bat": 44.1266666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 44.1266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b30"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T14:40:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.06,
+    "T_Liv": 19.033333333333296,
+    "H_Liv": 43.23,
+    "T_Bat": 17.79,
+    "H_Bat": 44,
+    "T_Bed": 17.1,
+    "H_Bed": 44
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b31"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T14:50:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.06,
+    "T_Liv": 19,
+    "H_Liv": 43.2,
+    "T_Bat": 17.7,
+    "H_Bat": 43.933333333333294,
+    "T_Bed": 17.1,
+    "H_Bed": 43.933333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b32"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T15:00:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.09,
+    "T_Liv": 19,
+    "H_Liv": 43.1266666666667,
+    "T_Bat": 17.7,
+    "H_Bat": 43.79,
+    "T_Bed": 17.1,
+    "H_Bed": 43.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b33"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T15:10:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 44.03,
+    "T_Liv": 19,
+    "H_Liv": 43.09,
+    "T_Bat": 17.7,
+    "H_Bat": 43.79,
+    "T_Bed": 17.1,
+    "H_Bed": 43.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b34"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T15:20:00Z"
+    },
+    "T_Kit": 19.963333333333296,
+    "H_Kit": 43.9,
+    "T_Liv": 18.9266666666667,
+    "H_Liv": 43.09,
+    "T_Bat": 17.7,
+    "H_Bat": 43.7,
+    "T_Bed": 17.1,
+    "H_Bed": 43.7
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b35"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T15:30:00Z"
+    },
+    "T_Kit": 19.963333333333296,
+    "H_Kit": 43.9,
+    "T_Liv": 19.033333333333296,
+    "H_Liv": 43.06,
+    "T_Bat": 17.7,
+    "H_Bat": 43.76,
+    "T_Bed": 17.1,
+    "H_Bed": 43.76
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b36"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T15:40:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 43.863333333333294,
+    "T_Liv": 19.1,
+    "H_Liv": 43,
+    "T_Bat": 17.7,
+    "H_Bat": 43.79,
+    "T_Bed": 17.1666666666667,
+    "H_Bed": 43.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b37"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T15:50:00Z"
+    },
+    "T_Kit": 20.066666666666695,
+    "H_Kit": 43.863333333333294,
+    "T_Liv": 19.1333333333333,
+    "H_Liv": 42.863333333333294,
+    "T_Bat": 17.7,
+    "H_Bat": 43.79,
+    "T_Bed": 17.1666666666667,
+    "H_Bed": 43.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b38"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T16:00:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.79,
+    "T_Liv": 19.2,
+    "H_Liv": 42.715,
+    "T_Bat": 17.7,
+    "H_Bat": 43.79,
+    "T_Bed": 17.2,
+    "H_Bed": 43.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b39"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T16:10:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.73,
+    "T_Liv": 19.1363636363636,
+    "H_Liv": 42.65,
+    "T_Bat": 17.7,
+    "H_Bat": 43.73,
+    "T_Bed": 17.2,
+    "H_Bed": 43.73
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b3a"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T16:20:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.56,
+    "T_Liv": 19.13,
+    "H_Liv": 42.59,
+    "T_Bat": 17.6666666666667,
+    "H_Bat": 43.6633333333333,
+    "T_Bed": 17.2,
+    "H_Bed": 43.6633333333333
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b3b"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T16:30:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.433333333333294,
+    "T_Liv": 19.1,
+    "H_Liv": 42.59,
+    "T_Bat": 17.6,
+    "H_Bat": 43.53,
+    "T_Bed": 17.2,
+    "H_Bed": 43.53
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b3c"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T16:40:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.1633333333333,
+    "T_Liv": 19.0375,
+    "H_Liv": 42.53375,
+    "T_Bat": 17.6,
+    "H_Bat": 43.4,
+    "T_Bed": 17.1,
+    "H_Bed": 43.4
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b3d"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T16:50:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.03,
+    "T_Liv": 19.007692307692295,
+    "H_Liv": 42.43,
+    "T_Bat": 17.6,
+    "H_Bat": 43.3266666666667,
+    "T_Bed": 17.1,
+    "H_Bed": 43.3266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b3e"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T17:00:00Z"
+    },
+    "T_Kit": 20.066666666666695,
+    "H_Kit": 42.83333333333329,
+    "T_Liv": 19,
+    "H_Liv": 42.4181818181818,
+    "T_Bat": 17.6,
+    "H_Bat": 43.26,
+    "T_Bed": 17.1,
+    "H_Bed": 43.26
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b3f"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T17:10:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 42.6725,
+    "T_Liv": 19,
+    "H_Liv": 42.433333333333294,
+    "T_Bat": 17.6,
+    "H_Bat": 43.2,
+    "T_Bed": 17.1,
+    "H_Bed": 43.2
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b40"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T17:20:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 42.53,
+    "T_Liv": 18.99,
+    "H_Liv": 42.4718181818182,
+    "T_Bat": 17.6,
+    "H_Bat": 43.145,
+    "T_Bed": 17.1,
+    "H_Bed": 43.145
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b41"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T17:30:00Z"
+    },
+    "T_Kit": 20.033333333333296,
+    "H_Kit": 43.4966666666667,
+    "T_Liv": 18.9022222222222,
+    "H_Liv": 42.58,
+    "T_Bat": 17.6,
+    "H_Bat": 43,
+    "T_Bed": 17.1,
+    "H_Bed": 43
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b42"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T17:40:00Z"
+    },
+    "T_Kit": 20.033333333333296,
+    "H_Kit": 42.963333333333296,
+    "T_Liv": 18.89,
+    "H_Liv": 42.56,
+    "T_Bat": 17.5333333333333,
+    "H_Bat": 43,
+    "T_Bed": 17.1,
+    "H_Bed": 43
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b43"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T17:50:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 43.16,
+    "T_Liv": 18.89,
+    "H_Liv": 42.7966666666667,
+    "T_Bat": 17.6,
+    "H_Bat": 42.93,
+    "T_Bed": 17.0666666666667,
+    "H_Bed": 42.93
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b44"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T18:00:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 43.9,
+    "T_Liv": 18.8566666666667,
+    "H_Liv": 43.4,
+    "T_Bat": 17.6,
+    "H_Bat": 42.863333333333294,
+    "T_Bed": 17,
+    "H_Bed": 42.863333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b45"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T18:10:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 43.7,
+    "T_Liv": 18.8566666666667,
+    "H_Liv": 43.4666666666667,
+    "T_Bat": 17.5,
+    "H_Bat": 42.8266666666667,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 42.8266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b46"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T18:20:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 43.76,
+    "T_Liv": 18.9266666666667,
+    "H_Liv": 43.363333333333294,
+    "T_Bat": 17.5,
+    "H_Bat": 42.8266666666667,
+    "T_Bed": 17.0333333333333,
+    "H_Bed": 42.8266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b47"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T18:30:00Z"
+    },
+    "T_Kit": 20.033333333333296,
+    "H_Kit": 44,
+    "T_Liv": 19,
+    "H_Liv": 43.29,
+    "T_Bat": 17.5,
+    "H_Bat": 42.7,
+    "T_Bed": 17,
+    "H_Bed": 42.7
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b48"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T18:40:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 44.26,
+    "T_Liv": 19.2,
+    "H_Liv": 43.29,
+    "T_Bat": 17.5,
+    "H_Bat": 42.76,
+    "T_Bed": 17,
+    "H_Bed": 42.76
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b49"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T18:50:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 44.2,
+    "T_Liv": 19.245,
+    "H_Liv": 43.245,
+    "T_Bat": 17.5,
+    "H_Bat": 42.79,
+    "T_Bed": 17,
+    "H_Bed": 42.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b4a"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T19:00:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 44.1266666666667,
+    "T_Liv": 19.29,
+    "H_Liv": 43.095,
+    "T_Bat": 17.5,
+    "H_Bat": 42.79,
+    "T_Bed": 17,
+    "H_Bed": 42.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b4b"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T19:10:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 44.06,
+    "T_Liv": 19.37,
+    "H_Liv": 42.92,
+    "T_Bat": 17.5,
+    "H_Bat": 42.79,
+    "T_Bed": 17,
+    "H_Bed": 42.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b4c"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T19:20:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 44,
+    "T_Liv": 19.39,
+    "H_Liv": 42.9,
+    "T_Bat": 17.5,
+    "H_Bat": 42.79,
+    "T_Bed": 16.9266666666667,
+    "H_Bed": 42.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b4d"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T19:30:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.9,
+    "T_Liv": 19.39,
+    "H_Liv": 42.76,
+    "T_Bat": 17.5,
+    "H_Bat": 42.79,
+    "T_Bed": 16.89,
+    "H_Bed": 42.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b4e"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T19:40:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.8266666666667,
+    "T_Liv": 19.39,
+    "H_Liv": 42.7,
+    "T_Bat": 17.5,
+    "H_Bat": 42.863333333333294,
+    "T_Bed": 16.9633333333333,
+    "H_Bed": 42.863333333333294
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b4f"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T19:50:00Z"
+    },
+    "T_Kit": 20.033333333333296,
+    "H_Kit": 43.73,
+    "T_Liv": 19.39,
+    "H_Liv": 42.6633333333333,
+    "T_Bat": 17.5,
+    "H_Bat": 42.9,
+    "T_Bed": 16.89,
+    "H_Bed": 42.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b50"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T20:00:00Z"
+    },
+    "T_Kit": 20.1,
+    "H_Kit": 43.73,
+    "T_Liv": 19.39,
+    "H_Liv": 42.53,
+    "T_Bat": 17.5,
+    "H_Bat": 42.9,
+    "T_Bed": 16.89,
+    "H_Bed": 42.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b51"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T20:10:00Z"
+    },
+    "T_Kit": 20.066666666666695,
+    "H_Kit": 43.49,
+    "T_Liv": 19.3566666666667,
+    "H_Liv": 42.5,
+    "T_Bat": 17.5,
+    "H_Bat": 42.9,
+    "T_Bed": 16.89,
+    "H_Bed": 42.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b52"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T20:20:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 43.29,
+    "T_Liv": 19.29,
+    "H_Liv": 42.433333333333294,
+    "T_Bat": 17.5,
+    "H_Bat": 42.9,
+    "T_Bed": 16.89,
+    "H_Bed": 42.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b53"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T20:30:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 43.145,
+    "T_Liv": 19.29,
+    "H_Liv": 42.45,
+    "T_Bat": 17.5,
+    "H_Bat": 42.845,
+    "T_Bed": 16.89,
+    "H_Bed": 42.845
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b54"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T20:40:00Z"
+    },
+    "T_Kit": 20,
+    "H_Kit": 43.06,
+    "T_Liv": 19.26,
+    "H_Liv": 42.4666666666667,
+    "T_Bat": 17.5,
+    "H_Bat": 42.8266666666667,
+    "T_Bed": 16.89,
+    "H_Bed": 42.8266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b55"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T20:50:00Z"
+    },
+    "T_Kit": 19.9266666666667,
+    "H_Kit": 43,
+    "T_Liv": 19.2,
+    "H_Liv": 42.4,
+    "T_Bat": 17.39,
+    "H_Bat": 42.9,
+    "T_Bed": 16.89,
+    "H_Bed": 42.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b56"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T21:00:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 42.863333333333294,
+    "T_Liv": 19.2,
+    "H_Liv": 42.3266666666667,
+    "T_Bat": 17.39,
+    "H_Bat": 42.9,
+    "T_Bed": 16.89,
+    "H_Bed": 42.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b57"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T21:10:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 42.79,
+    "T_Liv": 19.2,
+    "H_Liv": 42.3266666666667,
+    "T_Bat": 17.39,
+    "H_Bat": 42.9,
+    "T_Bed": 16.89,
+    "H_Bed": 42.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b58"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T21:20:00Z"
+    },
+    "T_Kit": 19.89,
+    "H_Kit": 42.7,
+    "T_Liv": 19.1,
+    "H_Liv": 42.363333333333294,
+    "T_Bat": 17.39,
+    "H_Bat": 42.9,
+    "T_Bed": 16.89,
+    "H_Bed": 42.9
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b59"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T21:30:00Z"
+    },
+    "T_Kit": 19.823333333333295,
+    "H_Kit": 42.6266666666667,
+    "T_Liv": 19.1,
+    "H_Liv": 42.29,
+    "T_Bat": 17.39,
+    "H_Bat": 42.8266666666667,
+    "T_Bed": 16.89,
+    "H_Bed": 42.8266666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b5a"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T21:40:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 42.59,
+    "T_Liv": 19.0444444444444,
+    "H_Liv": 42.24,
+    "T_Bat": 17.39,
+    "H_Bat": 42.79,
+    "T_Bed": 16.79,
+    "H_Bed": 42.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b5b"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T21:50:00Z"
+    },
+    "T_Kit": 19.79,
+    "H_Kit": 42.723333333333294,
+    "T_Liv": 19,
+    "H_Liv": 42.0563636363636,
+    "T_Bat": 17.39,
+    "H_Bat": 42.79,
+    "T_Bed": 16.79,
+    "H_Bed": 42.79
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b5c"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T22:00:00Z"
+    },
+    "T_Kit": 19.76,
+    "H_Kit": 42.76,
+    "T_Liv": 19,
+    "H_Liv": 41.8866666666667,
+    "T_Bat": 17.39,
+    "H_Bat": 43.1966666666667,
+    "T_Bed": 16.89,
+    "H_Bed": 43.1966666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b5d"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T22:10:00Z"
+    },
+    "T_Kit": 19.7,
+    "H_Kit": 42.7,
+    "T_Liv": 19,
+    "H_Liv": 41.988333333333294,
+    "T_Bat": 17.39,
+    "H_Bat": 43.7966666666667,
+    "T_Bed": 16.89,
+    "H_Bed": 43.7966666666667
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b5e"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T22:20:00Z"
+    },
+    "T_Kit": 19.7,
+    "H_Kit": 42.7,
+    "T_Liv": 19,
+    "H_Liv": 42.064285714285695,
+    "T_Bat": 17.39,
+    "H_Bat": 44.19333333333329,
+    "T_Bed": 16.89,
+    "H_Bed": 44.19333333333329
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b5f"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T22:30:00Z"
+    },
+    "T_Kit": 19.6333333333333,
+    "H_Kit": 42.6266666666667,
+    "T_Liv": 18.910625,
+    "H_Liv": 42.2525,
+    "T_Bat": 17.39,
+    "H_Bat": 44.66,
+    "T_Bed": 16.89,
+    "H_Bed": 44.66
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b60"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T22:40:00Z"
+    },
+    "T_Kit": 19.6666666666667,
+    "H_Kit": 43,
+    "T_Liv": 18.89,
+    "H_Liv": 42.410625,
+    "T_Bat": 17.39,
+    "H_Bat": 45.09666666666671,
+    "T_Bed": 16.9266666666667,
+    "H_Bed": 45.09666666666671
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b61"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T22:50:00Z"
+    },
+    "T_Kit": 19.6,
+    "H_Kit": 43,
+    "T_Liv": 18.89,
+    "H_Liv": 42.5,
+    "T_Bat": 17.39,
+    "H_Bat": 45.43,
+    "T_Bed": 16.9266666666667,
+    "H_Bed": 45.43
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b62"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T23:00:00Z"
+    },
+    "T_Kit": 19.6,
+    "H_Kit": 43,
+    "T_Liv": 18.89,
+    "H_Liv": 42.645,
+    "T_Bat": 17.3566666666667,
+    "H_Bat": 45.7,
+    "T_Bed": 17,
+    "H_Bed": 45.7
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b63"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T23:10:00Z"
+    },
+    "T_Kit": 19.533333333333296,
+    "H_Kit": 43,
+    "T_Liv": 18.8081818181818,
+    "H_Liv": 42.7,
+    "T_Bat": 17.3566666666667,
+    "H_Bat": 45.83333333333329,
+    "T_Bed": 17,
+    "H_Bed": 45.83333333333329
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b64"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T23:20:00Z"
+    },
+    "T_Kit": 19.5,
+    "H_Kit": 43.09,
+    "T_Liv": 18.79,
+    "H_Liv": 42.75625,
+    "T_Bat": 17.29,
+    "H_Bat": 46.03,
+    "T_Bed": 17,
+    "H_Bed": 46.03
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b65"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T23:30:00Z"
+    },
+    "T_Kit": 19.5,
+    "H_Kit": 43.09,
+    "T_Liv": 18.79,
+    "H_Liv": 42.86166666666671,
+    "T_Bat": 17.29,
+    "H_Bat": 46.1633333333333,
+    "T_Bed": 17,
+    "H_Bed": 46.1633333333333
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b66"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T23:40:00Z"
+    },
+    "T_Kit": 19.5,
+    "H_Kit": 43.145,
+    "T_Liv": 18.79,
+    "H_Liv": 43,
+    "T_Bat": 17.29,
+    "H_Bat": 46.29,
+    "T_Bed": 17,
+    "H_Bed": 46.29
+  },{
+    "_id": {
+      "$oid": "624d62139115eef59faa3b67"
+    },
+    "metadata": {
+      "deviceId": "ad12ss24",
+      "meter_type": "HumidityAndTemperature"
+    },
+    "timestamp": {
+      "$date": "2016-01-12T23:50:00Z"
+    },
+    "T_Kit": 19.5,
+    "H_Kit": 43.2,
+    "T_Liv": 18.775,
+    "H_Liv": 43.045,
+    "T_Bat": 17.29,
+    "H_Bat": 46.53,
+    "T_Bed": 17,
+    "H_Bed": 46.53
+  }
+]
