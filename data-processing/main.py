@@ -1,4 +1,4 @@
-from mongo_db import measurement_processor, household_processor, device_processor, price_processor, humidity_temp_processor
+from mongo_db import bucket_measurement_processor, measurement_processor, household_processor, device_processor, price_processor, humidity_temp_processor
 import get_csv_data
 
 import time
@@ -23,6 +23,10 @@ def run():
     region_prices = get_csv_data.get_region_prices()
     print("Processing prices...")
     timer(lambda: price_processor.insert_df(region_prices), "Processing region prices")
+
+    measurementsbucket_df = get_csv_data.get_measurements_df()
+    print("processing measurements for bucket pattern ...")
+    timer(lambda: bucket_measurement_processor.insert_df(measurementsbucket_df), "Processing measurent bucket")
 
 
 
