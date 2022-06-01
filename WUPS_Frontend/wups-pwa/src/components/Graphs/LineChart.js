@@ -1,4 +1,3 @@
-import React, {StyleSheet} from "react";
 import { CartesianGrid, LineChart, XAxis, YAxis, Line, Tooltip, Legend } from 'recharts';
 import Logic from './Logic';
 

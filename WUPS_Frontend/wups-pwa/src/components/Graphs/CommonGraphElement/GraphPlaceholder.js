@@ -1,15 +1,11 @@
-import React, {useState, useEffect} from 'react';
 import logo from '../../../logo.svg';
 import '../../../App.css';
-import FetchAPI from '../../../logic/FetchAPI';
-
 
 const GraphPlaceholder = (prop) => {
     const onPressHandler = () => {
         window.alert(prop.id)
 
     }
-
 
     return (
         
